@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/chosen/chosen.jquery.js"></script>
+    <script src="../lib/common.js"></script>
+    <script src="../lib/keguan/wodebanji/jquery.easydropdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/banji.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/easydropdown.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/xuanze.css"/>
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="../image/logo.png" /></div>
+        <div class="nav">
+            <ul class="oList">
+                 <li>
+                    <a href="已登陆首页.html">首页</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#">客观作业</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#">客观测验</a>
+                </li>
+                <li>
+                    <a href="综合测验.html">综合测验</a>
+                </li>
+                <li>
+                    <a href="我的试卷.html"  class="addColor">我的试卷</a>
+                </li>
+                <li>
+                    <a href="我的收藏.html">我的收藏</a>
+                </li>
+                <li><a href="测评分析.html">测评分析</a></li>
+            </ul>
+        </div>
+        <div class="user">
+            <a class="icon_user" href="用户中心.html">
+                13888888888
+            </a>
+            <div class="icon_out"><a href="#">退出</a></div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<div class="content">
+    <div class="con">
+        <!-- 左侧导航 -->
+        <div class="menu">
+            <div class="menu_tit">用户中心</div>
+            <div class="menu_con">
+                <ul>
+                    <li><a href="用户中心.html">个人信息</a></li>
+                    <li><a href="修改密码.html">修改密码</a></li>
+                    <li><a href="我的班级.html">我的班级</a></li>
+                    <li class="on"><a href="我的试卷.html">我的试卷</a></li>
+                    <li><a href="我的收藏.html">我的收藏</a></li>
+                    <li><a href="测评分析.html">测评分析</a></li>
+                    <li><a href="测评助手.html">测评助手</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 左侧导航 -->
+
+        <!-- 右侧内容 -->
+        <div class="r_content">
+            <div class="r_body">
+                <div class="r_title">我的试卷</div>
+                <dl class="formatter">
+                    <dt>学科：</dt>
+                    <dd>
+                        <a href="#" class="on">数学</a>
+                        <a href="#">物理</a>
+                        <a href="#">化学</a>
+                        <a href="#">语文</a>
+                        <a href="#">历史</a>
+                        <a href="#">政治</a>
+                        <a href="#">地理</a>
+                        <a href="#">生物</a>
+                        <a href="#">英语</a>
+                    </dd>
+                </dl>
+                <dl class="formatter">
+                    <dt>状态：</dt>
+                    <dd>
+                        <a href="#" class="on">全部</a>
+                        <a href="#">组卷中</a>
+                        <a href="#">测试中</a>
+                        <a href="#">待测试</a>
+                    </dd>
+                </dl>
+                <hr size="1">
+                <div class="r_table">
+                    <table bgcolor="#ccc" cellpadding="1">
+
+                    	<p align="center">历史学科测试试卷</p>
+
+                        <thead>
+                            <th>时间</th>
+                            <th>试卷类型</th>
+                            <th>试卷名称&nbsp;&nbsp;<input type=text><button>搜索</button></th>
+                            <th>难易度</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>6月</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>L1</td>
+                                <td>06.25  13：01<font color="#ed4c4c">【指定试卷】</font>此处是文字 学科试卷  </td>
+                                <td>难度5</td>
+                                <td>组卷中</td>
+                                <td><a href="#">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>L1</td>
+                                <td>06.25  13：01<font color="#ed4c4c">【指定试卷】</font>此处是文字 学科试卷 </td>
+                                <td>难度5</td>
+                                <td>测试中</td>
+                                <td><a href="#">收卷</a>&nbsp;&nbsp;<a href="#">下载PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>L1</td>
+                                <td>06.25  13：01<font color="#ed4c4c">【指定试卷】</font>此处是文字 学科试卷  </td>
+                                <td>难度5</td>
+                                <td>待测试</td>
+                                <td><a href="#">开始</a>&nbsp;&nbsp;<a href="#">下载PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>7月</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>L1</td>
+                                <td>06.25  13：01<font color="#ed4c4c">【指定试卷】</font>此处是文字 学科试卷 </td>
+                                <td>难度5</td>
+                                <td>待测试</td>
+                                <td><a href="#">开始</a>&nbsp;&nbsp;<a href="#">下载PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>L1</td>
+                                <td>06.25  13：01<font color="#ed4c4c">【指定试卷】</font>此处是文字 学科试卷 </td>
+                                <td>难度5</td>
+                                <td>待测试</td>
+                                <td><a href="#">开始</a>&nbsp;&nbsp;<a href="#">下载PDF</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="r_page">
+                    <a href="#">上一页</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">...</a>
+                    <a href="#">20</a>
+                    <a href="#">下一页</a>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+<!--蒙层-->
+<div class="mengceng"></div>
+<!--客观作业------------------------------------客观作业----------------------------->
+<form class="tianjia  kgzy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一1</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="客观作业.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+<!--客观检测------------------------------------客观检测----------------------------->
+<form class="tianjia  kgcy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一2</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="客观测验页建立试卷框架.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+<!--综合检测------------------------------------综合检测----------------------------->
+<form class="tianjia  zhcy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="综合测验页建立试卷框架.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+</body>
+</html>

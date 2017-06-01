@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/chosen/chosen.jquery.js"></script>
+    <script src="../lib/common.js"></script>
+    <script src="../lib/keguan/wodebanji/jquery.easydropdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/banji.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/easydropdown.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/xuanze.css"/>
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="../image/logo.png" /></div>
+         <div class="nav">
+            <ul class="oList">
+                 <li >
+                    <a href="已登陆首页.html">首页</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#" class="addColor">初中组卷</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#">高中组卷</a>
+                </li>
+                <li>
+                    <a href="学校考试.html">学校考试</a>
+                </li>
+                <li>
+                    <a href="我的试卷.html">我的试卷</a>
+                </li>
+                <li>
+                    <a href="错题集合.html">错题集和</a>
+                </li>
+                <li><a href="评测分析.html">测评分析</a></li>
+            </ul>
+        </div>
+        <div class="user">
+            <a class="icon_user" href="用户中心.html">
+                13888888888
+            </a>
+            <div class="icon_out"><a href="#">退出</a></div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<div class="content">
+    <div class="con">
+        <!-- 左侧导航 -->
+        <div class="menu">
+            <div class="menu_tit">初一数学</div>
+            <div class="menu_con">
+                <ul>
+                    <li class="on"><a href="#">有理数</a></li>
+                    <li><a href="#">整式的加减</a></li>
+                    <li><a href="#">一元一次方程</a></li>
+                    <li><a href="#">圆形认识初步</a></li>
+                    <li><a href="#">第一级知识点</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 左侧导航 -->
+       <div>&emsp;</div>
+       <div align="right">
+       	<table align="right">
+       		<tr>
+       			<td>
+       		    <img src="../image/zonghe.png">
+       	   </td>
+       	   <td>
+       		 <a href="申请试卷页2.html" class="icon_user">我要综合测评</a>
+       		</td>
+       	</tr>
+       	</table>
+      </div>
+        <!-- 右侧内容 -->
+        <div class="r_content">
+            <div class="r_body">
+                <div class="r_lv_title">客观评测</div>
+                <div>&emsp;</div>
+                <div>&emsp;</div>
+                <dl class="pc_div">
+                    <dt>知&nbsp;&nbsp;识&nbsp;&nbsp;点：</dt>
+                    <dd id="select_label">
+                        <label><input type="checkbox" id="zs_1" val="正数和负数" /> 正数和负数</label>
+                        <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+                        <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+                        <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+                        <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+                        <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+                        <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+                        <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+                        <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+                    </dd>
+                </dl>
+                <dl class="pc_div">
+                    <dt>已&nbsp;&nbsp;选&nbsp;&nbsp;择：</dt>
+                    <dd id="select_zs"></dd>
+                </dl>
+                <dl class="pc_div">
+                    <dt>难&nbsp;&nbsp;易&nbsp;&nbsp;度：</dt>
+                    <dd>
+                        <img src="../image/btn_jian.jpg" align="absmiddle" />
+                        <input class="input_text" type="text" style="width: 40px;" />
+                        <img src="../image/btn_jia.jpg" align="absmiddle" />
+                    </dd>
+                </dl>
+                <dl class="pc_div">
+                    <dt>试题数量：</dt>
+                    <dd>
+                        <input class="input_text" type="text" style="width: 64px;" readonly> 题
+                    </dd>
+                </dl>
+                <div>&emsp;</div>
+                <div align="right">
+                    <input type="image" src="../image/input_sqsj.png"  onclick="location.href='试卷预览页.html'"/>
+                </div>
+                <div>&emsp;</div>
+                <div>&emsp;</div>
+            </div>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+
+<script>
+$(function(){
+    $('#select_label input').click(function(){
+        var id = $(this).attr('id').replace(/zs/, 'ss');
+        if($(this).prop('checked')){
+            var html = "<a id='"+ id +"' href='javascript:removeSz("+ $(this).attr('id').replace(/zs_/, '') +");'>"+ $(this).attr('val') +"</a>";
+            $('#select_zs').append(html);
+        } else {
+            $('#' + id).remove();
+        }
+    });
+});
+//删除
+function removeSz(id){
+    $('#zs_' + id).attr('checked', false);
+    $('#ss_' + id).remove();
+}
+</script>
+
+<!--蒙层-->
+<div class="mengceng"></div>
+<form class="tianjia" id="qwe" action="申请试卷页.html">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing">确定</button>
+			<button class="quXiao">取消</button> 
+		</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+内容修改：
+1.index.html内容全部修改，直接替换文件即可；
+2.css文件夹和css01文件夹全部替换；
+4.img文件夹和img01文件夹全部替换；
+5.去掉lunbo.html文件；
+6.xaingqingye01.html文件内容有修改；直接替换即可；
+7.nash_beijing_introduce.html内容底部有所更改，直接替换文件即可；
+8.js文件夹直接替换；
+9.去掉location.html文件；
+10.list.html和list_02.html内容有修改，更改之后为： <dl class="product">
+													<dt><a href="xaingqingye01.html"><img src="img/list01_03.jpg"/></a></dt>
+													<dd><span>万达广场</span><span>￥<a>20000</a>元/月</span></dd>
+													<dd><span>优选工作室</span><i>&nbsp;|&nbsp;</i><span>145㎡</span></dd>
+													<dd><img src="img/weizhi01.jpg"/>建国路93号</dd>
+												</dl>
+												
+
+新增需求：
+1.在详情页（xaingqingye01.html）底部点击预约参观跳转yuyue.html，点击拨打电话记录次数，在详情页第95行有注释；
+2.在服务页，点击单个服务模块跳转到servic.xiangqing.html;
+新增加文件：
+1.在css文件中新增了o.css，jquery.datetimepicker.css;
+2.在js文件中新增了common.js,jquery.datetimepicker.full.min.js;
+
+
+
+
+
+

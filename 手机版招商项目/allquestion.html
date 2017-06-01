@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<link href="zhaoShang/img/icon.png" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/zhanshang.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/shangjilist.css"/>
+		<style type="text/css">
+			.mainLeftConFive{border: none;}
+			.backQuestion{float: right;color: #EF4351;;cursor: pointer;background: url(zhaoShang/img/fan.png) no-repeat left center;margin: 5px 0;padding-left: 12px;font-size: 20px;margin-right: 30px;}
+		</style>
+	</head>
+	<body>
+		<!---------顶部-->
+		<div class="top">
+			<div class="topCon">
+				<img src="zhaoShang/img/logo2.png"/>
+			</div>
+		</div>
+		 <!--main-->
+		<div class="main">
+			<div class="mainLeftConFive">
+				<dl>
+					<dt>Q1.&nbsp;推荐人需要提供哪些信息才可以提交介绍？</dt>
+					<dd>若要提交介绍，您需要提供客户和您的全名、电子邮件地址和电话号码，可帮助我们加快处理速度。</dd>
+				</dl>
+				<dl>
+					<dt>Q2.&nbsp;我得到的报酬会扣税吗？</dt>
+					<dd>会，我们会严格按照国家税法规定和会计规范对所得报酬发生的税额进行代扣代缴。</dd>
+				</dl>
+				<dl>
+					<dt>Q3.&nbsp;为纳什空间介绍客户会获得哪些报酬？</dt>
+					<dd>本页面提交准确客户信息，并通过纳什空间确认，即成为该客户的推荐人。</dd>
+					<dd>自提交信息之日起，该客户三个月内签约入驻纳什空间，推荐人即可获得推荐奖励。</dd>
+					<dd>奖励金额为该客户签约入驻合同租金的2%（合同期超过12个月的以12个月计算）。</dd>
+				</dl>
+				<dl>
+					<dt>Q4.&nbsp;我需要多长时间才可以拿到报酬？</dt>
+					<dd>当您的客户加入 纳什空间 时，您将在其推荐客户成交生效后 3–4 个星期收到第一笔报酬。此后您将在每个月 固定时间收到上个月的报酬。</dd>
+				</dl>
+				<dl>
+					<dt>Q5.&nbsp;我怎样知道自己的介绍是否成功？</dt>
+					<dd>您会在被介绍人加入 纳什空间时收到 纳什空间 的电子邮件通知。您也可以点击“推荐人登录”页面，了解介绍的最新进展。</dd>
+				</dl>
+				<dl>
+					<dt>Q6.&nbsp;我需要提供哪些信息才可以参加计划？</dt>
+					<dd>若要参加并开始提交介绍，您需要提供您的全名、电子邮件地址、电话号码。稍后，您需要提供所选账户的银行信息，以便我们将您获得的报酬转账至您的账户。</dd>
+				</dl>
+				<dl>
+					<dt>Q7.&nbsp;我的公司是否会分享报酬？</dt>
+					<dd>推介费将支付到与您提供的银行信息相符的账户。纳什空间不干预各公司的支付条款。</dd>
+				</dl>
+				<dl>
+					<dt>Q8.&nbsp;我怎样了解客户在销售流程中的进度？</dt>
+					<dd>您可以登录自己的帐户，在“个人中心”页面查看每位客户的状态。</dd>
+				</dl>
+				<dl>
+					<dt>Q9.&nbsp;如果我有其它问题，我怎样获得帮助？</dt>
+					<dd>如果遇到上文没有回答的问题，请联系 <a id="oCompanyTelphone" href="tel:4001160055">400-116-0055</a>，纳什空间团队将在随时内与您沟通，处理您的问题或疑虑。</dd>
+				</dl>
+				<dl>
+					<dt>Q10.&nbsp;我怎样更多地了解纳什空间，以便向客户销售其产品？</dt>
+					<dd>请浏览<a id="oCompanyTelphone" href="http://www.nashwork.com">nash.work</a>了解我们产品和服务的信息。如果您需要特定的营销材料或或宣传品，请拨打免费电话<a id="oCompanyTelphone" href="tel:4001160055">400-116-0055</a></dd>
+				</dl>
+				<a class="backQuestion">返回</a>
+			</div>
+		</div>
+		<!-----------------底部------------------>
+		<iframe src="foot.html" scrolling="no" width="100%" height="445px" marginheight="0" marginwidth="0" border="none"></iframe>
+		<script src="zhaoShang/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/tongji.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".backQuestion").click(function(){
+				var oAccunt = sessionStorage.oAccunt;
+				if ( oAccunt == 1 ) {
+					location.href = "homeFE.html"
+				} else{
+					location.href = "home.html"
+				}
+			})
+		</script>
+	</body>
+</html>

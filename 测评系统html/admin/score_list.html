@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/common.js"></script>
+    <script src="../lib/chosen/chosen.jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+
+
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="../image/logo.png" /></div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="user_list.html">用户管理</a>
+                </li>
+                <li>
+                    <a href="＃" class="on">成绩管理</a>
+                </li>
+                <li>
+                    <a href="papers_list.html">试卷管理</a>
+                </li>  
+            </ul>
+        </div>
+        <div class="user">
+            <div class="icon_user">
+                系统管理员admin
+            </div>
+            <div class="icon_out"><a href="#">退出</a></div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<div class="content">
+    <div class="con">
+        <!-- 左侧导航 -->
+        <div class="menu">
+            <div class="menu_tit">成绩管理</div>
+            <div class="menu_con">
+                <ul>
+                    <li class="on"><a href="score_list.html" class="on">考试情况</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 左侧导航 -->
+
+        <!-- 右侧内容 -->
+        <div class="r_content">
+            <div class="r_body">
+                <div class="r_title"><font color="#4c9fed">考试成绩列表</font></div>
+                <div>&emsp;</div>
+                <div class="user_div">
+                    <dl>
+<dl>
+                        <dd>
+                           <table>                  	
+                                <tr>
+                                   <td> <dt>省份：</dt></td>
+                                   <td>
+                                       <select class="chzn-select" style="width:110px;">
+                                           <option>北京市</option>
+                                          <option>天津市</option>
+                                       </select>
+                                   </td>
+                                    <td> <dt>城市：</dt></td>
+                                    <td>
+                                        <select class="chzn-select" style="width:111px;">
+                                            <option>北京</option>
+                                        </select>
+                                          <select class="chzn-select" style="width:111px;">
+                                            <option>朝阳区</option>
+                                        </select>
+                                    </td>
+ 
+                                  </tr>
+                                 
+                                  <tr>  
+                                    <td><dt>学校：</dt></td>
+                                    <td>
+                                        <select class="chzn-select" style="width:200px;">
+                                            <option>北京第一中学</option>
+                                            <option>北京市第二中学</option>
+                                        </select>
+                                    </td>
+                                     <td><dt>学生姓名：</dt></td>
+                                    <td>
+                                    <dd><input type="text" class="input_text" style="width:170px;" /></dd>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                  	<td>学科：</td>              
+                                   
+                                   <td>
+                                   	<dd id="select_label">
+                                    <table>
+                                       <tr>
+                                         <td><label><input type="checkbox" id="zs_1" val="语文" /> 语文</label></td>
+                                         <td><label><input type="checkbox" id="zs_2" val="数学" /> 数学</label></td>
+                                         <td><label><input type="checkbox" id="zs_3" val=" 英语" /> 英语</label></td>
+                                      </tr>
+                                      <tr>
+                                         <td><label><input type="checkbox" id="zs_4" val="物理" /> 物理</label></td>
+                                         <td> <label><input type="checkbox" id="zs_5" val="化学" /> 化学</label></td>
+                                      </tr>
+                                  </table>
+                                 </dd>
+                                </td>
+ 			                          <tr>
+                                  	
+                                    <td><button type="button" style="width:60px;">搜索</button></td>
+                                </tr>
+                            </table>
+                        </dd>
+                    </dl>
+                    <dl>
+               </div>
+                <table class="table">
+                    <thead>
+                        <th>ID</th>
+                        <th>学生姓名</th>
+                        <th>学生账号</th>
+                        <th>所在城市</th>
+                        <th>所在学校</th>
+                        <th>考试状态</th>
+                        <th>考试分数</th>
+                        <th>操作</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>李同学</td>
+                            <td>litongxue</td>
+                            <td>北京</td>
+                            <td>朝阳六中</td>
+                            <td>未完成</td>
+                            <td></td>
+                            <td>
+                            	<a href="test.html">考卷查阅</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>李同学</td>
+                            <td>litongxue</td>
+                            <td>北京</td>
+                            <td>朝阳六中</td>
+                            <td>已完成</td>
+                            <td>60</td>
+                            <td>
+                            	<a href="test.html">考卷查阅</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>李同学</td>
+                            <td>litongxue</td>
+                            <td>北京</td>
+                            <td>朝阳六中</td>
+                            <td>已完成</td>
+                            <td>60</td>
+                            <td>
+                            	<a href="test.html">考卷查阅</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>李同学</td>
+                            <td>litongxue</td>
+                            <td>北京</td>
+                            <td>朝阳六中</td>
+                            <td>已完成</td>
+                            <td>60</td>
+                            <td>
+                            	<a href="test.html">考卷查阅</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+                <div class="r_page">
+                    <a href="#">上一页</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">...</a>
+                    <a href="#">20</a>
+                    <a href="#">下一页</a>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- footer -->
+<script>
+jQuery(".chzn-select").chosen();  
+</script>
+
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+
+</body>
+</html>

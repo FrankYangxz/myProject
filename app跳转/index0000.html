@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.obtn{color: peru;font-size: 40px;}
+		</style>
+	</head>
+	<body>
+		<a class="obtn" id="openApp0">打电话</a>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script language="javascript">
+			alert("1111");
+			var ua = navigator.userAgent;
+			var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Linux') > -1; //android终端或者uc浏览器
+			var isiOS = ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+			
+			if(isAndroid){
+				android();
+		      function android(){
+		      	alert("安卓")
+		        window.location.href =  "nashwork://space/"; /***打开app的协议，有安卓同事提供***/
+		        window.setTimeout(function(){
+		           window.location.href = "http://www.wjtr.com/download/index.html"; /***打开app的协议，有安卓同事提供***/
+		        },2000);
+		      };
+		      if(isiOS){
+		      	alert("ios")
+//		      	  ios();
+//			      function ios(){
+//			      	alert("ios")
+//			      	window.location.href =  "nashwork://space/"; /***打开app的协议，有安卓同事提供***/
+//			        window.setTimeout(function(){
+//			           window.location.href = "http://www.wjtr.com/download/index.html"; /***打开app的协议，有安卓同事提供***/
+//			        },2000);
+////			        var ifr = document.createElement("iframe");
+////			        ifr.src = "nashwork://space/";
+////			        ifr.style.display = "none"; 
+////			        document.body.appendChild(ifr);
+////			        window.setTimeout(function(){
+////			          document.body.removeChild(ifr);
+////			           window.location.href = "http://www.wjtr.com/download/index.html"; /***下载app的地址***/
+////			        },2000)
+//			      };
+			 }
+//			function isInstalled(){
+//				var the_href=$(".obtn").attr("href");//获得下载链接
+//				window.location="nashwork://space/";//打开某手机上的某个app应用
+//				setTimeout(function(){
+//					alert("不存在！")
+//					window.location=the_href;//如果超时就跳转到app下载页
+//				},3000);
+//			}
+//			$('#openApp0').click(function(){
+//				isInstalled();
+//			})
+//		 	alert(1);
+//		 	if (navigator.userAgent.match(/android/i)) {
+		 		
+			     // 通过iframe的方式试图打开APP，如果能正常打开，会直接切换到APP，并自动阻止a标签的默认行为
+			     // 否则打开a标签的href链接
+			     
+//			     var isInstalled;
+//			     //下面是安卓端APP接口调用的地址，自己根据情况去修改
+////			     var ifrSrc = 'cartooncomicsshowtwo://platformapi/startApp? type=0&id=${com.id}&phone_num=${com.phone_num}';
+//			    var ifrSrc = "http://www.androidchina.net/2435.html";
+//			    var ifr = document.createElement('iframe');
+//			     ifr.src = ifrSrc;
+//			     ifr.style.display = 'none';
+//			     ifr.onload = function() {
+//			     	 alert('Is installed.');
+//				     isInstalled = true;
+//				     alert(isInstalled);
+//				     document.getElementById('openApp0').click();
+//			     };
+//			     ifr.onerror = function() {
+//			         alert('May be not installed.');
+//			         isInstalled = false;
+//			         alert(isInstalled);
+//			     }
+//			     document.body.appendChild(ifr);
+//			     setTimeout(function() {
+//			         document.body.removeChild(ifr);
+//			     },1000);
+//			}
+//			//ios判断
+//			if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)){
+//			     if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i))  {
+//			         //Animation://com.yz.animation
+//			         var isInstalled;
+//			         //var gz = '{"comName":"${com.short_name}","comID":"${com.id}","comPhoneNum":"${com.phone_num}","type":"0"}';
+//			         //var jsongz =JSON.parse(gz);
+//			
+//			         //下面是IOS调用的地址，自己根据情况去修改
+//			         var ifrSrc = 'Animation://?comName=${com.short_name}&comID=${com.id}&comPhoneNum=${com.phone_num}&type=0';var ifr = document.createElement('iframe');
+//			         ifr.src = ifrSrc;
+//			         ifr.style.display = 'none';
+//			         ifr.onload = function() {
+//			              // alert('Is installed.');
+//			              isInstalled = true;
+//			              alert(isInstalled);
+//			              document.getElementById('openApp1').click();};
+//			         ifr.onerror = function() {
+//			              // alert('May be not installed.');
+//			              isInstalled = false;
+//			              alert(isInstalled);
+//			         }
+//			         document.body.appendChild(ifr);
+//			         setTimeout(function() {
+//			              document.body.removeChild(ifr);
+//			         },1000);
+//			     }
+//			
+//		 	}
+		 
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/chosen/chosen.jquery.js"></script>
+    <script src="../lib/common.js"></script>
+    <script src="../lib/keguan/wodebanji/jquery.easydropdown.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/banji.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/easydropdown.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/xuanze.css"/>
+    </head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="../image/logo.png" /></div>
+        <div class="nav">
+            <ul class="oList">
+                 <li >
+                    <a href="已登陆首页.html">首页</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#">客观作业</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#">客观测验</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#" class="addColor">综合测验</a>
+                </li>
+                <li>
+                    <a href="我的试卷.html">我的试卷</a>
+                </li>
+                <li>
+                    <a href="错题集合.html">我的收藏</a>
+                </li>
+                <li><a href="测评分析.html">测评分析</a></li>
+            </ul>
+        </div>
+        <div class="user">
+            <a class="icon_user" href="用户中心.html">
+                13888888888
+            </a>
+            <div class="icon_out"><a href="#">退出</a></div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<div class="content">
+    <div class="con">
+        <!-- 左侧导航 -->
+        <div class="menu">
+            <div class="menu_tit">客观测验</div>
+            <div class="kgcy_con">
+                <ul>
+                    <li class="on"><a href="#">建立试卷框架</a></li>
+                    <li><a href="#">试题预选</a></li>
+                    <li><a href="#">试题精选</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 左侧导航 -->
+
+        <!-- 右侧内容 -->
+        <div class="r_content">
+            <div class="r_body">
+                <div>&emsp;</div>
+                <div class="s_title">
+                    <h2 class="on">初中</h2>
+                    <h2>高中</h2>
+                </div>
+                 <!--------------初中---------------------------------------->
+                    <form class="chuzhong" >
+	                    		<dl class="formatter">
+			                    <dt>年级：</dt>
+			                    <dd class="nianji">
+			                        <a href="#" class="on">初一</a>
+			                        <a href="#">初二</a>
+			                        <a href="#">初三</a>
+			                    </dd>
+			                </dl>
+			                <dl class="formatter">
+			                    <dt>学科：</dt>
+			                    <dd>
+			                        <a href="#" class="on">数学</a>
+			                        <a href="#">物理</a>
+			                        <a href="#">化学</a>
+			                        <a href="#">语文</a>
+			                        <a href="#">历史</a>
+			                        <a href="#">政治</a>
+			                        <a href="#">地理</a>
+			                        <a href="#">生物</a>
+			                        <a href="#">英语</a>
+			                    </dd>
+			                </dl>
+			                <p>&nbsp;</p>
+                    </form>
+         		 <!--------------高中---------------------------------------->
+                    <form class="gaozhong" style="display: none;">
+	                    		<dl class="formatter">
+			                    <dt>年级：</dt>
+			                    <dd class="nianji">
+			                        <a href="#" class="on">高一</a>
+			                        <a href="#">高二</a>
+			                        <a href="#">高三</a>
+			                    </dd>
+			                </dl>
+			                <dl class="formatter">
+			                    <dt>学科：</dt>
+			                    <dd>
+			                        <a href="#" class="on">数学</a>
+			                        <a href="#">物理</a>
+			                        <a href="#">化学</a>
+			                        <a href="#">语文</a>
+			                        <a href="#">历史</a>
+			                        <a href="#">政治</a>
+			                        <a href="#">地理</a>
+			                        <a href="#">生物</a>
+			                        <a href="#">英语</a>
+			                    </dd>
+			                </dl>
+			                <p>&nbsp;</p>    
+                    </form>
+				<!----------------表格--------------------------------------->
+					<div class="zsd_div">
+			                    <dl>
+			                        <dt>试卷名称：</dt>
+			                        <dd><input type="text" class="input_text" /></dd>
+			                    </dl>
+			                    <dl>
+			                        <dt style="width: 100px;height: 30px;">题&emsp;&emsp;型：</dt>
+			                        <dd>
+			                            <table class="table">
+			                                <thead>
+			                                    <th>题型</th>
+			                                    <th>分值</th>
+			                                    <th>数量</th>
+			                                    <th>总分</th>
+			                                </thead>
+			                            	<tbody class="air">
+			                                    <tr>
+			                                        <td>单选题</td>
+			                                        <td><input type="text" name="" id="danxuan_fenzhi_zong_chu" placeholder="0" /></td>
+			                                        <td><input type="text" name="" id="danxuan_shuliang_zong_chu" placeholder="0" /></td>
+			                                        <td class="danxuan_zongfen_zong_chu">0</td>
+			                                    </tr>
+			                                    <tr>
+			                                        <td>多选题</td>
+			                                        <td><input type="text" name="" id="duoxuan_fenzhi_zong_chu" placeholder="0" /></td>
+			                                        <td><input type="text" name="" id="duoxuan_shuliang_zong_chu" placeholder="0" /></td>
+			                                        <td class="duoxuan_zongfen_zong_chu">0</td>
+			                                    </tr>
+			                                    <tr>
+			                                        <td>填空题</td>
+			                                        <td><input type="text" name="" id="tiankong_fenzhi_zong_chu" placeholder="0" /></td>
+			                                        <td><input type="text" name="" id="tiankong_shuliang_zong_chu" placeholder="0" /></td>
+			                                        <td class="tiankong_zongfen_zong_chu">0</td>
+			                                    </tr>
+			                                    <tr>
+			                                        <td>问答题</td>
+			                                        <td><input type="text" name="" id="wenda_fenzhi_zong_chu" placeholder="0" /></td>
+			                                        <td><input type="text" name="" id="wenda_shuliang_zong_chu" placeholder="0" /></td>
+			                                        <td class="wenda_zongfen_zong_chu">0</td>
+			                                    </tr>
+			                                    <tr>
+			                                        <td>证明题</td>
+			                                        <td><input type="text" name="" id="zhengming_fenzhi_zong_chu" placeholder="0" /></td>
+			                                        <td><input type="text" name="" id="zhengming_shuliang_zong_chu" placeholder="0" /></td>
+			                                        <td class="zhengming_zongfen_zong_chu">0</td>
+			                                    </tr>
+			                                    <tr>
+			                                        <td>合计</td>
+			                                        <td class="fenzhi_zong_chu">0</td>
+			                                        <td class="shuliang_zong_chu">0</td>
+			                                        <td class="zongfen_zong_chu">0</td>
+			                                    </tr>
+			                                </tbody>
+
+			                            </table>
+			                        </dd>
+			                    </dl>
+			                     <dl>
+                        <dt>我的班级：</dt>
+                        <dd>
+                        	<div><span><a href="#" >刷新我的班级</a> <a href="我的班级.html" target="_blank class="hong">管理我的班级</a></span></div>
+                            <div class="zsd_layer">
+                                    <h3>启东市汇龙中学</h3>
+  
+                                      <input type="checkbox" href="javascript:;"> 初一（1）班</a></li>
+                                      <input type="checkbox" href="javascript:;"> 初一（1）班</a></li>
+                                      <input type="checkbox" href="javascript:;"> 初一（1）班</a></li>
+                                      <input type="checkbox" href="javascript:;"> 初一（1）班</a></li>
+                                      <input type="checkbox" href="javascript:;"> 初一（1）班</a></li>
+                                      <input type="checkbox" href="javascript:;"> 初一（1）班</a></li>
+                                      <input type="checkbox" href="javascript:;"> 初一（1）班</a></li>
+                                      <input type="checkbox" href="javascript:;"> 初一（1）班</a></li>
+      
+                            </div>
+                        </dd>
+                    </dl>
+			                    <p>&nbsp;</p>
+			                    <dl>
+			                        <dt>&nbsp;</dt>
+			                        <dd>
+			                            <input type="image" src="../image/input_qrbjrstyx.png" onclick="location.href='综合测验页试题预选.html'">
+			                        </dd>
+			                    </dl>
+			                    <p>&nbsp;</p>
+			                    <p>&nbsp;</p>
+			                </div>
+
+            </div>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+<!--蒙层-->
+<div class="mengceng"></div>
+<!--客观作业------------------------------------客观作业----------------------------->
+<form class="tianjia  kgzy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一1</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="客观作业.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+<!--客观检测------------------------------------客观检测----------------------------->
+<form class="tianjia  kgcy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="客观测验页建立试卷框架.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+<!--综合检测------------------------------------综合检测----------------------------->
+<form class="tianjia  zhcy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一3</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="综合测验页建立试卷框架.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+<script>
+jQuery(".chzn-select").chosen();
+
+$(function(){
+    $('#select_label input').click(function(){
+        var id = $(this).attr('id').replace(/zs/, 'ss');
+        if($(this).prop('checked')){
+            var html = "<a id='"+ id +"' href='javascript:removeSz("+ $(this).attr('id').replace(/zs_/, '') +");'>"+ $(this).attr('val') +"</a>";
+            $('#select_zs').append(html);
+        } else {
+            $('#' + id).remove();
+        }
+    });
+});
+//删除
+function removeSz(id){
+    $('#zs_' + id).attr('checked', false);
+    $('#ss_' + id).remove();
+}
+</script>
+</body>
+</html>

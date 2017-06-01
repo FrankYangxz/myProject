@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="../image/logo.png" /></div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user">
+            <a class="iLogin" href="login.html">登录</a>
+            <a class="iRegister" href="register.html">注册</a>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<!-- login -->
+<div class="login_bg" style="background-size: contain;>
+    <div class="con">
+        <div class="login_region" style="width: 500px;height: 415px;right: 50px;margin-top: -210px;">
+            <!-- forget pass -->
+            <div class="student">
+                <div class="login_div">
+                    <p class="login_title"><img src="../image/title_wjmm.png" /></p>
+                    <div class="login_input">
+                        <strong><img src="../image/font-user.png" /></strong>
+                        <input type="text" placeholder="请输入您的手机号" />
+                    </div>
+                    <div class="login_input_smail f_l">
+                        <strong><img src="../image/font-yzm.png" /></strong>
+                        <input type="text" placeholder="请输入验证码" />
+                    </div>
+                    <div class="f_r"><img src="../image/get_yzm.png"></div>
+                    <button class="btn_xyb"></button>
+                </div>
+            </div>
+            <!-- forget pass -->
+        </div>
+    </div>
+</div>
+<!-- login -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+<script type="text/javascript">
+	var h = $(window).height();
+	var d= parseInt( h - 167 ) + "px";
+	$('.login_bg').css("height",d);
+</script>
+<!--蒙层-->
+<div class="mengceng"></div>
+<form class="tianjia" id="qwe" action="申请试卷页.html" method="get">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button type="submit" class="queDing">确定</button>
+			<button class="quXiao">取消</button> 
+		</div>
+</body>
+</html>

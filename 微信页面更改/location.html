@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="img/logo01.png" rel="shortcut icon">
+		<title>选择服务城市</title>
+		<style type="text/css">
+			*{padding: 0;margin:0;}
+			dl dt{list-style: none;}
+			a{text-decoration: none;}
+			body{background: #f3f3f3;}
+			.dl01,.dl02{background:#FFFFFF;}
+			.dl01 dt,.dl02 dt{width: 100vw;height: 8.482vw;line-height: 8.482vw;text-indent: 2.778vw;font-size: 4.1928vw;background: #f3f3f3;color: #888888;}
+			.dl01 dd,.dl02 dd{height:9.734vw;line-height: 9.734vw;margin: 2px 0;}
+			.dl01 img{width: 5.078vw;height: 4.978vw;float: right;margin-right: 2.778vw;margin-top: 2.278vw;}
+			.dl02 a{display: block;width: 97.222vw;padding: 2.7706 0;margin-left: 2.778vw;font-size:4.1928vw;color: #333333;border-bottom: 1px solid #f3f3f3;}
+			.dl01 span{margin-left: 2.778vw;}
+
+		</style>
+	</head>
+	<body>
+		<dl class="dl01  ">
+			<dt>当前定位城市</dt>
+			<dd><span>北京</span> <img src="img/duigou.png"/></dd>
+		</dl>
+		<dl class="dl02">
+			<dt>选择其它城市</dt>
+			<dd><a >上海</a></dd>
+			<dd><a >天津</a></dd>
+			<dd><a >北京</a></dd>
+		</dl>
+		
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.dl02 dd a').on('click',function(){
+				var text=$(this).text();
+				localStorage.oWeiZhi = text;
+				var s = $('.dl01 dd span').text();
+				var t = s;
+				s = text;//定位城市
+				text = t;//服务城市
+				var oDqwz=sessionStorage.oDq = s;
+				var oFw=sessionStorage.oFw = text;
+				oDqwz = sessionStorage.oDq = sessionStorage.oDq || '北京';
+				oFw = sessionStorage.oFw = sessionStorage.oFw;
+				$(this).html(oFw);
+				$('.dl01 dd span').text(oDqwz);
+				window.location='index.html';
+			})		
+			$('.dl01 dd span').text(localStorage.oWeiZhi);
+			    
+		</script>
+		
+		
+	</body>
+</html>

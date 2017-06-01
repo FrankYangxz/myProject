@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/common.js"></script>
+    <script src="../lib/chosen/chosen.jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+
+
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="../image/logo.png" /></div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="#" class="on">用户管理</a>
+                </li>
+                <li>
+                    <a href="score_list.html">成绩管理</a>
+                </li>
+                <li>
+                    <a href="papers_list.html">试卷管理</a>
+                </li>  
+            </ul>
+        </div>
+        <div class="user">
+            <div class="icon_user">
+                系统管理员admin
+            </div>
+            <div class="icon_out"><a href="#">退出</a></div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<div class="content">
+    <div class="con">
+        <!-- 左侧导航 -->
+        <div class="menu">
+            <div class="menu_tit">用户管理</div>
+            <div class="menu_con">
+                <ul>
+                    <li><a href="user_list.html">学生管理</a></li>
+                    <li class="on"><a href="sch_teach_list.html">学校及老师管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 左侧导航 -->
+
+        <!-- 右侧内容 -->
+        <div class="r_content">
+            <div class="r_body">
+               <div class="r_title"><font color="#4c9fed">老师管理</font></div>
+                <div>&emsp;</div>
+                <div><a href="teacher_add.html">+创建老师账号</a></div>
+                <div>&emsp;</div>
+                 <div class="user_div">
+                  <dl>
+                        <dd>
+                           <table>                  	
+                                  <tr>  
+                                    <td><dt>老师姓名：</dt></td>
+                                    <td>
+                                    <dd><input type="text" class="input_text" style="width:170px;" /></dd>
+                                    </td>
+                                     <td><dt>老师账号：</dt></td>
+                                    <td>
+                                    <dd><input type="text" class="input_text" style="width:170px;" /></dd>
+                                    </td>
+                                    <td><button type="button" style="width:60px;">搜索</button></td>
+                                </tr>
+                            </table>
+                        </dd>
+                    </dl>
+               </div>  
+                <table class="table">
+                    <thead>
+                        <th>ID</th>
+                        <th>账号</th>
+                        <th>老师姓名</th>
+                        <th>所管班级</th>
+                        <th>操作</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>zhangyu</td>
+                            <td>张宇</td>
+                            <td>初一121班、初一125班</td>
+                            <td>
+                            	<a href="#">编辑</a>
+                            	<a href="#">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>lifang</td>
+                            <td>李芳</td>
+                            <td>初一123班、初一126班</td>
+                            <td>
+                            	<a href="#">编辑</a>
+                            	<a href="#">删除</a>
+                            </td>
+                            </td>
+                        </tr>
+            </table>
+            <p>&nbsp;</p>
+                <div class="r_page">
+                    <a href="#">上一页</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">...</a>
+                    <a href="#">20</a>
+                    <a href="#">下一页</a>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- 右侧内容 -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- footer -->
+<script>
+jQuery(".chzn-select").chosen();  
+</script>
+
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+
+</body>
+</html>

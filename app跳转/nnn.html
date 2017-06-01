@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{font-size: 40px;color: #CD853F;}
+		</style>	
+	</head>
+	<body>
+		<a class="box">点击是否跳转</a>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script language="javascript">
+		//ios
+		$(".box").click(function(){
+			if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+			  	alert("ios")
+			    var loadDateTime = new Date();
+			    window.setTimeout(function() {
+				      var timeOutDateTime = new Date();
+				      if (timeOutDateTime - loadDateTime < 5000) {
+				      	alert("111")
+				        window.location = "https://itunes.apple.com/cn/app/na-shen-kong-jian-chuang-ye/id1050870433?mt=8";
+				      } else {
+				      	alert("222")
+				        window.close();
+				      }
+			    },25);
+			    window.location = "nashwork://space/";
+			  } else if (navigator.userAgent.match(/android/i)) {
+			  	alert("安卓")
+			        var state = null;
+				    try {
+				      state = window.open("nashwork://space/", '_blank');
+				    } catch(e) { 
+				    		console.log(e)
+				    }
+				    if (state) {
+				      window.close();
+				    } else {
+				      window.location = "http://a.app.qq.com/o/simple.jsp?plg_nld=1&pkgname=com.nashwork.space&plg_uin=1&plg_auth=1&plg_usr=1&plg_dev=1&plg_vkey=1";
+				    }
+			  }
+			
+		})
+			  
+		</script>
+	</body>
+</html>

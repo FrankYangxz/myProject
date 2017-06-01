@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<link href="i/logo.png" rel="shortcut icon">
+		<title>活动</title>
+		<link rel="stylesheet" type="text/css" href="../public/c/public.css" />
+		<link rel="stylesheet" type="text/css" href="c/active.css" />
+		<script src="../public/j/jquery-1.9.1.min.js"></script>
+		<script src="../public/j/fun.js"></script>
+		<script src="j/active.js"></script>
+		<script>
+			$(document).ready(function() {
+				document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="loading dis_load">
+				<div class="load"><img src="../public/i/loading.gif">加载中...</div>
+			</div>
+			<div class="changeTitle" onclick="goBack()"><img src="../public/i/anniu_02.jpg">
+				<p>返回</p>
+			</div>
+			<div class="active_img"><img src="i/a_img.jpg"></div>
+			<div class="content">
+				<h3 class="title">纳什空间首城国际项目的小狗科技是一家资深的互联网创业公司</h3>
+				<p><img src="i/icon_s.jpg">开始时间：<span class="start_time">2016.04.20 18:00</span></p>
+				<p><img src="i/icon_e.jpg">结束时间：<span class="end_time">2016.04.20 18:00</span></p>
+				<p><img src="i/icon_a.jpg"><span class="address">北京市朝阳区北四环东路97号</span></p>
+				<p>报名人数限制：<span class="number">80人</span></p>
+				<p>报名截止时间：<span class="abort_time">2016.04.20 18:00</span></p>
+				<div class="infor"></div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(document).ready(function() {
+			active_detail();
+		})
+	</script>
+	<script src="j/statistics.js"></script>
+
+</html>

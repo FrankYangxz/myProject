@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+<body>
+
+<!-- header -->
+
+<!-- login -->
+<div class="login_bg" style="background-size: contain;>
+    <div class="con">
+        <div class="login_region" style="width: 500px;height: 415px;right: 50px;margin-top: -210px;">
+
+            <!-- student login -->
+            <div >
+                <div class="login_div">
+                    <p class="login_title">系统管理员</p>
+                    <div class="login_input">
+                        <strong><img src="../image/font-user.png" /></strong>
+                        <input type="text" placeholder="请输入管理员账号" />
+                    </div>
+                    <div class="login_input">
+                        <strong><img src="../image/font-pass.png" /></strong>
+                        <input type="password" placeholder="请输入密码" />
+                    </div>
+                    <button class="btn_dl" onclick="window.location.href='user_list.html'" /></button>
+                </div>
+            </div>
+            <!-- student login -->
+        </div>
+    </div>
+</div>
+<!-- login -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+<script type="text/javascript">
+	var h = $(window).height();
+	var d= parseInt( h - 167 ) + "px";
+	$('.login_bg').css("height",d);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+i {font: inherit;}
+
+
+/**/
+body{background: #f4f4f4;}
+button{outline: none;}
+#header{width: 100vw;height: 26.66666vw;line-height: 26.6666666vw;text-align: center;background: #FFFFFF;color: #fea120;font-size: 4.799999999vw;margin-top: 3.99999999vw;}
+#header img{width: 7.999998vw;height: 7.9999998vw;margin-right: 3.33333333325vw;}
+.con{width:100vw;text-align: center;padding-top: 8.66666645vw;color: #c7c7c7;font-size: 3.73333324vw;}
+.close{width: 91.99999977vw;margin-left:3.9999999vw;height: 13.3333333vw;line-height: 13.333333vw;text-align: center;font-size: 4.799999988vw;border-radius:1.3333333vw;color: #FFFFFF;background: #ff8800;margin-top: 44.66666666vw;}

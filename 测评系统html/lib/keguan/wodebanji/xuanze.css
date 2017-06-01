@@ -1,0 +1,13 @@
+.xuan_nj{position: relative;width: 100%;font-size: 20px;}
+.xuan_nj .dropdown{position: absolute;right: 108px;top: -4px;height: 27px;}
+#qwe .xuan_nj .dropdown ul{padding: 0;margin-top:0px;}
+#qwe .xuan_nj .dropdown ul li{text-align: center;}
+
+.xuan_kc{position: relative;width: 100%;margin-top:50px;font-size: 20px;}
+.xuan_kc .dropdown{position: absolute;right: 108px;top: -4px;height: 27px;}
+#qwe .xuan_kc .dropdown ul{padding: 0;margin-top:0px;}
+#qwe .xuan_kc .dropdown ul li{text-align: center;}
+
+.make_sure{margin-top: 50px;margin-left: 230px;}
+.make_sure button{background: #4C9FED;border: none;outline-style: none;outline: none;padding: 0 4px;height: 22px;line-height: 22px;text-align: center;color: #FFFFFF;}
+.make_sure button:nth-of-type(2){margin-left:15px;}

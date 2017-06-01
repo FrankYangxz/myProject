@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="part/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="part/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="part/css/common.css"/>
+		<script src="part/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+			window.addEventListener("resize", function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+			}, false);
+		</script>
+	</head>
+	<body>
+		<div id="back">
+			<div class="backCon">
+				<span class="backImg">返回</span>
+				<span class="oTitle">纳什空间</span>
+			</div>
+		</div>
+		<div id="oTop">
+			<div class="oTopCon">
+				<img src="part/img/nashLogo.png"/>	
+			</div>
+		</div>
+		<div id="homeMain">
+			<p>整个城市都是</p>
+			<p>你的office</p>
+			<p>请选择你的联系方式</p>
+			<p class="oLink"><a href="member.html">我是员工</a></p>
+			<p class="oLink"><a href="outsider.html">我是非员工</a></p>
+		</div>
+		<script type="text/javascript">
+			$(".backImg").on("click",function(){
+				window.history.go(-1);
+			})
+		</script>
+		
+		
+	</body>
+</html>

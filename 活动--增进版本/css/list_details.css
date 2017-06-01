@@ -1,0 +1,68 @@
+html {width: 100%;-webkit-text-size-adjust： none;font-family: "微软雅黑","STHeitiTC-Light","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;}
+body{width: 100%;overflow-x: hidden;margin: 0;font-size: 0.14rem;line-height: 1.5;color: #333;}
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+html {
+    font-size: 62.5%; /* 10÷16=62.5% */
+}
+@media only screen and (min-width: 320px){
+    html {
+        font-size: 62.5%!important;
+    }
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important; /* 15.04÷16=94% */
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important; /* 17.44÷16=109% */
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important; /* 20÷16=125% */
+    }
+}
+/*以上是公共样式*/
+.oImg{position: fixed;right: 4.19999992vw;top:6.6933333vw;z-index: 1000;}
+/*标题，列表蓝*/
+.oAll_activity{width: 100%;background: #56adda;height:10.66666664vw;}
+.oAll_activity p{font-size:3.99999999vw;padding: 3.33335454vw;color: #FFFFFF;}
+.oAll_activity P img{float: right;}
+/*详细信息*/
+.oInfo{width: 100%;background: #f2f2f2;min-height: 50vh;padding-top: 5.5rem;}
+.oInfo_one{width: 100vw;padding-top: 2.6666666vw;}
+.oInfo_one .banner{width: 100vw;height:39.20vw;position: relative;}
+/*日期*/
+.date{position: absolute;left: 0;top: 0;}
+.date img{width: 17.066666vw;height: 14.13333325vw;}
+.date p:first-of-type{position: absolute;top:0;left:5.5466666vw;color:#FFFFFF;font-size: 3.19999992vw;}
+.date p:last-of-type{position: absolute;bottom: 2.1333328vw;left: 1.1333328vw;color:#111;font-size: 5.1199992vw;font-weight: 700;}
+
+/*活动时间地点*/
+.oTime{position: absolute;left: 0;bottom: 0;width: 100%;height:5.9999999vw;background: #333;opacity: 0.5;
+		padding-left:3.999999vw;padding-right: 3.999999vw;line-height: 6.4999999vw;font-size: 3.19999992vw;}
+.oTime .oTime_activity{color: #FFFFFF;float: left;z-index: 500;}
+.oTime .oTime_wangjing{color:#FFFFFF; float: left;margin-left:26.9333331vw;z-index: 500;}
+/*报名人数*/
+.oOrder{background: #FFFFFF;width: 100%;height: 8.799999vw;line-height: 8.799999vw;padding:0vw  4.2101vw;color: #333333;}
+.oOrder span:first-of-type{float: left;font-size: 4.533333vw;}
+.oOrder span:last-of-type{float: left;margin-left:39.96666664vw;color:#9f9f9f;font-size: 3.1999992vw;}
+.oOrder span img{width: 3.866666vw;height: 3.86666vw;margin-bottom: 5px;}
+
+/*倒计时*/
+#nav{width:28.0666666vw;height: 7.733333vw;line-height: 7.733333vw;text-align: center;position: absolute;right:1.05vw;top: 0;background: #fdb030;font-size: 3.999999vw;
+	border:1.173333vw solid #ffdca2;color: #FFFFFF;border-top: none;}
+/*结束遮罩层*/
+.over{width: 100vw;height:39.20vw;line-height: 39.20vw;background: #333333;opacity: 0.5;color: #FFFFFF;text-align: center;font-size: 4.799999vw;position: absolute;top: 0;left: 0;z-index: 600;}
+
+/*肉丝*/
+.select{font-size: 32px;font-size:2rem;height: 88px;height: 5.5rem; line-height: 88px; line-height: 5.5rem; padding-left: 20px; padding-left: 1.25rem;padding-right: 20px;padding-right: 1.25rem;}
+select {width:100%;border-radius:0;appearance:none;-moz-appearance:none;-webkit-appearance:none;background: #56adda url(../i/arrow.png) no-repeat fixed 96% 34px;background: #56adda url(../i/arrow.png) no-repeat fixed 96% 1.4533333333333333rem;color: #fff;}
+select::-ms-expand { display: none; }
+
+.select{position: fixed;z-index: 1000;}

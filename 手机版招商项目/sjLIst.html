@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<link href="zhaoShang/img/icon.png" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/zhanshang.css" />
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/shangjilist.css" />
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/fenye.css" />
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/select.css" />
+		<style type="text/css">
+			.combo-dropdown li {line-height: 50px;}
+			
+		</style>
+	</head>
+
+	<body>
+		<!--弹层-->
+		<div class="oZheFeiQi"></div>
+		<div class="oReason">
+			<form>
+				<p>废弃原因说明</p>
+				<textarea></textarea>
+				<a class="oFeiQiSub">确认提交</a>
+			</form>
+		</div>
+		<!--提醒更新成功-->
+		<div class="oTXSuccess">
+			<div class="oTXSuccessInfo">
+				<p><img src="zhaoShang/img/tixinggengxin_03.jpg" /></p>
+				<a class="oBtn oTXback">返回</a>
+			</div>
+		</div>
+		<!--重置密码-------------第一个弹层---------------------->
+		<div class="oPassword">
+			<form class="oPasswordInfo">
+				<p>请输入手机号码</p>
+				<p class="oyanInput"><input type="tel" placeholder="手机号码" id="oTel" style="display: inline-block;width: 50%;" /><input type="text" id="oYanZheng" placeholder="验证码" style="display: inline-block;width: 20%;border-left: 1px solid #666666;" />|&nbsp;<span class="oGetMa oColor">&nbsp;&nbsp;&nbsp;获取验证码</span><span class="oDaojiShi oColor" style="display: none;">倒计时<i>60</i>s</span></p>
+				<p>新密码</p>
+				<p><input type="password" id="oNewPwd" /></p>
+				<p>再次输入新密码</p>
+				<p><input type="password" id="oNewPwdSecond" /></p>
+				<a class="oQueRen">确认提交</a>
+			</form>
+		</div>
+		<!---------顶部-->
+		<div class="top">
+			<div class="topCon">
+				<img src="zhaoShang/img/logo2.png" />
+			</div>
+		</div>
+		<div class="banner">
+			<div class="bannerInfo">
+				<p class="logohh"></p>
+				<p>与纳什空间共同成长</p>
+				<p>推荐优质客户，纳什与您共同成长</p>
+			</div>
+		</div>
+		<!------main------>
+		<div class="main">
+			<!--左侧-->
+			<div class="mainLeft">
+				<!--下拉菜单-->
+				<ul class="oList">
+					<li id="_keyTime">
+						<select name="time" class="oSelect">
+							<option value="0">推荐时间段</option>
+							<option value="1">一星期内</option>
+							<option value="2">一月内</option>
+							<option value="3">三个月内</option>
+							<option value="4">半年内</option>
+							<option value="5">一年半内</option>
+						</select>
+					</li>
+					<li id="_keyProgress">
+						<select name="progress" class="oSelect">
+							<option value="0">商机进度</option>
+							<option value="1">带看</option>
+							<option value="2">赢单</option>
+							<option value="3">丢单</option>
+							<option value="4">付款中</option>
+							<option value="5">已付款</option>
+						</select>
+					</li>
+					<li id="_keyType">
+						<select name="typee" class="oSelect">
+							<option value="0">商机类型</option>
+							<option value="Space">Space</option>
+							<option value="Studio">Studio</option>
+						</select>
+					</li>
+					<div style="clear:both;"></div>
+				</ul>
+				<p class="menu"><span class="oAll oColor">全部</span>|<span class="oTiXing">更新提醒</span>|<span class="oChuang">待创建商机</span>|<span class="oFeI">废弃</span></p>
+				<!---------------------三个表单。全部，提醒更新，带创建商机----------------------->
+				<!--全部-->
+				<div class="mainLeftAll">
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i></i></span> <span class="oTime">推荐时间：<i></i></span></p>
+							<p><span class="oID">客户姓名:<i class="_nameCus"></i></span> <span class="oTime ">商机类型：<i class="oColor"></i></span></p>
+							<p><span class="oID">客户电话:<i class="_telCus"></i></span> <span class="oTime">商机进度：<i class="oColor"></i></span></p>
+							<p><span class="oID">推荐人姓名:<i class="_namePref"></i></span></p>
+							<p><span class="oID">推荐人电话:<i class="_telPref"></i></span></p>
+							<p>
+								<a class="lookforinformation">查看详情</a>
+								<a style="float: right;" class="oTiXingMoneyInfo">提醒更新付款信息</a>
+							</p><br />
+							<p>
+								<a class="_Feiqi">废弃</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--分页-->
+				<div class="tcdPageCode"></div>
+			</div>
+			<!--右侧-->
+			<div class="mainRight">
+				<div class="mainRightCon">
+					<p>客服信息</p>
+					<p>客服编号：<span class="oKeFuNum"></span>
+						<a class="oResetPassWord">重置密码</a>
+					</p>
+					<p class="oKeFuEmail"></p>
+					<button class="oExit">退出登录</button>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		<!--底部-->
+		<!-----------------底部------------------>
+		<iframe src="foot.html" scrolling="no" width="100%" height="445px" marginheight="0" marginwidth="0" border="none"></iframe>
+		<script src="zhaoShang/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/tongji.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/jquery.page.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/creatresetpwd.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/selelelel.js" type="text/javascript" charset="utf-8"></script>
+		<!--分页-->
+		<script type="text/javascript">
+			//渲染右侧部分
+			$(".oKeFuNum").html(sessionStorage.name);
+			$(".oKeFuEmail").html(sessionStorage.email);
+			//进入页面渲染全部数据第一页
+			var oPag = sessionStorage.oPag = 1; //页数(第几页)
+			var oActionType = sessionStorage.oActionType = 0; // 1-待创建商机 2-待更新付款信息 0-默认是全部
+			var oProgress = sessionStorage.oProgress = 0; //商机进度 
+			var oType = sessionStorage.oType = ""; //商机类型 Space  Studio
+			var oTime = sessionStorage.oTime = 0; //推荐时间段
+			var totalPage; //总的页数
+			oClick();
+			function getDefault() {}
+			function getSuccess(data) {
+				if(data.code == "0") {
+					totalPage = sessionStorage.totalPage = data.data.totalNum;
+					$(".tcdPageCode").createPage({
+						pageCount: totalPage,
+						current: page(),
+						backFn: function(p) {
+							console.log(1)
+							sessionStorage.oPag = p;
+							oClick();
+						}
+					});
+					function page(){
+						var page = sessionStorage.oPag;
+						return Number(page);
+					}
+					//渲染第一页的数据
+					pageData(data);
+				} else if (data.code == "10006"){
+					alert("超时");
+				} else {
+					location.href = "loginfalse.html";
+				}
+			}
+			
+			function pageData(data) {
+				$('.mainLeftAll').empty();
+				for(var i = 0; i < data.data.list.length; i++) {
+					var oInfo = data.data.list[i];
+					var timer = oInfo.createTime;
+					timer = new Date(parseInt(timer) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
+					timer = timer.split(' ')[0];
+					if(oInfo.opportunityInfo.length == 0) {
+						var isDel = oInfo.isDel;
+						//判断是否废弃，废弃的话在id号后面显示废弃
+						var or = "";
+						if( isDel == 1 ){
+							or = "(已废弃)";
+						}
+						var html = "";
+						html += "<div class=\"oForm\"><div class=\"oFromCon\">";
+						html += "<p><span class=\"oID oColor\">ID:<i>" + oInfo.code + "</i><i class=\"oColor\">  "+or+"</i></span> <span class=\"oTime\">推荐时间：<i>" + timer + "</i></span></p>";
+						html += "<p><span class=\"oID\">客户姓名:<i class=\"_nameCus\">" + oInfo.custom.name + "</i></span> <span class=\"oTime\">商机类型：<i class=\"oColor\"></i></span></p>";
+						html += "<p><span class=\"oID\">客户电话:<i class=\"_telCus\">" + oInfo.custom.tel + "</i></span> <span class=\"oTime\">商机进度：<i class=\"oColor\"></i></span></p>";
+						html += "<p><span class=\"oID\">推荐人姓名:<i class=\"_namePref\">" + oInfo.reference.name + "</i></span></p>";
+						html += "<p><span class=\"oID\">推荐人电话:<i class=\"_telPref\">" + oInfo.reference.tel + "</i></span></p>";
+						html += "<p data-value=" + oInfo.id + " data-isdel="+oInfo.isDel+" ><a class=\"lookforinformation\" data-value="+oInfo.action.createOpportunity+" id=\"_color\">查看详情</a><a style=\"float: right;\" class=\"oTiXingMoneyInfo\"  data-value=" + oInfo.reference.uid + " id=\"_color\">提醒更新付款信息</a></p><br />";
+						html += "<p data-isdel="+oInfo.isDel+" ><a class=\"_Feiqi\"  data-value=" + oInfo.id + " id=\"_color\">废弃</a></p></div></div>";
+						$('.mainLeftAll').append(html);
+					} else {
+						var oLeiXing = "";
+						for(var s = 0; s < oInfo.opportunityInfo.length; s++) {
+							oLeiXing += " , " + oInfo.opportunityInfo[s].type;
+						}
+						oLeiXing = oLeiXing.substring(3);
+						var oJindu = "";
+						for(var s = 0; s < oInfo.opportunityInfo.length; s++) {
+							oJindu += " , " + oInfo.opportunityInfo[s].state;
+						}
+						oJindu = oJindu.substring(3);
+						var html = "";
+						html += "<div class=\"oForm\"><div class=\"oFromCon\">";
+						html += "<p><span class=\"oID oColor\">ID:<i>" + oInfo.code + "</i></span> <span class=\"oTime\">推荐时间：<i>" + timer + "</i></span></p>";
+						html += "<p><span class=\"oID\">客户姓名:<i class=\"_nameCus\">" + oInfo.custom.name + "</i></span> <span class=\"oTime\">商机类型：<i class=\"oColor\">" + oLeiXing + "</i></span></p>";
+						html += "<p><span class=\"oID\">客户电话:<i class=\"_telCus\">" + oInfo.custom.tel + "</i></span> <span class=\"oTime\">商机进度：<i class=\"oColor\">" + oJindu + "</i></span></p>";
+						html += "<p><span class=\"oID\">推荐人姓名:<i class=\"_namePref\">" + oInfo.reference.name + "</i></span></p>";
+						html += "<p><span class=\"oID\">推荐人电话:<i class=\"_telPref\">" + oInfo.reference.tel + "</i></span></p>";
+						html += "<p data-value=" + oInfo.id + "><a class=\"lookforinformation\" data-value=" + oInfo.action.createOpportunity + ">查看详情</a><a style=\"float: right;\" class=\"oTiXingMoneyInfo\"  data-value=" + oInfo.reference.tel + " data-up=" + oInfo.action.notifyUpdatePayInfo + " >提醒更新付款信息</a></p><br />";
+						html += "<p><a class=\"_Feiqi\"  data-value="+ oInfo.id +">废弃</a></p></div></div>";
+						$('.mainLeftAll').append(html);
+					}
+				}
+			}
+			//点击废弃
+			$(".oFeI").click(function() {
+				$(this).addClass("oColor").siblings().removeClass("oColor");
+				$(".oFromCon .lookforinformation").css("opacity","0.5");
+				sessionStorage.oActionType = 3;
+				oClick();
+			});
+			//点击更新提醒
+			$(".oTiXing").click(function() {
+				sessionStorage.oActionType = 2;
+				oClick();
+			});
+			//点击待创建商机
+			$(".oChuang").click(function() {
+				sessionStorage.oActionType = 1;
+				oClick();
+			});
+			//点击全部
+			$(".oAll").click(function() {
+				sessionStorage.oPag = 1;
+				location.reload();
+			})
+
+			//下拉菜单实例化
+			$(function() {
+				$('#_keyTime .oSelect').comboSelect();
+				$('#_keyProgress .oSelect').comboSelect();
+				$('#_keyType .oSelect').comboSelect();
+				$("#_keyTime .combo-dropdown li").click(function() {
+					var oVal = $(this).data("value");
+					sessionStorage.oTime = oVal;
+					oClick();
+				})
+				$("#_keyProgress .combo-dropdown li").click(function() {
+					var oVal = $(this).data("value");
+					sessionStorage.oProgress = oVal;
+					oClick();
+				})
+				$("#_keyType .combo-dropdown li").click(function() {
+					var oVal = $(this).data("value");
+					sessionStorage.oType = oVal;
+					oClick();
+				})
+			});
+			//点击
+			function oClick() {
+				var oData;
+				$('.mainLeftAll').empty();
+				oData = { page: sessionStorage.oPag, pageNum: 15, actionType: sessionStorage.oActionType, progress: sessionStorage.oProgress, type: sessionStorage.oType, time: sessionStorage.oTime };
+				console.log(oData);
+				getAjax("r=reference/getList", oData, getSuccess, getDefault);
+			}
+			//退出登录
+//			$(".oExit").click(function() {
+//				sessionStorage.clear();
+//				location.href = "index.html";
+//			})
+			//进入列表
+			$("body").delegate(".lookforinformation", "click", function() {
+				var  isDel = $(this).parent().data("isdel");
+				if ( isDel == 1  ) {
+					alert("该商机已废弃，暂无法执行该操作");
+				} else{
+					var oVal = $(this).parent().data("value"); //是推荐id
+					location.href = "liebiao.html?rid=" + oVal;
+				}
+				
+			});
+			//提醒更新
+			$("body").delegate(".oTiXingMoneyInfo", "click", function() {
+				var oVal = $(this).data("value").toString(); //客户电话
+				var oData = { tel: oVal };
+				var ooo = $(this).data("up");
+				if( ooo == 1) {
+					OAJAX("r=payInfo/notify", oData, oTiXingScuuess, oTiXingDefault)
+				} else {
+					alert("暂时无法执行更新操作");
+				}
+
+			});
+
+			function oTiXingScuuess(data) {
+				console.log(data)
+				if(data.code == 0) {
+					$('.oZheFeiQi').show();
+					$(".oTXSuccess").show();
+					console.log("tixingchengdsfs")
+				}
+			}
+
+			function oTiXingDefault() {}
+			$('.oTXback').click(function() {
+				$('.oZheFeiQi').hide();
+				$('.oTXSuccess').hide();
+			})
+			//废弃
+			var oTuiJianId;
+			$("body").delegate("._Feiqi", "click", function() {
+				var  oisDel = $(this).parent().data("isdel");
+				if ( oisDel == 1  ) {
+					alert("该商机已废弃，暂无法执行该操作");
+				} else {
+					$('.oZheFeiQi').show();
+					$('.oReason').show();
+					oTuiJianId = $(this).data("value");
+				}	
+			});
+			$(".oFeiQiSub").click(function() {
+				var oReason = $(".oReason textarea").val();
+				if(oReason == "") {
+					alert("请输入废弃原因！")
+					return false;
+				}
+				var oData = { id: oTuiJianId, reason: oReason };
+				console.log(oData)
+				OAJAX("r=reference/del", oData, oFeiqiScuuess, oFeiqiDefault)
+			})
+			function oFeiqiScuuess(data) {
+				if(data.code == 0) {
+					$('.oZheFeiQi').hide();
+					$('.oReason').hide();
+					location.reload();
+				}
+			}
+			function oFeiqiDefault() {
+				alert("数据提交失败！")
+			}
+		</script>
+	</body>
+
+</html>

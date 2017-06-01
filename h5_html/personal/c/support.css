@@ -1,0 +1,15 @@
+.support{width: 750px;width: 10rem; margin: auto; height: 100%; margin-top: 88px; margin-top: 1.1733333333333333rem;overflow: hidden; color: #333;}
+.support p{font-size: 30px;font-size: 0.4rem;color:#a4a5a4;height: 80px;height: 1.0666666666666667rem; line-height: 80px; line-height: 1.0666666666666667rem; background: #f4f4f4;padding-left: 20px; padding-left: 0.26666666666666666rem;}
+.support_person{ font-size: 34px;font-size: 0.4533333333333333rem;border-bottom: 1px solid #d8d8d8; padding:20px 40px; padding:0.26666666666666666rem 0.5333333333333333rem; height: 95px; height: 1.2666666666666666rem; line-height: 95px; line-height: 1.2666666666666666rem;}
+.support_person .support_photo{width: 95px;width: 1.2666666666666666rem; height: 95px; height: 1.2666666666666666rem; float: left;}
+.support_person .support_photo img{width: 100%; border-radius: 50%; vertical-align: top;}
+.support_person .support_name{float:left;margin-left: 20px;margin-left: 0.26666666666666666rem; width: 50%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.support_person .job{width: 30%; float:right;text-align:right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.search{position:relative;height: 98px;height: 1.3066666666666666rem; line-height: 98px; line-height: 1.3066666666666666rem;background: #E6E6E6;}
+.search .search_input{width:730px;width:9.733333333333333rem; padding-left:12%;color:#707070;font-size: 30px;font-size: 0.4rem; border-radius: 5px; margin:10px auto;margin:0.13333333333333333rem auto;height: 78px;height: 1.04rem; line-height: 78px; line-height: 1.04rem; vertical-align: top; background: #fff;background: #fff url(../i/search.png)  5% 50% no-repeat;}
+.search .search_btn{position: absolute;width: 80px; top: 10px;  top:0.13333333333333333rem;right: 10px; right:0.13333333333333333rem;color:#fff;font-size: 30px;font-size: 0.4rem;border-radius:0 5px 5px 0;height: 78px;height: 1.04rem; line-height: 78px; line-height: 1.04rem; vertical-align: middle; background:#FEA120;}
+
+.display_none{display: none;}
+.no{position: relative;}
+.no img{position: relative; width: 100%; height: 100%;}
+.no .no_result{ position: absolute;width: 120px; top: 50%; left: 50%; text-align: center; font-size: 16px; margin-left: -60px; background:none;}

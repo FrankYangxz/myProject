@@ -1,0 +1,240 @@
+html {
+	width: 100%;
+	overflow-x: hidden;
+	font-size: 100px;
+	font-family: "Hiragino Sans GB"
+}
+
+@media(min-device-width :375px) and (max-device-width :667px) and (-webkit-min-device-pixel-ratio :2) {
+html {
+	font-size: 117.1875px
+}
+}
+
+@media(min-device-width :414px) and (max-device-width :736px) and (-webkit-min-device-pixel-ratio :3) {
+html {
+	font-size: 129.375px
+}
+}
+body {
+	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	font-size: .14rem;
+	line-height: 1.5;
+	color: #333
+}
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal
+}
+a {
+	text-decoration: none;
+	color: #333
+}
+img {
+	vertical-align: middle;
+	max-width: 100%
+}
+em, i {
+	font-style: normal
+}
+input {
+	font-family: "Hiragino Sans GB";
+	border: 0;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+	width: 100%;
+	font-size: .12rem
+}
+textarea {
+	outline: 0;
+	resize: none;
+	width: 100%;
+	padding: 0 .1rem;
+	border: 1px solid #DDD;
+	line-height: .4rem;	
+	font-size: .14rem;
+	border: 1px solid #DDD;
+	margin-bottom: .15rem;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+ul, li {
+	padding: 0;
+	margin: 0;
+	list-style: none
+}
+.oh {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+.fl {
+	float: left
+}
+.fr {
+	float: right
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both
+}
+.line-all, .line-top, .line-bottom, .line-right, .line-left {
+	position: relative
+}
+.line-all:before, .line-all:after, .line-top:after, .line-bottom:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 200%;
+	height: 1px;
+	background: #DDD;
+	-webkit-transform: scale(0.5)
+}
+.line-right:before, .line-left:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 1px;
+	height: 200%;
+	background: #DDD;
+	-webkit-transform: scale(0.5)
+}
+.line-right:before {
+	right: 0;
+	-webkit-transform-origin: right top
+}
+.line-left:before {
+	left: 0;
+	-webkit-transform-origin: left top
+}
+.line-all:before, .line-top:after {
+	top: 0;
+	-webkit-transform-origin: left top
+}
+.line-all:after, .line-bottom:after {
+	bottom: 0;
+	-webkit-transform-origin: left bottom
+}
+.icon-go {
+	position: absolute;
+	right: .12rem;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: .1rem;
+	height: .1rem;
+	border-top: 4px solid #CCC;
+	border-right: 4px solid #CCC;
+	-webkit-transform: rotate(45deg)
+}
+.title {
+	position: relative;
+	height: .44rem;
+	padding: 0 .12rem;
+	overflow: hidden;
+	font-size: .17rem;
+	line-height: .44rem;
+	text-align: center;
+	color: #FFF;
+	background: #fe9f39
+}
+.title-back {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: .4rem
+}
+.title-back:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: .12rem;
+	border-left: 4px solid #FFF;
+	border-top: 4px solid #FFF;
+	width: .14rem;
+	height: .14rem;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+.title a {
+	color: #FFF;
+	font-size: .17rem
+}
+.title .fr {
+	position: absolute;
+	right: .12rem;
+	font-size: .15rem;
+	line-height: .44rem
+}
+.img-wraper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+.img-wraper img {
+	width: 100%;
+	height: auto
+}
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance:none
+}
+.icon-back {
+	display: inline-block;
+	width: .11rem;
+	height: .205rem;
+}
+.common-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: .44rem;
+	padding: 0 .35rem;
+	border-bottom: 1px solid #ddd;
+	background-color: rgba(255,255,255,.9);
+	line-height: .44rem;
+	text-align: center;
+	z-index: 10;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+.common-header .header-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: .35rem;
+	height: .44rem
+}
+.common-header .icon-back {
+	vertical-align: -3px
+}
+.invite{
+	margin-bottom: .15rem; font-size: .14rem;
+}
+.invite span{color: #fe9f39;}
+.invitation_code
+{
+	width:100%;
+	background:#fff;
+	margin-bottom: 4%;
+	font-size: 0.14rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+ .invitation_code img{
+	width: 10%;
+}
+ .invitation_code span{ color: #fff;}

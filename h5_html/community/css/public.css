@@ -1,0 +1,24 @@
+/*公共样式*/
+html {width: 100%;-webkit-text-size-adjust： none;font-family:"STHeitiTC-Light","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;}
+body {width: 100%;color: #3c3c3c;background: #fff;min-height: 100%;}
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+i {font: inherit;}
+input,select{vertical-align:middle;}
+/*设置左右浮动，class="fl"为左浮动，class="fr"为右浮动*/
+.fl { float:left; display:inline;}
+.fr { float:right; display:inline;}
+/*把h1--h6的字体大小和加粗样式全部清除掉，这样h标签就跟普通标签没有区别*/
+h1, h2, h3, h4, h5, h6 {font-weight: normal;font-size: 100%;}
+/*a样式*/
+a:link, a:visited { text-decoration:none;}
+a {text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a:hover {text-decoration: none;outline: none; color: #fff;}
+/*clear,clearfix是清楚浮动的----clearfix用法是：给浮动元素的父级添加class="clearfix"，即可清楚子元素的浮动，目前是业内比较流行的清楚浮动方法。*/
+.clear{ clear:both;}
+.clearfix:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix {zoom:1;display:block;_height:1px;clear:both;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary,time{display: block;}
+input[type="text"],input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}

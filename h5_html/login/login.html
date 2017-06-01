@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>登录</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+		<link type="text/css" rel="stylesheet" href="css/login.css">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/jquery.md5.js"></script>
+		<script src="js/fun.js"></script>
+		<script type="text/javascript">
+			var vtimeout;
+			function settime(val, countdown) {
+				if (countdown == 0) {
+					if (vtimeout) {
+						clearTimeout(vtimeout);
+					}
+					val.removeAttr('disabled');
+					val.html('发送验证码');
+					countdown = 60;
+					return false;
+				} else {
+					val.attr('disabled', true);
+					val.html(countdown + " 秒后重发");
+					countdown--;
+				}
+				vtimeout = setTimeout(function() {
+						settime(val, countdown)
+					},
+					1000);
+			}
+		</script>
+	</head>
+
+	<body style="background: #f2f2f2;">
+		<div class="loading dis_load">
+			<div class="load"><img src="img/loading.gif">加载中...</div>
+		</div>
+		<form onsubmit="return false;">
+			<p class="invitation_code"><img src="img/icon.png" />纳什空间 · 办公社交圈</p>
+			<div class="wrap">
+				<input type="tel" id="userid" name="phone_num" placeholder="手机号" maxLength="11">
+				<input type="password" id="password" name="password" placeholder="登录密码">
+				<input type="button" value="登录" class="login-btn" id="login_butten">
+				<p class="forgot"><a class="click_dis" href="forgot.html">忘记密码？</a></p>
+				<p class="login-tip reg">还没有纳什空间账号？ <a id="regist-url" class="click_dis" href="#">立即注册</a></p>
+			</div>
+		</form>
+		<script src="js/common.js"></script>
+	</body>
+
+	<script>
+		$('#login_butten').bind('click', function() {
+			var _from = GetQueryString('from');
+			console.log(_from);
+			login(_from);
+		});
+		var inviteCode = getCookie('inviteCode');
+		inviteCode = inviteCode ? inviteCode : '83368239';
+		$('#regist-url').attr('href', '/checkCode/' + inviteCode);
+	</script>
+	<script src="js/statistics.js"></script>
+
+</html>

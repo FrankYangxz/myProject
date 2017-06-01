@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<link href="i/logo.png" rel="shortcut icon">
+		<title>详情</title>
+		<link rel="stylesheet" type="text/css" href="c/post750.css" />
+		<script src="j/jquery-1.9.1.min.js"></script>
+		<script src="j/tips.js"></script>
+		<script>
+			$(document).ready(function() {
+				//$(".loading").removeClass("dis_load"); /*显示loading*/
+				document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+				if (window.history.length < 2) {
+					$('.changeTitle p').html('更多');
+				}
+			});
+			window.onload = function() {
+				$(".loading").addClass("dis_load"); /*加载完隐藏loading*/
+			}
+
+			function goBack() {
+				if (window.history.length <= 2) {
+					window.location.href = '/App/community/';
+				} else {
+					window.history.back(-1);
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<img src="i/logo.png" style="position:fixed; display: none; z-index: -999;">
+		<div class="loading dis_load">
+			<div class="load"><img src="i/loading.gif">加载中...</div>
+		</div>
+		<div class="changeTitle" onclick="goBack()"><img src="i/anniu_02.jpg"><p>返回</p></div>
+		<div class="page">
+			<div id="article">
+				<div class="notice_mark"></div>
+				<div class="notice_img">
+					<img src="i/open_browse.png">
+				</div>
+				<section>
+					<div class="top_div">
+						<!--<a id="J-regist-app" href="javascript:;"><img class="top_img" src="img/share_download.jpg"> </a>-->
+						<a id="J-call-app" href="javascript:;"><img class="top_img" src="i/share_download.jpg"> </a>
+					</div>
+					<div class="top">
+						<div class="fri_photo">
+							<img src="i/photo_03.png" />
+						</div>
+						<div class="f_title">
+							<h2>Rose@纳什空间<p class="xj_img"><img src="i/black.png"></p><p id="button1" class="call"><a href="#">私信</a></p></h2>
+							<time datetime="2015-9-21">2015-9-21</time>
+						</div>
+					</div>
+					<div class="main">
+						<h3>虽然没有躲过资本寒冬，但他们仍然心怀希望</h3>
+						<div class="twice_title" style="">
+							<p style="font-size:34px;font-size:0.4533333333333333rem;color: #d6a382;height: 0.5333333333333333rem;line-height:0.5333333333333333rem;">BAT背景大咖解密</p>
+							<p style="font-size:34px;font-size:0.4533333333333333rem;color: #d6a382;height: 0.5333333333333333rem;line-height: 0.5333333333333333rem;">阿里巴巴的崛起之路</p>
+						</div>
+						<pre>位于纳什空间首城国际项目的小狗科技，是一家资深的互联网创业公司。目前他们的第二款APP求偶已经正式提交APP Store，预计将在2周左右上线，届时安卓版本也会同步发布。</pre>
+						<ul class="imglist">
+							<li><img src="i/share_download.jpg"></li>
+							<li><img src="i/share_download.jpg"></li>
+						</ul>
+						<div class="list clearfix">
+							<div class="a_active">
+								<img src="i/photo_03.png">
+							</div>
+							<div class="a_detail">
+								<p class="a_content">每周三，让我们抱团聊创业，感受最真实的狼性内心</p>
+								<p class="a_time">活动时间：2016-04-25 16:00</p>
+							</div>
+							<div class="a_more">
+								<p>活动报名</p>
+							</div>
+						</div>
+						<div class="list clearfix">
+							<div class="a_active">
+								<img src="i/photo_03.png">
+							</div>
+							<div class="a_detail">
+								<p class="a_content">这个不逊于迪士尼的亲子天堂，让无数孩子撒泼打滚儿都要去！</p>
+							</div>
+							<div class="a_more">
+								<p>查看详情</p>
+							</div>
+						</div>
+						<div class="list clearfix">
+							<div class="a_active">
+								<img src="i/photo_03.png">
+							</div>
+							<div class="a_detail">
+								<p class="a_content">CBD会议室'在线预订联合办公区'全城办公，全程办公</p>
+								<div class="a_time clearfix">
+									<p class="a_total">售出<span>19</span>件</p>
+									<p class="a_price">¥<span class="price">199</span></p>
+								</div>
+							</div>
+							<div class="a_more">
+								<p>购买商品</p>
+							</div>
+						</div>
+						<div class="list clearfix">
+							<div class="a_active a_goods_i">
+								<img src="i/photo_03.png">
+							</div>
+							<div class="a_detail">
+								<p class="a_content">办公用品</p>
+								<p class="a_goos">提供公司注册和人力社保，标准化服务流程,伴您同行！</p>
+							</div>
+							<div class="a_more">
+								<p>更多商品</p>
+							</div>
+						</div>
+						<div class="map">
+							<p class="address">旺座中心<span>111阅读</span></p>
+							<p class="channel">灌水区<span>❯</span></p>
+						</div>
+					</div>
+					<div class="about_me clearfix">
+						<div class="upvote"><img src="i/support.png"></div>
+						<p class="upvote_p"><span>纳什测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电</span><img class="more" src="i/jiantou_03.png"></p>
+					</div>
+					<div class="about_me">
+						<p class="comment">123条评论</p>
+					</div>
+					<div class="message">
+						<i></i>
+						<ul class="mess_bg">
+							<li>
+								<div class="my_photo"><img src="i/photo_03.png" width="70" height="70"></div>
+								<div class="content">
+									<h3>Sara：<p class="min">5分钟前</p></h3>
+									<p class="discuss">贺电</p>
+								</div>
+							</li>
+							<li>
+								<div class="my_photo"><img src="i/photo_03.png" width="70" height="70"></div>
+								<div class="content">
+									<h3>Rose@纳什空间<p class="min">1小时前</p></h3>
+									<p class="discuss">回复<span>Sara</span>谢谢！</p>
+								</div>
+							</li>
+							<li>
+								<div class="my_photo"><img src="i/photo_03.png" width="70" height="70"></div>
+								<div class="content">
+									<h3>Sara<p class="min">3小时前</p></h3>
+									<p class="discuss">贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试贺电测试</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<div class="bottom">
+					<!--<a id="J-call-app" href="javascript:;">打开纳什空间互动</a>-->
+					<div class="upvote"><img src="i/support.png">
+						<!--<img src="i/support_over.png">-->赞</div>
+					<div class="sub_discuss"><input type="text" class="input_text"><a href="#" class="click_dis">发送</a></div>
+				</div>
+			</div>
+			<div class="tips_box"></div>
+		</div>
+		<script type="text/javascript">
+			//测试数据 正式上线 删除
+			var configIos = {
+				scheme: 'nashwork://space?app_data=eyJwYXJhbUlkIjo3MTEwLCJ0eXBlIjoiMTAxIiwibmFtZSI6IiIsInVybCI6IiJ9',
+				path: 'http://share.nashspace.com/checkCode/83368239'
+			};
+			var configAdr = {
+				scheme: 'nashwork://space?app_data=eyJwYXJhbUlkIjo3MTEwLCJ0eXBlIjoiMTAxIiwibmFtZSI6IiIsInVybCI6IiJ9',
+				path: 'http://share.nashspace.com/checkCode/83368239'
+			};
+			var pc_path = 'http://share.nashspace.com/checkCode/83368239';
+			//doc加载完成初始化数据
+			$(document).ready(function() {
+				init_argument();
+			});
+			/**  
+                浏览器版本信息
+                * @type {Object} 
+                * @return {Boolean}  返回布尔值     
+                */
+			function browser() {
+				var u = window.navigator.userAgent.toLowerCase();
+				var app = navigator.appVersion.toLowerCase();
+				return {
+					txt: u, // 浏览器版本信息
+					version: (u.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1], // 版本号       
+					msie: /msie/.test(u) && !/opera/.test(u), // IE内核
+					mozilla: /mozilla/.test(u) && !/(compatible|webkit)/.test(u), // 火狐浏览器
+					safari: /safari/.test(u) && !/chrome/.test(u), //是否为safair
+					chrome: /chrome/.test(u), //是否为chrome
+					opera: /opera/.test(u), //是否为oprea
+					presto: u.indexOf('presto/') > -1, //opera内核
+					webKit: u.indexOf('applewebkit/') > -1, //苹果、谷歌内核
+					gecko: u.indexOf('gecko/') > -1 && u.indexOf('khtml') == -1, //火狐内核
+					mobile: !!u.match(/applewebkit.*mobile.*/), //是否为移动终端
+					ios: !!u.match(/\(i[^;]+;( u;)? cpu.+mac os x/), //ios终端
+					android: u.indexOf('android') > -1, //android终端
+					iPhone: u.indexOf('iphone') > -1, //是否为iPhone
+					iPad: u.indexOf('ipad') > -1, //是否iPad
+					webApp: !!u.match(/applewebkit.*mobile.*/) && u.indexOf('safari/') == -1, //是否web应该程序，没有头部与底部
+					weiXin: u.match(/MicroMessenger/i) == 'micromessenger'
+				};
+			}
+			//页面参数信息体
+			var config = {
+				scheme: '',
+				path: '',
+				device: {
+					weixin: false,
+					ios: false,
+					android: false,
+					other: false
+				}
+			};
+
+			function init_argument() {
+				var b = browser();
+				if (b.weiXin) {
+					config.device.weixin = true;
+				}
+				if (b.ios || b.iPhone || b.iPad) {
+					config.scheme = configIos.scheme; //初始化替换
+					config.path = configIos.path; //初始化替换
+					config.device.ios = true;
+				} else if (b.android) {
+					config.scheme = configAdr.scheme; //初始化替换
+					config.path = configAdr.path; //初始化替换
+					config.device.android = true;
+				} else {
+					//非客户端浏览器打开
+					config.device.other = true;
+					config.path = pc_path;
+				}
+			}
+
+			function open_appstore() {
+				window.location = config.path;
+			}
+
+			function open_client() {
+				if (config.device.weixin || config.device.other) {
+					open_hint_ui();
+				} else {
+					window.location = config.scheme;
+				}
+			}
+			//非客户端浏览器打开页面 
+			function open_hint_ui() {
+				if (config.device.ios) {
+					//alert('ios ui');
+					$(".notice_mark,.notice_img").show();
+				} else if (config.device.android) {
+					$(".notice_mark,.notice_img").show();
+				} else {
+					//非客户端浏览器打开 
+					//$(".notice_mark,.notice_img").show();
+				}
+			}
+			window.addEventListener("DOMContentLoaded", function() {
+				document.getElementById("J-call-app").addEventListener('click', open_client, false);
+				//document.getElementById("J-regist-app").addEventListener('click', open_appstore, false);
+			}, false);
+			tips();
+			$('.input_text').bind('focus', function() {
+				$('.bottom').css({
+					'position': 'absolute'
+				});
+			}).bind('blur', function() {
+				$('.bottom').css({
+					'position': 'fixed'
+				});
+			});
+		</script>
+	</body>
+	<script src="j/statistics.js"></script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,minimum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/gaiban.css"/>
+	</head>
+	<body>
+		<div id="header">
+			<img src="img/gg.png"/>提交成功
+		</div>
+		<div class="con">
+			我们会在24小时内给您回复
+		</div>
+		<button id="btn" class="close">
+			关闭
+		</button>
+	</body>
+	<script type="text/javascript">
+		var oBtn = document.getElementById("btn");
+			touch.on( '#list li' , 'hold tap doubletap' , function(ev){
+				$(window).scrollTop(function(){
+					var s=$(this).scrollTop();
+					console.log(s);
+					sessionStorage.oTop = s;
+				})
+				window.location="index.html";
+			})
+	</script>
+</html>
+

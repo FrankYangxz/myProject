@@ -1,0 +1,228 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+table {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: none;
+}
+img {
+  display: block;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+body {
+  font-size: 14px;
+  font-family: "微软雅黑";
+  background: #999;
+}
+header {
+  width: 1000px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  background: #fff;
+}
+header h1 {
+  font-size: 28px;
+  font-weight: 500;
+  padding-left: 20px;
+  color: #0099ff;
+}
+nav {
+  width: 1000px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  background: #fff;
+}
+nav h2 {
+  font-size: 18px;
+  padding-left: 20px;
+  float: left;
+}
+nav span {
+  display: inline-block;
+  float: left;
+  font-size: 18px;
+}
+nav span em {
+  color: red;
+  font-style: normal;
+}
+section {
+  width: 1000px;
+  height: 800px;
+  margin: 0 auto;
+  background: #fff;
+}
+section .top {
+  width: 900px;
+  height: 400px;
+  margin: 0 auto;
+  border-bottom: 1px dashed #666;
+}
+section .top p {
+  padding-left: 300px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+}
+section .top p:nth-of-type(1) {
+  padding-top: 60px;
+}
+section .top p:nth-of-type(1) input {
+  width: 200px;
+  height: 25px;
+}
+section .top p:nth-of-type(2) {
+  padding-left: 316px;
+}
+section .top p:nth-of-type(2) input {
+  width: 200px;
+  height: 25px;
+}
+section .top p:nth-of-type(3) {
+  padding-left: 316px;
+}
+section .top p:nth-of-type(3) select {
+  width: 85px;
+  height: 22px;
+}
+section .top p:nth-of-type(3) span {
+  padding-left: 25px;
+}
+section .top p:nth-of-type(4) {
+  padding-left: 284px;
+}
+section .top p:nth-of-type(4) input {
+  width: 200px;
+  height: 25px;
+}
+section .top p:nth-of-type(5) {
+  padding-top: 30px;
+}
+section .top p:nth-of-type(5) input:nth-of-type(1) {
+  width: 108px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background: #0099ff;
+  color: #fff;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+section .top p:nth-of-type(5) input:nth-of-type(2) {
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 60px;
+  background: #0099ff;
+  color: #fff;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+section .bottom {
+  width: 900px;
+  height: 399px;
+  margin: 0 auto;
+}
+section .bottom p {
+  padding-left: 300px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+}
+section .bottom p:nth-of-type(1) {
+  padding-top: 60px;
+}
+section .bottom p:nth-of-type(1) input {
+  width: 200px;
+  height: 25px;
+}
+section .bottom p:nth-of-type(2) {
+  padding-left: 316px;
+}
+section .bottom p:nth-of-type(2) input {
+  width: 85px;
+  height: 25px;
+}
+section .bottom p:nth-of-type(2) span {
+  padding-left: 50px;
+}
+section .bottom p:nth-of-type(2) span select {
+  width: 85px;
+  height: 25px;
+}
+section .bottom p:nth-of-type(3) {
+  padding-left: 316px;
+}
+section .bottom p:nth-of-type(3) input {
+  width: 85px;
+  height: 25px;
+}
+section .bottom p:nth-of-type(3) span {
+  padding-left: 50px;
+}
+section .bottom p:nth-of-type(4) {
+  padding-top: 30px;
+}
+section .bottom p:nth-of-type(4) input:nth-of-type(1) {
+  width: 108px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background: #0099ff;
+  color: #fff;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+section .bottom p:nth-of-type(4) input:nth-of-type(2) {
+  width: 108px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 60px;
+  background: #0099ff;
+  color: #fff;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+/*# sourceMappingURL=style.css.map */

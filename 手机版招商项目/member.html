@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="part/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="part/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="part/css/common.css"/>
+		<script src="part/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="part/js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+			window.addEventListener("resize", function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+			}, false);
+		</script>
+	</head>
+	<body>
+		<div id="back">
+			<div class="backCon">
+				<span class="backImg">返回</span>
+				<span class="oTitle">纳什空间</span>
+			</div>
+		</div>
+		<div id="oTop">
+			<div class="oTopCon">
+				<img src="part/img/nashLogo.png"/>	
+			</div>
+		</div>
+		<!--<div id="banner">
+			<p>与纳什空间共同成长</p>
+			<p>推荐优质客户，纳什与您共同成长</p>
+		</div>-->
+		<!-------------------------------------推荐信息----------------------------------------->
+		<div class="recommend">
+			<div class="recommendCon">
+				<p class="addPlan">即刻加入纳新计划</p>
+				<p class="addPlanMore">加入纳新计划，与千万家入驻企业共同成长，加入纳什大家庭，获得更多奖励。</p>
+				<p class="customerTitle">客户信息</p>
+				<!--<p class="customerInfo"><span>＊</span><input type="text" id="oCity" placeholder="请选择城市" /></p>-->
+				<div class="customerInfo" id="oList"><span>＊</span><input type="text" placeholder="请选择城市" readonly="readonly" /><img class="oListImg" src="part/img/jiao_03.png"/>
+					<ul class="cityName"></ul>
+				</div>
+				<p class="customerInfo"><span>＊</span><input type="text" id="customName" placeholder="客户姓名" /></p>
+				<p class="customerInfo"><span>＊</span><input type="tel" id="customTel" placeholder="客户电话" /></p>
+				<hr style="height:1px;border:none;border-top:1px solid #c9c9c9;"/>
+				<p class="customerTitle">推荐人信息</p>
+				<div id="member">
+					<p class="lookInfo"><span>＊</span><input type="tel" id="nashEmployerId" placeholder="员工编号" /></p>
+					<span class="moreInformation">查看详细信息</span> 
+				</div>
+				<div class="nashEmpolerInfo">
+					<p class="nashEmpolerName"> 姓名：<span></span>  </p>
+					<p class="nashEmpolerEmail"> 电话：<span></span></p>
+				</div>
+				<p><a class="oBtn tuijian">立刻推荐</a></p>
+				<hr style="height:1px;border:none;border-top:1px solid #dbdddf;"/>
+				<p><a class="oBtn login" style="display: none;">推荐人登录</a></p>
+				<p class="oTel">或拨打24小时客服热线 : <a href="tel:4001160055">400-116-0055</a></p>
+			</div>
+		</div>
+		<!-----------------------------------推荐信息------------------------------------------------------>
+		<div class="companyIntroduce">
+			<div class="companyIntroduceCon">
+				<div class="infoCon">
+					<p class="addPlan">纳新计划 - 和伙伴们一起奔跑</p>
+					<p class="addPlanMore">一路走来，您的认可与支持给了纳什空间源源不断的前进能量。我们与您携手合作，为您的朋友提供最优质的创业空间。推荐客户成功入驻纳什空间，即可获得奖励。</p>
+				</div>
+				<div class="infoCon">
+					<p class="addPlan">奖励方案</p>
+					<p class="addPlanMore oColor">入驻推荐人</p>
+					<p class="addPlanMore">提交准确的客户信息，即可成为该客户的入驻推荐人。</p>
+					<p class="addPlanMore oColor">3个月</p>
+					<p class="addPlanMore">被推荐的客户自推荐之日起三个月内签约入驻纳什空间，推荐人即可获得推荐奖励。</p>
+					<p class="addPlanMore oColor">2%</p>
+					<p class="addPlanMore">奖励金额为首次签约的非居间入驻合同金额的2%（合同期超过12个月的，以12个月计）。</p>
+					<p class="explain">*纳什空间营销中心负责解释、修订。</p>
+				</div>
+				<div class="infoCon">
+					<p class="addPlan">为什么选择纳什空间</p>
+					<p class="addPlanMore">核心城市覆盖</p>
+					<div class="citylist">
+						<dl class="citylistCon">
+							<dt><img src="part/img/icon_05.jpg"/></dt>
+							<dd>北京</dd>
+						</dl>
+						<dl class="citylistCon">
+							<dt><img src="part/img/icon_07.jpg"/></dt>
+							<dd>上海</dd>
+						</dl>
+						<dl class="citylistCon">
+							<dt><img src="part/img/icon_09.jpg"/></dt>
+							<dd>天津</dd>
+						</dl>
+						<dl class="citylistCon">
+							<dt><img src="part/img/icon_11.jpg"/></dt>
+							<dd>深圳</dd>
+						</dl>
+						<dl class="citylistCon">
+							<dt><img src="part/img/icon_13.jpg"/></dt>
+							<dd>杭州comming</dd>
+						</dl>
+					</div>
+					<div style="clear: both;"></div>
+					<hr style="height:1px;border:none;border-top:1px solid #c9c9c9;margin-top: 0.2rem;"/>
+					<p class="addPlanMore paddd">强大的纳什实力支持</p>
+					<div class="mianji">
+						<dl>
+							<dt>6000+</dt>
+							<dd>入驻企业</dd>
+						</dl>
+						<dl>
+							<dt>30000㎡</dt>
+							<dd>在管面积</dd>
+						</dl>
+						<dl>
+							<dt>10000+</dt>
+							<dd>用户群体</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map">
+			<img src="part/img/icon_20.jpg"/>
+		</div>
+		<div class="oQuestion">
+			<div class="infoCon">
+				<p class="addPlan">纳新计划 - 和伙伴们一起奔跑</p>
+				<div class="questonCon">
+					<dl>
+						<dt class="ques">Q1. 推荐人需要提供哪些信息才可以提交介绍？</dt>
+						<dd>若要提交介绍，您需要提供客户和您的全名、电子邮件地址和电话号码，可帮助我们加快处理速度。</dd>
+					</dl>
+					<dl>
+						<dt class="ques">Q2. 我得到的报酬会扣税吗？</dt>
+						<dd>会，我们会严格按照国家税法规定和会计规范对所得报酬发生的税额进行代扣代缴。</dd>
+					</dl>
+					<dl>
+						<dt class="ques">Q3. 为纳什空间介绍客户会获得哪些报酬？</dt>
+						<dd>本页面提交准确客户信息，并通过纳什空间确认，即成为该客户的推荐人。</dd>
+						<dd>自提交信息之日起，该客户三个月内签约入驻纳什空间，推荐人即可获得推荐奖励。</dd>
+						<dd>奖励金额为该客户签约入驻合同租金的2%（合同期超过12个月的以12个月计算）。</dd>
+					</dl>
+					
+					<div class="moreQuestion">
+						<dl>
+							<dt class="ques">Q4. 我需要多长时间才可以拿到报酬？</dt>
+							<dd>当您的客户加入 纳什空间 时，您将在其推荐客户成交生效后 3–4 个星期收到第一笔报酬。此后您将在每个月 固定时间收到上个月的报酬。</dd>
+						</dl>
+						<dl>
+							<dt class="ques">Q5.  我怎样知道自己的介绍是否成功？</dt>
+							<dd>您会在被介绍人加入 纳什空间时收到 纳什空间 的电子邮件通知。您也可以点击“推荐人登录”页面，了解介绍的最新进展。</dd>
+						</dl>
+						<dl>
+							<dt class="ques">Q6. 我需要提供哪些信息才可以参加计划？</dt>
+							<dd>若要参加并开始提交介绍，您需要提供您的全名、电子邮件地址、电话号码。稍后，您需要提供所选账户的银行信息，以便我们将您获得的报酬转账至您的账户。</dd>
+						</dl>
+					</div>
+					<p class="lookMore"><span>展开更多</span> <img class="oimg" src="part/img/more_03.png"/>  </p>
+				</div>
+			</div>
+		</div>
+		<div class="rexian">
+			<p>更多热线，请拨打客服热线咨询</p>
+			<a href="tel:4001160055">400-116-0055</a>
+		</div>
+		<div class="oZheZhao"></div>
+		<div class="oTuisuccess">
+			<p class="successImg"><span>推荐成功</span></p>
+			<p>推荐详情和个人中心请登录网页版</p>
+			<p>refer.nashwork.com</p>
+			<p class="oFanhui">返回</p>
+		</div>
+		<!--底部-->
+		<div id="oFoot"></div>
+		<script src="part/js/topandfoot.js" type="text/javascript" charset="utf-8"></script>
+		<script src="part/js/xialamenuyangxz.js" type="text/javascript" charset="utf-8"></script>
+		<script src="part/js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="part/js/zhengze.js" type="text/javascript" charset="utf-8"></script>
+		<script src="part/js/member.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

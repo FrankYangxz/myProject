@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<link href="i/logo.png" rel="shortcut icon">
+		<title>活动</title>
+		<link rel="stylesheet" type="text/css" href="c/public.css" />
+		<link rel="stylesheet" type="text/css" href="c/a.css" />
+		<script src="j/jquery-1.9.1.min.js"></script>
+		<script src="j/jquery.downCount.js"></script>
+		<script src="j/fun.js"></script>
+		<script src="j/active.js"></script>
+		<script>
+			$(document).ready(function() {
+				document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="page">
+			<select value="全部活动" class="select" id="active">
+               <option value ="0">全部活动</option>
+               <option value ="1">我报名的活动</option>
+               <option value="2">今天活动</option>
+               <option value="3">本周工作日</option>
+               <option value="4">本周周末</option>
+               <option value="5">下周</option>
+               <option value="6">往期精彩</option>
+            </select>
+			<div class="list">
+				<div class="a_img"></div>
+				<div class="a_detail">
+					<img class="goods_bg" src="i/img_0.jpg">
+					<div class="data">
+						<img src="i/date.png">
+						<p class="data_mouth">4月</p>
+						<p class="data_date single">01</p>
+					</div>
+					<div class="count_down display_none"><p>倒计时:3天</p></div>
+					<div class="intro">
+						<p class="a_time">时间：<span>10:00-14:00</span></p>
+						<p class="a_addr">望京悠乐汇</p>
+						<p class="a_over display_none">活动已结束</p>
+					</div>
+					<div class="cont clearfix">
+						<p class="a_title">活动一活动一活动一活动一活动一</p>
+						<p class="person_total"><img src="i/icon_p_05.jpg">100人报名</p>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="a_img"></div>
+				<div class="a_detail">
+					<img class="goods_bg" src="i/img_0.jpg">
+					<div class="data">
+						<img src="i/date.png">
+						<p class="data_mouth">4月</p>
+						<p class="data_date">01-15</p>
+					</div>
+					<div class="count_down"><p>倒计时:59分钟</p></div>
+					<div class="intro">
+						<p class="a_time">时间：<span>10:00-14:00</span></p>
+						<p class="a_addr">望京悠乐汇</p>
+						<p class="a_over display_none">活动已结束</p>
+					</div>
+					<div class="cont clearfix">
+						<p class="a_title">活动一活动一活动一活动一活动一</p>
+						<p class="person_total"><img src="i/icon_p_05.jpg">60人报名</p>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="a_img"></div>
+				<div class="a_detail">
+					<img class="goods_bg" src="i/img_0.jpg">
+					<div class="data">
+						<img src="i/date.png">
+						<p class="data_mouth">4月</p>
+						<p class="data_date">01-15</p>
+					</div>
+					<div class="count_down display_none"><p>倒计时:3天</p></div>
+					<div class="intro over">
+						<p class="a_time display_none">时间：<span>10:00-14:00</span></p>
+						<p class="a_addr display_none">望京悠乐汇</p>
+						<p class="a_over">活动已结束</p>
+					</div>
+					<div class="cont clearfix">
+						<p class="a_title">活动一活动一活动一活动一活动一</p>
+						<p class="person_total"><img src="i/icon_p_05.jpg">60人报名</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="j/statistics.js"></script>
+
+</html>

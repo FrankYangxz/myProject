@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.header {
+				width: 100%;
+				height: 8vw;
+				background: #36353a;
+				line-height: 8vw;
+				text-align: center;
+				color: #F4F4F4;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 999;
+				font-size: 3.5vw;
+			}
+			em{font-style: normal;}
+			
+			.box {
+				width: 100vw;
+				height: 100vh;
+				background: #36353a;
+				overflow-y: scroll;
+				position: relative;
+				/*margin-top: 5.599986vw;*/
+			}
+			
+			.list {
+				width: 100vw;
+				/*height: 100vh;*/
+				overflow-y: scroll;
+			}
+			
+			.list::-webkit-scrollbar {
+				display: none;
+			}
+			
+			.box::-webkit-scrollbar {
+				display: none;
+			}
+			
+			li {
+				/*height: 8vw;*/
+				line-height: 8vw;
+				/*border-bottom: 1px solid #F4F4F4;*/
+			}
+			
+			li span:first-of-type {
+				color: #f18f2c;
+				font-size: 3.9999vw;
+			}
+			
+			li span:nth-of-type(2),em {
+				color: #f4f4f4;
+				font-size: 3.9999vw;
+			}
+			
+			li img {
+				width: 9.33331vw;
+				height: 3.1999992vw;
+				margin: 2.3999904vw 1.33333vw 0 2.66666vw;
+				background: #F18F2C;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<div class="header">
+			超级聊天室
+		</div>-->
+		<div class="box">
+			<ul class="list">
+				<li style="background: red;"></li>
+				<!--<li> <img src="img/admin.png" /> <span>lucky:</span><span>我刚刚浏览了一条信息</span></li>-->
+			</ul>
+		</div>
+		
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//通过ajax获取用户等级图片配置信息，写入configArr数组
+			var config = [];
+			$.ajax({
+					type: "get",
+					url: "http://v2.nashspace.com:8001/community/?r=app/getUserLevelListJsonp",
+					dataType: 'jsonp',
+					async: false,
+					success: function(info) {
+						//    保存数据
+						config = info.data.list;
+						var perHei = 0;
+						function add (olevel,oName,oNameColor,oMessage,oMessageColor){
+							var img='';
+							var oIndex = 0;
+							for(var i=0; i<config.length; i++){
+								var t = config[i].level;
+								if (t == olevel) {
+									oIndex = i;
+									img = config[oIndex].levelUrl;
+								} 
+							}
+							var screenHei = $(window).height();
+							var listHei = $(".list").height();
+							$('.list').append('<li><img src='+img+' /><span>'+oName+':</span><em>'+oMessage+'</em></li>')
+							var length = $('.list li').length - 1;
+							$('.list li').eq(length).find('span').css('color',oNameColor);
+							$('.list li').eq(length).find('em').css('color',oMessageColor);
+							var oLi = $('.list li').length;
+							
+							var h = ($('.list li').eq(oLi-1).outerHeight())*0.133333 - 1.733309;
+							console.log(h);
+							if(screenHei<listHei){
+								perHei -= h;
+								$(".list").animate({"marginTop":perHei + "vw"},500);
+							}
+						}
+						
+						setInterval(function(){
+//							add('img/admin.png','lili','red','我刚浏览了超市','#FFF')
+							add('\u767d','lili','red','一条信息我刚刚浏览了一条信息','#FFF');
+							//console.log( $(".list").height() );
+//							add(olevel,oName,oNameColor,oMessage,oMessageColor);
+						},1500)
+									
+					
+						
+					}
+			})
+			console.log(config);
+
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="img/logo01.png" rel="shortcut icon">
+		<title>介绍</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+	</head>
+	<body style="background: #111111;">
+		<div class="lunbo_img">
+	    		<p class="back" style="width: 20vw;height: 6vw;z-index: 700;"><img src="img/Arrow@3x.png"/></p>
+	    		<div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide"><img src="img/list01_03.jpg"/></div>
+		            <div class="swiper-slide"><img src="img/list01_03.jpg"/></div>
+		            <div class="swiper-slide"><img src="img/list01_03.jpg"/></div>
+		            <div class="swiper-slide"><img src="img/list01_03.jpg"/></div>
+		            <div class="swiper-slide"><img src="img/list01_03.jpg"/></div>
+		            <div class="swiper-slide"><img src="img/list01_03.jpg"/></div>
+		        </div>
+		        <div class="swiper-pagination" style="position: absolute;left:0;bottom:30vw;color: #F3F3F3;z-index: 900;"></div>
+		    </div>
+
+	    </div>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+			  pagination : '.swiper-pagination',
+			  paginationType : 'custom',
+			  paginationCustomRender: function (swiper, current, total) {
+			      return current + ' / ' + total;
+			  }
+			});
+		</script>
+		<script type="text/javascript">
+			$('.back').on('click',function(){
+				window.location='xangqingye02.html';
+			})
+		</script>
+	</body>
+</html>

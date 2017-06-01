@@ -1,0 +1,46 @@
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+i {font: inherit;}
+a{text-decoration: none;}
+
+/*首页的banner部分*/
+.newbanner{width: 100vw;height: 80.896vw;background: url(../img/index_img/pic_hd@3x.png) no-repeat center center;background-size: cover;position: relative;}
+.llloo{width: 64.82vw;height: 51.1152vw;margin: 24.8168vw 17.6vw 0;}
+.beijing{position: absolute;top: 2.778vw;left: 2.778vw;display: block;width:15vw;height: 5.926vw;line-height: 5.926vw;background: #FFFFFF;border-radius: 2.778vw;
+		font-size: 3.33vw;text-indent: 2.778vw;}
+.beijing img{width: 2.22vw;height: 1.29vw;margin-left: 1vw;}
+.newmain{width: 76vw;padding:8.77vw 12vw 0;height:60vw;}
+.newmain a{display: block;width: 37.566vw;height: 27.78vw;float: left;}
+.newmain a:first-of-type{border-bottom: 0.3vw solid #d7d7d7;border-right: 0.3vw solid #d7d7d7;}
+.newmain a:nth-of-type(2){border-bottom: 0.3vw solid #d7d7d7;}
+.newmain a:nth-of-type(3){border-right: 0.3vw solid #d7d7d7;}
+
+/*四个图*/
+.newmain a img{width: 14.07vw;height: 14.07vw;}
+.newmain a dd{font-size: 3.148vw;color:#111111;}
+.newmain a:first-of-type img{margin-left: 5.92vw;}
+.newmain a:first-of-type dd{margin: 3.333vw 0 0 6.29vw;}
+
+.newmain a:nth-of-type(2) img{margin-left: 18.15vw;}
+.newmain a:nth-of-type(2) dd{margin: 3.333vw 0 0 15.371vw;}
+
+.newmain a:nth-of-type(3) img{margin-left: 5.92vw;margin-top: 7.96vw;}
+.newmain a:nth-of-type(3) dd{margin: 3.333vw 0 0 3.148vw;}
+
+.newmain a:nth-of-type(4) img{margin-left: 18.15vw;margin-top: 7.96vw;}
+.newmain a:nth-of-type(4) dd{margin: 3.333vw 0 0 15.371vw;}
+
+/*****************定位********************/
+.locat{width: 100vw;height: 100vh;background:#f3f3f3;position: fixed;top: 100vh;left: 0;z-index: 500;}
+.dl01,.dl02{background:#FFFFFF;}
+.dl01 dt,.dl02 dt{width: 100vw;height: 8.482vw;line-height: 8.482vw;text-indent: 2.778vw;font-size: 4.1928vw;background: #f3f3f3;color: #888888;}
+.dl01 dd,.dl02 dd{height:9.734vw;line-height: 9.734vw;margin: 2px 0;}
+.dl01 img{width: 5.078vw;height: 4.978vw;float: right;margin-right: 2.778vw;margin-top: 2.278vw;}
+.dl02 a{display: block;width: 97.222vw;padding: 2.7706 0;margin-left: 2.778vw;font-size:4.1928vw;color: #333333;border-bottom: 1px solid #f3f3f3;}
+.dl01 span{margin-left: 2.778vw;}
+
+
+
+

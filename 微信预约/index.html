@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>预约</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<form>
+			<div class="header">
+				<h4>告诉我们您的需求</h4>
+				<h4 class="oKanfang">专业的房源顾问将为您匹配房源</h4>
+			</div>
+			<div class="main">
+				<!--选择城市-->
+				<div class="oArea">
+					<p class="oChengShi"><span>＊</span><span>预约城市</span><span><input type="text" id="oCity"  readonly="readonly"/></span><span class="oArrow"><img src="img/arrow.png"/></span></p>
+					<ul class="oAreaCon">
+						<li data-value = "100">北京</li><li data-value = "200">上海</li><li data-value = "300">天津</li><li data-value = "400">深圳</li>
+					</ul>
+					<div style="clear: both;"></div>
+				</div>
+				<!--选择区域-->
+				<div class="oArea">
+					<p class="oStreet"><span>＊</span><span>预约区域</span><span><input type="text" id="oQuYu" readonly="readonly"/></span><span class="oS"><img src="img/arrow.png"/></span></p>
+					<div class="oTow">
+						<ul class="oStreetOne">
+							<li data-value = "101">望京区域</li><li data-value = "102">朝青区域</li><li data-value = "103">亚奥区域</li><li>东直门区域</li>
+							<li data-value = "104">京东区域</li><li data-value = "105">京西区域</li><li data-value = "106">京北区域</li><li>中关村区域</li>
+							<li data-value = "107">CBD区域</li><li data-value = "108">京南区域</li>
+						</ul>
+						<ul class="oStreetOne">
+							<li data-value = "201">静安宝山区域</li><li data-value = "202">普陀长宁区域</li><li data-value = "203">浦东金融区域</li><li data-value = "204">杨浦虹口区域</li>
+							<li data-value = "205">徐汇黄浦区域</li>
+						</ul>
+						<ul class="oStreetOne">
+							<li data-value = "301">中心公园区域</li><li data-value = "302">河东公园区域</li><li data-value = "303">人民公园区域</li>
+						</ul>
+						<ul class="oStreetOne">
+							<li data-value = "401">福田东区域</li><li data-value = "402">福田西区域</li><li data-value = "403">南山区域</li>
+						</ul>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				<!--选择空间类型-->
+				<div class="oArea">
+					<p class="oType"><span>＊</span><span>空间类型</span><span><input type="text" id="oLeiXing" value="" readonly="readonly"/></span><span class="oT"><img src="img/arrow.png"/></span></p>
+					<ul class="oTypeCon">
+						<li>联合办公区</li><li>优选工作室（精装空房）</li><li>超级工作室（精装顶配 拎包入驻）</li>
+					</ul>
+					<div style="clear: both;"></div>
+				</div>
+				<!--入住人数-->
+				<div class="oArea">
+					<p><span>＊</span><span>入驻人数</span><span><input type="text" class="oRenShu" placeholder="请填写" /></span></p>
+				</div>
+			</div>
+			<div class="header">
+				<h4>留下您的联系方式，</h4>
+				<h4 class="oKanfang">我们将立刻为您安排看房</h4>
+			</div>
+			<div class="main">
+				<div class="oArea">
+					<p><span>＊</span><span>您的称呼</span><span><input type="text" class="oName" placeholder="请填写" /></span></p>
+				</div>
+				<div class="oArea">
+					<p><span>＊</span><span>您的联系电话</span><span><input type="tel" id="oTel" placeholder="请填写" /></span></p>
+				</div>
+				<div class="oArea">
+					<p><span style="color: #FFFFFF;">＊</span><span>您的邮箱</span><span><input type="email" class="oRenShu" id="oEmail" placeholder="请填写" /></span></p>
+				</div>
+			</div>
+			<div class="footer">
+				<h4>您也可以通过以下方式联系我们</h4>
+				<p>
+					<a class="oWeiXin" id="_WinXin" href="javascript:void(0);" data-clipboard-text="NASH01057262968"><img src="img/weixin.png"/></a>
+					<a  class="oQq" id="_QqWe" href="javascript:void(0);" data-clipboard-text="2670118121"><img src="img/QQ.png"/></a>
+					<a href="tel:010-57262968"><img src="img/dianhua.png"/></a>
+				</p>
+			</div>
+			<div class="submit">
+				<img src="img/tijiao.png"/>&nbsp;提交
+			</div>
+			
+		</form>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var btnOne = document.getElementById("_WinXin");
+			var btnTwo = document.getElementById("_QqWe");
+		    var clipboardOne = new Clipboard(btnOne);
+		    clipboardOne.on('success', function(e) {
+		       alert("微信号已复制到粘贴板")
+		    });
+			var clipboardTwo = new Clipboard(btnTwo);
+		    clipboardTwo.on('success', function(e) {
+		       alert("qq号已复制到粘贴板")
+		    });
+		</script>
+		<script type="text/javascript">
+			var oConfig = [];
+			//选择城市
+			var i=0;
+			$('.oChengShi').on("click",function(){
+				$('.oAreaCon').toggle(100);
+				if ( i == 0) {
+					$('.oArrow').removeClass('obb').addClass('oaa');
+					return i = 1;
+				} else{
+					$('.oArrow').removeClass('oaa').addClass('obb');
+					return i = 0;
+				}
+			})
+			$('.oAreaCon li').on("click",function(){
+				$('.oArrow').removeClass('oaa').addClass('obb');
+				i=0;
+				var oIndex = $(this).index();
+				$(this).addClass('oColor').siblings().removeClass('oColor');
+				var oVal = $(this).text();
+				$('#oCity').val(oVal);
+				$('.oAreaCon').toggle(100);
+				switch (oIndex){
+					case 0:
+						$('.oBeiJing').show();
+						$('.oShangHai').hide();
+						$('.oTianJin').hide();
+						$('.oShenZhen').hide();
+						break;
+					case 1 :
+						$('.oShangHai').show();
+						$('.oTianJin').hide();
+						$('.oShenZhen').hide();
+						$('.oBeiJing').hide();
+						break;
+					case 2 :
+						$('.oTianJin').show();
+						$('.oShenZhen').hide();
+						$('.oBeiJing').hide();
+						$('.oShangHai').hide();
+						break;
+					case 3 :
+						$('.oShenZhen').show();
+						$('.oBeiJing').hide();
+						$('.oShangHai').hide();
+						$('.oTianJin').hide();
+						break;
+					default:
+						alert("数据出错了！")
+						break;
+				}
+			})
+			
+			//选择区域
+			var s = 0;
+			$('.oStreet').on("click",function(){
+				$('.oTow').toggle(100);
+				if (s == 0) {
+					$('.oS').removeClass('obb').addClass('oaa');
+					return s= 1;
+				} else{
+					$('.oS').removeClass('oaa').addClass('obb');
+					return s= 0;
+				}
+			})
+			$('.oStreetOne li').on("click",function(){
+//				$('.oS').removeClass('oaa').addClass('obb');
+//				s=0;
+				if ( $(this).hasClass('oColor') ) {
+					$(this).removeClass('oColor');
+					$('#oQuYu').val(  $('#oQuYu').val().replace( $(this).text(),'') );
+				} else{
+					$(this).addClass('oColor');
+					var oQuVal = $('#oQuYu').val();
+					var oVal = $(this).text();
+					if (  oQuVal.indexOf(oVal) < 0 ) {
+						$('#oQuYu').val( oQuVal+oVal+" ");
+					}
+				}
+			})
+			$('.oS').on('click',function(){
+//				$(this).
+			})
+			//空间类型
+			var d = 0;
+			$('.oType').on("click",function(){
+				$('.oTypeCon').toggle(100);
+				if ( d==0 ) {
+					$('.oT').removeClass('obb').addClass('oaa');
+					return d= 1;
+				} else{
+					$('.oT').removeClass('oaa').addClass('obb');
+					return d= 0;
+				}
+			})
+			
+			$('.oTypeCon li').on('click',function(){
+//				d=0;
+//				$('.oT').removeClass('oaa').addClass('obb');
+				var oQuVal = $('#oLeiXing').val();
+				var oVal = $(this).text();
+				if ( $(this).hasClass('oColor') ) {
+					$(this).removeClass('oColor')
+					$('#oLeiXing').val(  $('#oLeiXing').val().replace( $(this).text(),'') );
+				}else{
+					$(this).addClass('oColor');
+					if (  oQuVal.indexOf(oVal) < 0 ) {
+						$('#oLeiXing').val( oQuVal+oVal+" ");
+					}
+				}
+				
+				
+			})
+			//复制到粘贴板
+			function Copy(str){
+			    var save = function(e){
+			        e.clipboardData.setData('text/plain', str);
+			        e.preventDefault();
+			    }
+			    document.addEventListener('copy', save);
+			    document.execCommand('copy');
+			    document.removeEventListener('copy',save);
+			}
+//			$('.oWeiXin').on('click',function(){
+//			    Copy('NASH01057262968');
+//			    alert("微信号已复制到粘贴板")
+//			});
+//			$('.oQq').on('click', function(){
+//			    Copy('2670118121');
+//			    alert("QQ号已复制到粘贴板")
+//			});
+			//电话正则
+			$('#oTel').blur(function(){
+				var oVal = $(this).val();
+				var oFact = oPhone(oVal);
+			    if ( oFact ) {
+			    		$(this).val('');
+			    }
+			})
+			function oPhone(oVal){
+				if( !(/^1[34578]\d{9}$/.test(oVal)) ){ 
+			        alert("手机号码有误"); 
+			        return true;
+			    } 
+			}
+			
+			function oEmail(oVal){
+				var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+				if ( !(reg.test(oVal)) ) {
+					alert("邮箱输入错误");
+					return true;
+				}
+			}
+			//邮箱正则
+			$('#oEmail').blur(function(){
+				var oVal = $(this).val();
+				var oFace = oEmail(oVal);
+				if ( oFace ) {
+					$(this).val('');
+				}
+			})
+//			//点击提交
+			$('.submit').on('click',function(){
+				var oVal01 = $('#oCity').val();
+				var oVal02 = $('#oQuYu').val();
+				var oVal03 = $('#oLeiXing').val();
+				var oVal04 = $('.oRenShu').val();
+				var oVal05 = $('.oName').val();
+				var oVal06 = $('#oTel').val();
+				var oVal07 = $('#oEmail').val();
+				if ( oVal01 == '' || oVal02 == '' || oVal03 == '' || oVal04 == '' || oVal05 == '' || oVal06 == '' || oVal07 == '' ) {
+					alert("数据不完整");
+					
+				}
+			})
+			//店家对号显引切换
+			
+		</script>
+		
+	</body>
+</html>

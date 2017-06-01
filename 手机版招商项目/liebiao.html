@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<link href="zhaoShang/img/icon.png" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/zhanshang.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/shangjilist.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/select.css" />
+		<style type="text/css">
+			tr td{background: #f7f7f7;}
+			td select{width: 95%;text-align: center;height: 80%;font-size: 20px;outline: none;}
+			td select option{display: block;width: 80%;text-align: center;padding-left: 20%;}
+			.combo-dropdown li{line-height: 50px;}
+			.combo-select{border: none;}
+			.combo-select .combo-input{margin-top:14px;text-indent: 44px;}
+			.combo-arrow {top: 8px;}
+			
+		</style>
+	</head>
+	<body>
+		<!--弹层-->
+		<div class="oZheFeiQi"></div>
+		<!--确认提交信息-->
+		<div class="oTXSuccess">
+			<div class="oTXSuccessInfo" id="makesureInfo">
+				<h2>请再次核对信息是否准确</h2>
+				<div class="_inforMation"><a class="modified">返回修改</a><a class="founder">创建</a></div>
+			</div>
+		</div>
+		<!---------顶部-->
+		<div class="top">
+			<div class="topCon">
+				<img src="zhaoShang/img/logo2.png"/>
+			</div>
+		</div>
+		<div class="oListFor">
+			<p><a class="oBackList">返回列表</a></p>
+			<p><span class="oColor oStudioMenu">Studio</span>|<span class="oSpaceMenu">Space</span></p>
+			<table class="oStudio">
+				<tr>
+					<td>推荐人姓名</td>
+					<td><input type="text"  placeholder="" id="sexsxsx"  /></td>
+				</tr>
+				<tr>
+					<td>推荐人联系方式</td>
+					<td><input type="text"  placeholder="" /></td>
+				</tr>
+				<tr>
+					<td>客户姓名</td>
+					<td><input type="text"  placeholder="" /></td>
+				</tr>
+				<tr>
+					<td>客户性别</td>
+					<td id="oSexStudio"><input type="radio" name="sex" value="男" />男   <input type="radio" name="sex" value="女" />女   </td>
+				</tr>
+				<tr>
+					<td>客户联系方式</td>
+					<td><input type="text"  placeholder="" /></td>
+				</tr>
+				<tr class="_customtypeStudio">
+					<td>客户类型</td>
+					<td>
+						<select id="_customtypeStudio">
+							<option value="请选择">请选择</opation>
+							<option value="暂未获知">暂未获知</opation>
+							<option value="公司">公司</opation>
+							<option value="个人">个人</opation>
+						</select>
+					</td>
+				</tr>
+				<tr class="needArea">
+					<td>需求面积</td>
+					<td>
+						<select id="needArea"></select>
+					</td>
+				</tr>
+				<tr>
+					<td>需求地段</td>
+					<td>
+						<input type="text"  value="" class="oSjQyinfo" />
+					</td>
+				</tr>
+				<tr class="needMoney">
+					<td>需求价位</td>
+					<td>
+						<select id="needMoney"></select>
+					</td>
+				</tr>
+				<tr class="companyType">
+					<td>企业行业类别</td>
+					<td>
+						<select id="companyType"></select>
+					</td>
+				</tr>
+				<tr>
+					<td>企业员工人数</td>
+					<td><input type="text"  value="" class="empolyerNum" /></td>
+				</tr>
+				<tr class="needStreet">
+					<td>商机区域信息</td>
+					<td>
+						<select id="needStreet">
+						</select>
+					</td>
+				</tr>
+				<tr class="oForUseClass">
+					<td>用途</td>
+					<td>
+						<select id="oForUse"></select>
+					</td>
+				</tr>
+			</table>
+			<p id="oRid"> <input type="text"  value="" /> </p>
+			<table class="oSpace" style="display: none;">
+				<tr>
+					<td>推荐人姓名</td>
+					<td><input type="text"  value=""/></td>
+				</tr>
+				<tr>
+					<td>推荐人联系方式</td>
+					<td><input type="text"  value="" /></td>
+				</tr>
+				<tr>
+					<td>客户姓名</td>
+					<td><input type="text"  value=""/></td>
+				</tr>
+				<tr>
+					<td>客户性别</td>
+					<td id="oSexSpace"><input type="radio" name="sex1" value="男" />男   <input type="radio" name="sex1" value="女" />女   </td>
+				</tr>
+				<tr>
+					<td>客户联系方式</td>
+					<td><input type="text"  value=""/></td>
+				</tr>
+				<tr class="_customtypeSpace">
+					<td>客户类型</td>
+					<td>
+						<select id="_customtypeSpace">
+							<option value="请选择">请选择</opation>
+							<option value="暂未获知">暂未获知</opation>
+							<option value="公司">公司</opation>
+							<option value="个人">个人</opation>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>工位需求数量</td>
+					<td><input type="text"  value="" class="oNeedNumber" /></td>
+				</tr>
+				<tr class="needMoneySpace">
+					<td>工位总价区间</td>
+					<td><select id="needMoneySpace"></select></td>
+				</tr>
+				<tr>
+					<td>需求地段</td>
+					<td><input type="text"  value=""  class="oSjQyinfo" /></td>
+				</tr>
+				<tr class="companyTypeSpace">
+					<td>企业行业类别</td>
+					<td><select id="companyTypeSpace"></select></td>
+				</tr>
+				<tr class="needStreetSpace">
+					<td>商机区域信息</td>
+					<td>
+						<select id="needStreetSpace"></select>
+					</td>
+				</tr>
+			</table>
+			<p class="oZhengZe"><a class="oChange">创建商机</a><a class="oReset">重置</a></p>
+		</div>
+		<!--底部-->
+		<!-----------------底部------------------>
+		<iframe src="foot.html" scrolling="no" width="100%" height="445px" marginheight="0" marginwidth="0" border="none"></iframe>		
+		<script src="zhaoShang/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/tongji.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/selelelel.js" type="text/javascript" charset="utf-8"></script>
+		<!--渲染数据-->
+		<script type="text/javascript">
+	        function browserRedirect() {
+	            var sUserAgent = navigator.userAgent.toLowerCase();
+	            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+					return "BP_MOBILE";
+	            } else {
+					return "BP_PC";
+	            }
+	        }
+	        var platformSource = browserRedirect();
+			//location.href="liebiao.html?rid=6;
+			var acountType = sessionStorage.acountType;
+			var oHref = location.href;
+			oHref = oHref + "&acountType=" + acountType;
+			console.log( oHref );
+			function UrlSearch() {
+			   var name,value; 
+			   var str=oHref ; //取得整个地址栏
+			   var num=str.indexOf("?") 
+			   str=str.substr(num+1); //取得所有参数   
+			   var arr=str.split("&"); //各个参数放到数组里
+			   for(var i=0;i < arr.length;i++){ 
+				   num=arr[i].indexOf("="); 
+				   if(num>0){ 
+					   name=arr[i].substring(0,num);
+					   value=arr[i].substr(num+1);
+					   this[name] = decodeURI(value); 
+			       } 
+			    } 
+			 } 
+			 var Request=new UrlSearch(); 
+			 var oChange = Request.rid;  // 推荐id
+			 var oData={rid:oChange};
+			 getAjax( "r=opportunity/get" , oData , getSuccess , getDefault );
+			 function getSuccess(data){
+			 	console.log(data);
+			 	if ( data.code == 0 ) {     //0 数据获取成功
+			 		limitData(data);   //渲染基本的信息   下拉菜单 
+				 	var oYNcreat = data.data.createAble;   //检查是否可以创建
+				 	if (  oYNcreat == 0 ) {    // 0- 不可以创建    1 - 可以创建
+				 		$(".oZhengZe").hide();   //有详细信息的时候隐藏创建商机按钮；
+				 		//获取详情并且渲染
+				 		$(".oSpace input").attr("readonly","readonly");
+						$(".oStudio input").attr("readonly","readonly");
+						$("select").attr("disabled","disabled");
+				 		var oINfo = data.data.oppList;
+				 		for ( var i=0;i<oINfo.length; i++  ) {
+				 			if ( oINfo[i].type == "Studio" ) {
+				 				$(".oStudio").show();
+				 				$(".oSpace").hide();
+				 				$(".oStudioMenu").addClass("oColor").siblings().removeClass("oColor");
+				 				$(".oStudio tr:eq(0) input").val( oINfo[i].reference.name );
+							 	$(".oStudio tr:eq(1) input").val( oINfo[i].reference.tel );
+							 	$(".oStudio tr:eq(2) input").val( oINfo[i].custom.name );
+							 	$("#oSexStudio input[value="+oINfo[i].custom.sex+"]").attr("checked",true); 
+							 	$(".oStudio tr:eq(4) input").val( oINfo[i].custom.tel );
+							 	
+							 	$("._customtypeStudio .text-input").val(oINfo[i].custom.type);
+							 	$("._customtypeStudio .text-input").attr("readonly","readonly");
+								$(".oStudio .needArea .text-input").val( oINfo[i].needSize );
+								var oArea = $(".oStudio #needStreet option[data-value="+oINfo[i].opportunityArea+"]").val();
+								$(".oStudio .needStreet .text-input").val( oArea );
+								$(".oStudio .needMoney .text-input").val( oINfo[i].totalPrice );
+								$(".oStudio .companyType .text-input").val( oINfo[i].custom.industryCategory );
+								$(".oStudio .empolyerNum").val(oINfo[i].employeeNum);
+								$(".oStudio .oSjQyinfo").val(oINfo[i].needArea);
+								$(".oStudio .oForUseClass .text-input").val( oINfo[i].purpose );
+				 			} else if ( oINfo[i].type == "Space" ){
+				 				$(".oStudio").hide();
+				 				$(".oSpace").show();
+				 				$(".oSpaceMenu").addClass("oColor").siblings().removeClass("oColor");
+				 				$(".oSpace tr:eq(0) input").val( oINfo[i].reference.name );
+							 	$(".oSpace tr:eq(1) input").val( oINfo[i].reference.tel );
+							 	$(".oSpace tr:eq(2) input").val( oINfo[i].custom.name );
+							 	$(".oSpace tr:eq(3) input[value="+oINfo[i].custom.sex+"]").attr("checked",true); 
+							 	$(".oSpace tr:eq(4) input").val( oINfo[i].custom.tel );
+							 	$(".oSpace ._customtypeSpace .text-input").val( oINfo[i].custom.type );
+								$(".oSpace .oNeedNumber").val( oINfo[i].stationNumber );
+								$(".oSpace .needMoneySpace .text-input").val( oINfo[i].totalPrice );
+								$(".needStreetSpace .text-input").val(oINfo[i].opportunityArea);
+								var oSpaceArea = $("#needStreetSpace option[data-value="+oINfo[i].opportunityArea+"]").val();
+								$(".needStreetSpace .text-input").val(oSpaceArea);
+								$(".oSpace .companyTypeSpace .text-input").val( oINfo[i].custom.industryCategory );
+								$(".oSpace .oSjQyinfo").val(oINfo[i].needArea);
+				 			}
+				 		}
+				 	} else if (  oYNcreat == 1 ) {   //创建商机
+				 		//渲染客户和推荐人的基本信息
+					 	var oList = data.data;
+					 	$("#oRid input").val( oList.cityName );
+					 	$(".oSpace tr:eq(0) input").val( oList.reference.name );
+					 	$(".oSpace tr:eq(0) td:eq(0)").attr("data-value",oList.reference.id);
+					 	$(".oSpace tr:eq(1) input").val( oList.reference.tel );
+					 	$(".oSpace tr:eq(2) input").val( oList.custom.name );
+					 	$(".oSpace tr:eq(2) td:eq(0)").attr("data-value",oList.custom.id);
+					 	$(".oSpace tr:eq(4) input").val( oList.custom.tel );
+					 	
+					 	$(".oStudio tr:eq(0) input").val( oList.reference.name );
+					 	$(".oStudio tr:eq(0) td:eq(0)").attr("data-value",oList.reference.id);
+					 	$(".oStudio tr:eq(1) input").val( oList.reference.tel );
+					 	$(".oStudio tr:eq(2) input").val( oList.custom.name );
+					 	$(".oStudio tr:eq(2) td:eq(0)").attr("data-value",oList.custom.id);
+					 	$(".oStudio tr:eq(4) input").val( oList.custom.tel );
+				 	}
+			 
+			 	} else{   // 数据获取不成功提示去跳转登录
+			 		var oHref = location.href;
+					location.href="loginfalse.html?oHref="+oHref;
+			 	}
+			 }
+			 
+			 //吧所有的下拉菜单渲染  实例化
+			 function limitData(data){
+			 	var oLimitData = data.data.limitData;
+			 	var oUse = oLimitData.purposeList;  // 用途
+			 	var oMoney = oLimitData.priceList;  // 价格区间
+			 	var oAreaSize = oLimitData.sizeList;  // 面积
+			 	var oComType = oLimitData.industryCategoryList;  // 企业类型
+			 	var oArea = oLimitData.OpportunityAreaList;  // 需求地段
+			 	$("#oForUse").append("<option>请选择</option>");
+			 	for (var i=0;i<oUse.length;i++) {
+			 		$("#oForUse").append("<option>"+oUse[i]+"</option>");
+			 	}
+			 	$("#needMoney").append("<option>请选择</option>");
+			 	for (var i=0;i<oMoney.length;i++) {
+			 		$("#needMoney").append("<option>"+oMoney[i]+"</option>");
+			 	}
+			 	$("#needMoneySpace").append("<option>请选择</option>");
+			 	for (var i=0;i<oMoney.length;i++) {
+			 		$("#needMoneySpace").append("<option>"+oMoney[i]+"</option>");
+			 	}
+			 	$("#needArea").append("<option>请选择</option>");
+			 	for (var i=0;i<oAreaSize.length;i++) {
+			 		$("#needArea").append("<option>"+oAreaSize[i]+"</option>");
+			 	}
+			 	$("#companyType").append("<option>请选择</option>");
+			 	for (var i=0;i<oComType.length;i++) {
+			 		$("#companyType").append("<option>"+oComType[i]+"</option>");
+			 	}
+			 	$("#needStreet").append("<option value='请选择' data-value=\"\">请选择</option>");
+			 	for (var i=0;i<oArea.length;i++) {
+			 		$("#needStreet").append("<option value="+oArea[i].name+" data-value="+oArea[i].id+" >"+oArea[i].name+"</option>");
+			 	}
+			 	$("#needStreetSpace").append("<option value='请选择' data-value=\"\">请选择</option>");
+			 	for (var i=0;i<oArea.length;i++) {
+			 		$("#needStreetSpace").append("<option value="+oArea[i].name+" data-value="+oArea[i].id+" >"+oArea[i].name+"</option>");
+			 	}
+			 	$("#companyTypeSpace").append("<option>请选择</option>");
+			 	for (var i=0;i<oComType.length;i++) {
+			 		$("#companyTypeSpace").append("<option>"+oComType[i]+"</option>");
+			 	}
+			 	$("#_customtypeSpace").comboSelect();
+			 	$("#_customtypeStudio").comboSelect();
+			 	$('#oForUse').comboSelect();
+			 	$('#needMoney').comboSelect();
+			 	$('#needMoneySpace').comboSelect();
+			 	$('#needArea').comboSelect();
+			 	$('#companyType').comboSelect();
+			 	$('#needStreet').comboSelect();
+			 	$('#needStreetSpace').comboSelect();
+			 	$('#companyTypeSpace').comboSelect();
+			 }
+			 function getDefault(){}
+			//创建新的商机
+	 		$(".founder").click(function(){
+	 			var cityName = $("#oRid input").val();
+	 			var rid = oChange;
+	 			//space
+	 			var spaceReferenceName = $(".oSpace tr:eq(0) input").val();
+	 			var spaceReferenceTel = $(".oSpace tr:eq(1) input").val();
+	 			var spaceReferenceId = $(".oSpace tr:eq(0) td:eq(0)").data("value").toString();
+	 			var spaceCustomName = $(".oSpace tr:eq(2) input").val();
+	 			var	spaceCustomTel = $(".oSpace tr:eq(4) input").val();
+	 			var	spaceCustomSex = $(".oSpace tr:eq(3) input:checked").val();  //性别
+	 			var spaceCustomType = $(".oSpace ._customtypeSpace .text-input").val();
+	 			var	spaceCustomId = $(".oSpace tr:eq(2) td:eq(0)").data("value").toString();
+	 			var spaceNeedArea = $(".oSpace .needStreetSpace .text-input").val();  //商机区域信息
+	 			spaceNeedArea = $(".oSpace #needStreetSpace option[value="+spaceNeedArea+"]").data("value");
+	 			var spaceToatlPrice = $(".oSpace .needMoneySpace .text-input").val();
+	 			var spaceStationNumber = $(".oSpace .oNeedNumber").val();      //工位需求数量
+	 			var spaceIndustryCategory = $(".oSpace .companyTypeSpace .text-input").val();
+	 			var spaceOpportunityArea = $(".oSpace .oSjQyinfo").val();      //需求地段
+	 			
+	 			//studio
+	 			var studioReferenceName = $(".oStudio tr:eq(0) input").val();
+	 			var studioReferenceTel = $(".oStudio tr:eq(1) input").val();
+	 			var studioReferenceId = $(".oStudio tr:eq(0) td:eq(0)").data("value").toString();
+	 			var studioCustomName = $(".oStudio tr:eq(2) input").val();
+	 			var	studioCustomTel = $(".oStudio tr:eq(4) input").val();
+	 			var	studioCustomSex = $(".oStudio tr:eq(3) input:checked").val();  //性别
+	 			var studioCustomType = $("._customtypeStudio .text-input").val();
+	 			var	studioCustomId = $(".oStudio tr:eq(2) td:eq(0)").data("value");          
+	 			var studioNeedSize = $(".oStudio .needArea .text-input").val();
+	 			var	studioNeedArea = $(".oStudio .needStreet .text-input").val();
+	 		    studioNeedArea = $(".oStudio #needStreet option[value="+studioNeedArea+"]").data("value");
+	 			var studioToatlPrice = $(".oStudio .needMoney .text-input").val();
+	 			var studioIndustryCategory = $(".oStudio .companyType .text-input").val();
+	 			var studioEmployeeNum = $(".oStudio .empolyerNum").val();   //企业员工人数
+	 			var studioOpportunityArea= $(".oStudio .oSjQyinfo").val();  //需求地段
+	 			var studioPurpose= $(".oStudio .oForUseClass .text-input").val();  // 用途
+	 			function oSpaceTF(spaceCustomSex,spaceStationNumber,spaceOpportunityArea){
+		 			if ( spaceCustomSex != "" && spaceStationNumber != "" && spaceOpportunityArea != "" ) {
+		 				return 1;
+		 			}else{
+		 				return 0;
+		 			}
+	 			}
+	 			function oStudioTF(studioCustomSex,studioEmployeeNum,studioOpportunityArea){
+		 			if ( studioCustomSex != "" && studioEmployeeNum != "" && studioOpportunityArea != "" ) {
+		 				return 1;
+		 			}else{
+		 				return 0;
+		 			}
+	 			}
+	 			if ( oSpaceTF(spaceCustomSex,spaceStationNumber,spaceOpportunityArea) == 1 && oStudioTF(studioCustomSex,studioEmployeeNum,studioOpportunityArea) == 0  ) {
+	 				//space
+	 				var oData = {cityName:cityName,rid:rid,type:"Space",platformSource:platformSource,spaceReferenceName:spaceReferenceName,
+	 				spaceReferenceTel:spaceReferenceTel,spaceReferenceId:spaceReferenceId,spaceCustomName:spaceCustomName,spaceCustomTel:spaceCustomTel,
+	 				spaceCustomSex:spaceCustomSex,spaceCustomType:spaceCustomType,spaceCustomId:spaceCustomId,spaceNeedArea:spaceOpportunityArea,spaceToatlPrice:spaceToatlPrice,
+	 				spaceStationNumber:spaceStationNumber,spaceIndustryCategory:spaceIndustryCategory,spaceOpportunityArea:spaceNeedArea};
+	 				OAJAX("r=opportunity/create", oData , creatSuccess , creatDefault );
+	 				console.log(oData);
+	 			} else if ( oSpaceTF(spaceCustomSex,spaceStationNumber,spaceOpportunityArea) == 0 && oStudioTF(studioCustomSex,studioEmployeeNum,studioOpportunityArea) == 1  ) {
+	 				//studio
+	 				if ( studioPurpose == '请选择') {
+	 					alert("请选择商机用途");
+	 					return false;
+	 				}
+	 				var oData = {cityName:cityName,rid:rid,type:"Studio",platformSource:platformSource,
+	 				studioReferenceName:studioReferenceName,studioReferenceTel:studioReferenceTel,studioReferenceId:studioReferenceId,studioCustomName:studioCustomName,
+	 				studioCustomTel:studioCustomTel,studioCustomSex:studioCustomSex,studioCustomType:studioCustomType,studioCustomId:studioCustomId,studioNeedSize:studioNeedSize,
+	 				studioNeedArea:studioOpportunityArea,studioToatlPrice:studioToatlPrice,studioIndustryCategory:studioIndustryCategory,studioEmployeeNum:studioEmployeeNum,
+	 				studioPurpose:studioPurpose,studioOpportunityArea:studioNeedArea};
+	 				console.log(oData);
+	 				OAJAX("r=opportunity/create", oData , creatSuccess , creatDefault )	;
+	 			} else if ( oSpaceTF(spaceCustomSex,spaceStationNumber,spaceOpportunityArea) == 1 && oStudioTF(studioCustomSex,studioEmployeeNum,studioOpportunityArea) == 1  ) {
+	 				//space和studio
+	 				if ( studioPurpose == '请选择') {
+	 					alert("请选择商机用途");
+	 					return false;
+	 				}
+	 				var oData = {cityName:cityName,rid:rid,type:"Space,Studio",platformSource:platformSource,spaceReferenceName:spaceReferenceName,
+	 				spaceReferenceTel:spaceReferenceTel,spaceReferenceId:spaceReferenceId,spaceCustomName:spaceCustomName,spaceCustomTel:spaceCustomTel,
+	 				spaceCustomSex:spaceCustomSex,spaceCustomType:spaceCustomType,spaceCustomId:spaceCustomId,spaceNeedArea:spaceOpportunityArea,spaceToatlPrice:spaceToatlPrice,
+	 				spaceStationNumber:spaceStationNumber,spaceIndustryCategory:spaceIndustryCategory,spaceOpportunityArea:spaceNeedArea,
+	 				studioReferenceName:studioReferenceName,studioReferenceTel:studioReferenceTel,studioReferenceId:studioReferenceId,studioCustomName:studioCustomName,
+	 				studioCustomTel:studioCustomTel,studioCustomSex:studioCustomSex,studioCustomType:studioCustomType,studioCustomId:studioCustomId,studioNeedSize:studioNeedSize,
+	 				studioNeedArea:studioOpportunityArea,studioToatlPrice:studioToatlPrice,studioIndustryCategory:studioIndustryCategory,studioEmployeeNum:studioEmployeeNum,
+	 				studioPurpose:studioPurpose,studioOpportunityArea:studioNeedArea};
+	 				OAJAX("r=opportunity/create", oData , creatSuccess , creatDefault );
+					console.log(oData);
+	 			}
+	 		})
+			function creatSuccess(data){
+				console.log(data)
+			 	if ( data.code == 0 ) {
+			 		console.log("创建商机成功");
+			 		$(".oZheFeiQi").hide();
+					$(".oTXSuccess").hide();
+					$(".oSpace input").attr("readonly","readonly");
+					$(".oStudio input").attr("readonly","readonly");
+					location.reload();
+			 	}else{
+			 		alert("创建失败")
+			 	}
+			 }
+			  function creatDefault( ){
+			 	alert("创建商机失败")
+			 }
+		</script>
+		<script type="text/javascript">
+			$('.oSpaceMenu').click(function(){
+				$(this).addClass('oColor').siblings().removeClass('oColor');
+				$('.oStudio').hide();
+				$('.oSpace').show();
+			})
+			$('.oStudioMenu').click(function(){
+				$(this).addClass('oColor').siblings().removeClass('oColor');
+				$('.oSpace').hide();
+				$('.oStudio').show();
+			})
+			$('.oChange').click(function(){
+				$(".oZheFeiQi").show();
+				$(".oTXSuccess").show();
+			});
+			//点击返回修改
+			$('.modified').click(function(){
+				$(".oZheFeiQi").hide();
+				$(".oTXSuccess").hide();
+			})
+			//重置数据 
+			$('.oReset').click(function(){
+				//studio
+	 			$("._customtypeStudio .text-input").val("请选择");         
+	 			$(".oStudio .needArea .text-input").val("请选择");
+	 			$(".oStudio .needStreet .text-input").val("请选择");
+	 			$(".oStudio .needMoney .text-input").val("请选择");
+	 			$(".oStudio .companyType .text-input").val("请选择");
+	 			$(".oStudio .empolyerNum").val("");   //企业员工人数
+	 			$(".oStudio .oSjQyinfo").val("");  //需求地段
+	 			$(".oStudio .oForUseClass .text-input").val("请选择");  // 用途
+				//space
+				$(".oSpace ._customtypeSpace .text-input").val("请选择");
+	 			$(".oSpace .needStreetSpace .text-input").val("请选择");  //商机区域信息
+	 			$(".oSpace .needMoneySpace .text-input").val("请选择");
+	 			$(".oSpace .oNeedNumber").val("");      //工位需求数量
+	 			$(".oSpace .companyTypeSpace .text-input").val("请选择");
+	 			$(".oSpace .oSjQyinfo").val("");    
+			})
+			//返回列表
+			$(".oBackList").click(function(){
+				window.history.go(-1);
+			})
+			
+			$(".oNeedNumber").blur(function(){
+				var oVal = $(this).val();
+				if ( isNaN( oVal ) ) {
+					$(this).val("");
+					$(this).focus();
+					alert("请输入数字")
+				}
+			})
+			$(".empolyerNum").blur(function(){
+				var oVal = $(this).val();
+				if ( isNaN( oVal ) ) {
+					$(this).val("");
+					$(this).focus();
+					alert("请输入数字")
+				}
+			})
+		</script>
+	</body>
+</html>

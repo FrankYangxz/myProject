@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<link href="zhaoShang/img/icon.png" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/zhanshang.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/shangjilist.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/fenye.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/select.css"/>
+		<style type="text/css">
+			.oShouKuan input,#oBankList{height: 37px;}
+		</style>
+	</head>
+	<body id="sjlistLogin">
+		<!--弹层-->
+		<div class="oZheFeiQi"></div>
+		<!--收款信息-------------第一个弹层---------------------->
+		<div class="oShouKuan">
+			<form class="oShouKuanInfo">
+				<p>收款信息</p>
+				<p class="oNameForSk">您的姓名</p>
+				<p class="oNameForBank"><input type="text" id="oPersonName" value="" /></p>
+				<p class="oNameForSk">身份证号</p>
+				<p class="oNameForBank"><input type="text" id="oIdCard" value="" /></p>
+				<p class="oNameForSk">开户行账号</p>
+				<p class="oNameForBank"><input type="text" id="oBankZhangHao" value="" /></p>
+				<p class="oNameForSk">开户行名称</p>
+				<p class="oNameForBank noPadding">
+					<select name="bank" class="oSelect" id="oBankList" style="text-indent: 8px;">
+						<option value="请选择城市">请选择银行</option>
+					</select>
+				</p>
+				<p class="oNameForSk">开户行行号</p>
+				<p class="oNameForBank"><input type="text" id="oBankNumber" value="" /></p>
+				<p style="display: none;" id="oBankId"></p>
+				<a class="oJiKeCreat">立刻创建</a>
+			</form>
+		</div>
+		<!--警告-------------------第二个弹层--------------------->
+		<div class="oJingGao">
+			<form class="oJingGaoInFo" >
+				<div class="oDanger"><img src="zhaoShang/img/danger.jpg"/></div>
+				<p>收款信息</p>
+				<table>
+					<tr><td>您的姓名</td><td id="_name"></td></tr>
+					<tr><td>身份证号</td><td id="_idCard"></td></tr>
+					<tr><td>开户行</td><td id="_bank"></td></tr>
+					<tr><td>开户行号</td><td id="_bankNum"></td></tr>
+					<tr><td>开户行账号</td><td id="_bankZhang"></td></tr>
+				</table>
+				<a class="oMakeSure">确认提交</a>
+				<a class="oBackXiuGai">返回修改</a>
+			</form>
+		</div>	
+		<!----------提交成功--------第三个弹层--------------->
+		<div class="oSubSuccess">
+			<p><img src="zhaoShang/img/success_03.jpg"/></p>
+			<button class="oSuccessBack">返回</button>
+		</div>
+		<!--重置密码-------------第四个弹层---------------------->
+		<div class="oPassword">
+			<form class="oPasswordInfo">
+				<p>请输入手机号码</p>
+				<p class="oyanInput"><input type="tel" placeholder="手机号码" id="oTel" style="display: inline-block;width: 50%;"/><input type="text" id="oYanZheng" placeholder="验证码" style="display: inline-block;width: 20%;border-left: 1px solid #666666;"/>|&nbsp;<span class="oGetMa oColor">&nbsp;&nbsp;&nbsp;获取验证码</span><span class="oDaojiShi oColor" style="display: none;">倒计时<i>60</i>s</span></p>
+				<p>新密码</p>
+				<p><input type="password" id="oNewPwd" /></p>
+				<p>再次输入新密码</p>
+				<p><input type="password"  id="oNewPwdSecond"/></p>
+				<a class="oQueRen">确认提交</a>
+			</form>
+		</div>
+		<!--意见反馈--------------第五个弹层-------------------->
+		<div class="oYiJianFanKui">
+			<form class="oYiJianInfo">
+				<textarea></textarea>
+				<input type="text" placeholder="问题订单ID" id="oProblemId"/>
+				<span>*我们将会在48小时之内，以短信(邮件)的形式回复您。</span><br />
+				<a class="oSubYiJian">确认提交</a>
+			</form>
+		</div>
+		<!--推荐-------------------第六个弹层------------------>
+		<div class="oTuiJianfo">
+			<div class="oTuiJianCon">
+				<dl>
+					<dt><h3>即刻加入纳新计划</h3></dt>
+					<dd>加入纳新计划，与千万家入驻企业共同成长，加入纳什大家庭，获得更多奖励。</dd>
+				</dl>
+				<form>
+					<p class="kehuxinxi">客户信息</p>
+					<select  id="oCity" style="width: 100%;">
+			            <option value= "0" >请选择城市</option>
+			        </select>
+					<input type="text" placeholder="客户姓名"  class="oSelect oNameCus" />
+					<input type="tel" placeholder="客户电话"  class="oSelect oTelCus" />
+					<a class="oBtn" id="subNewInfo">确认提交</a>
+				</form>
+			</div>
+		</div>
+		<!---------顶部-->
+		<div class="top">
+			<div class="topCon">
+				<img src="zhaoShang/img/logo2.png"/>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="bannerInfo">
+				<p class="logohh"></p>
+				<p>与纳什空间共同成长</p>
+				<p>推荐优质客户，纳什与您共同成长</p>
+			</div>
+		</div>
+		<!------main------>
+		<div class="main">
+			<!--左侧-->
+			<div class="mainLeft">
+				<!--下拉菜单-->
+				<ul class="oList">
+					<li id="_keyTime">
+						<select name="time" class="oSelect" >
+							<option value="0">推荐时间段</option>
+							<option value="1">一星期内</option>
+							<option value="2">一月内</option>
+							<option value="3">三个月内</option>
+							<option value="4">半年内</option>
+							<option value="5">一年半内</option>
+						</select>
+					</li>
+					<li id="_keyProgress">
+						<select name="progress" class="oSelect">
+							<option value="0">商机进度</option>
+							<option value="1">带看</option>
+							<option value="2">赢单</option>
+							<option value="4">付款中</option>
+							<option value="3">丢单</option>
+							<option value="5">已付款</option>
+						</select>
+					</li>
+					<li id="_keyType">
+						<select name="typee" class="oSelect">
+							<option value="0">商机类型</option>
+							<option value="Space">Space</option>
+							<option value="Studio">Studio</option>
+						</select>
+					</li>
+					<div style="clear:both;"></div>
+				</ul>
+				<!---------------------三个表单。全部，提醒更新，带创建商机----------------------->
+				
+				<div class="mainLeftAll">
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>张三</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">签约中</i>&nbsp;<i class="oColor">￥3000.00</i></span></p>
+							<p class="oBeiZhu"><span>备注：</span><span>各种各样的原因，所以废弃了，暂定20字以内的备注。谢谢合作！</span></p>
+						</div>
+					</div>
+				</div>
+				<!--分页-->
+				<div class="tcdPageCode"></div>
+			</div>
+			<!--右侧-->
+			<div class="mainRight">
+				<div class="mainRightCon">
+					<p>个人中心</p>
+					<p><span>基础信息</span><a class="oResetPassWord">重置密码</a></p>
+					<p class="_deName"></p>
+					<p class="_deTel"></p>
+					<p class="_deEmail"></p>
+					<button class="oMoneyInfo">点击完善收款信息</button>
+					<p><a class="oCreat">创建新推荐</a><a class="oYiJian">意见反馈</a></p>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		<!--底部-->
+		<!-----------------底部------------------>
+		<iframe src="foot.html" scrolling="no" width="100%" height="445px" marginheight="0" marginwidth="0" border="none"></iframe>
+	<script src="zhaoShang/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="zhaoShang/js/ajax.js" type="text/javascript" charset="utf-8"></script>
+	<script src="zhaoShang/js/tongji.js" type="text/javascript" charset="utf-8"></script>
+	<script src="zhaoShang/js/creatresetpwd.js" type="text/javascript" charset="utf-8"></script>
+	<script src="zhaoShang/js/jquery.page.js" type="text/javascript" charset="utf-8"></script>
+	<script src="zhaoShang/js/selelelel.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//审核信息
+		$('.oJiKeCreat').click(function(){
+			var oPersonName = $('#oPersonName').val();
+			var oIdCard = $("#oIdCard").val();
+			var oBankZhangHao = $('#oBankZhangHao').val();
+			var oBankName = $('#oBankList option:selected').val();
+			var oBankNumber = $('#oBankNumber').val();
+			//验证12为开户行号
+			var reg = /^\d{12}$/;
+			if ( !reg.test( oBankNumber ) ) {
+				alert("开户行账号不正确！请重新输入");
+				$('#oBankNumber').val("");
+				return false;
+			}
+			//验证15位或者18位数字的身份证号
+			var exg = /^([0-9]{17}[0-9X]{1})|([0-9]{15})$/;
+			if ( !exg.test( oIdCard ) ) {
+				alert("身份证号不正确！请重新输入");
+				$('#oIdCard').val("");
+				return false;
+			} 
+			//验证16-19位银行卡号
+			var regs = /^\d{16,19}$/;
+			if ( !regs.test( oBankZhangHao ) ) {
+				alert("银行账号不对，请重新输入！");
+				$('#oBankZhangHao').val("");
+				return false;
+			}
+			//判断是否有空值
+			if (  oPersonName == "" ||  oBankName == "" ||  oBankNumber == "" || oBankZhangHao == "" || oIdCard == "" ) {
+				alert("请把信息补充完整！");
+				return false;
+			} else {
+				$('#_name').text(oPersonName);   //姓名
+				$("#_idCard").text(oIdCard);     //身份证号
+				$('#_bank').text(oBankName);     //银行名字
+				$("#_bankNum").text(oBankNumber);   // 开户行号
+				$('#_bankZhang').text(oBankZhangHao);  //卡号
+				$('.oJingGao').show();
+			}
+		})
+		//确认提交银行账号信息
+		$('.oMakeSure').click(function(){
+			var name = $('#_name').text();
+			var bankName = 	$('#_bank').text();
+			var bankId = $("#oBankId").text();
+			var bankAcountNo = $('#_bankZhang').text();
+			var 	bankNo = $("#_bankNum").text();
+			var userNo = $("#_idCard").text();
+			var oDataq = {name:name,userNo:userNo,bankName:bankName,bankAcountNo:bankAcountNo,bankNo:bankNo,bankId:bankId};
+			OAJAX( "r=payInfo/create" , oDataq , creatReceiveInfo , creatReceiveInfoDefault );
+//			console.log(oDataq)
+			sessionStorage.bankName = name;
+			sessionStorage.bankNo = bankNo;
+			sessionStorage.bankAcountNo = bankAcountNo;
+		})
+		function creatReceiveInfo(data){
+			console.log(data)
+			if( data.code == 0 ){
+				sessionStorage.bankName = $('#_bank').text();
+				sessionStorage.bankNo = $('#_bankZhang').text();
+				sessionStorage.bankAcountNo = $("#_bankNum").text();
+				$('.oShouKuan').hide();
+				$('.oJingGao').hide();
+				$('.oSubSuccess').show();
+			}
+		}
+		function creatReceiveInfoDefault(){
+			alert("数据提交失败！");
+		}
+		//返回修改
+		$('.oBackXiuGai').click(function(){
+			$('.oJingGao').hide();
+		})
+		//返回
+		$('.oSuccessBack').click(function(){
+			$('#oPersonName').val("");
+			$('#oBankName').val("");
+			$('#oBankNumber').val("");
+			$('#oBankZhangHao').val("");
+			$('.oZheFeiQi').hide();
+			$('.oSubSuccess').hide();
+			window.location.href="homelist.html";
+		})
+	</script>
+	<!--补充信息----银行-->
+	<script type="text/javascript">
+		//渲染银行列表
+		var oDatas;
+		OAJAX("r=bank/getList", oDatas , getBankList , getBankDefault );
+		function getBankList (data){
+			var oBankList = data.data.list;
+			for ( var i = 0 ; i < oBankList.length; i++  ) {
+				$("#oBankList").append("<option value="+oBankList[i].name+" data-value="+oBankList[i].id+" >"+oBankList[i].name+"</option>");
+			}
+		}
+		function getBankDefault (){
+			alert("获取数据失败！")
+		}
+		//银行账号失去焦点获取银行名称
+		$("#oBankZhangHao").blur(function(){
+			var oVal = $(this).val();
+			var regs = /^\d{16,19}$/;
+			if ( !regs.test( oVal ) ) {
+				alert("银行账号不对，请重新输入！");
+				$('#oBankZhangHao').val("");
+				return false;
+			}
+			var oDatam = {bankAcountNo:oVal};
+			OAJAX( "r=bank/getBankNameByCardNo" , oDatam , oShowBank , oShowBankDefault);
+		})
+		function oShowBank (data){
+			var oSelected = data.data.bankName;
+			var oBankId = $("#oBankList option[value="+oSelected+"]").data("value");
+			console.log( oBankId );
+			$("#oBankId").html( oBankId );
+			console.log( $("#oBankId").html() )
+			$("#oBankList").val( oSelected );
+		}
+		function oShowBankDefault (){
+			console.log("失败")
+		}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//渲染右测数据
+			$("._deMOney").html(sessionStorage.totalMoney);
+			$("._deName").html(sessionStorage.name);
+			$("._deTel").html(sessionStorage.tel);
+			$("._deEmail").html(sessionStorage.email);
+			$("._deBank").html(sessionStorage.bankName);
+			$("._deBankId").html(sessionStorage.bankAcountNo);
+			$("._deCardNumber").html(sessionStorage.bankNo);
+			//渲染右侧数据
+			//进入页面渲染全部数据第一页
+			var oPag = sessionStorage.oPag = 1 ;  //页数(第几页)
+			var oActionType = sessionStorage.oActionType = 0 ;   // 1-待创建商机 2-待更新付款信息 0-默认是全部
+			var oProgress = sessionStorage.oProgress = 0;     //商机进度 
+			var oType = sessionStorage.oType = "" ;  //商机类型 Space  Studio
+			var oTime = sessionStorage.oTime = 0 ;  //推荐时间段
+			var totalPage ; //总的页数
+//			getAjax( "r=reference/getList" , oDataj , getSuccess , getDefault  )
+			oClick();
+			function getDefault(){}
+			function getSuccess(data){
+				console.log(data)
+				if ( data.code == "0" ) {
+					totalPage = sessionStorage.totalPage = data.data.totalNum;
+					$(".tcdPageCode").createPage({
+						pageCount: totalPage,
+						current: page(),
+						backFn: function(p) {
+							console.log(1)
+							sessionStorage.oPag = p;
+							oClick();
+						}
+					});
+					function page(){
+						var page = sessionStorage.oPag;
+						return Number(page);
+					}
+					//渲染第一页的数据
+					 pageData(data);
+				}else if (data.code == "10006"){
+					alert("超时")
+				}else{
+					location.href = "loginfalse.html";
+				}
+			}
+			
+			//select 选择发送数据
+			$(function() {
+				$('#_keyTime .oSelect').comboSelect();
+				$('#_keyProgress .oSelect').comboSelect();
+				$('#_keyType .oSelect').comboSelect();
+				$("#_keyTime .combo-dropdown li").click(function(){
+					var oVal = $(this).data("value");
+					sessionStorage.oTime = oVal;
+					oClick();
+				})
+				$("#_keyProgress .combo-dropdown li").click(function(){
+					var oVal = $(this).data("value");
+					sessionStorage.oProgress = oVal;
+					oClick();
+				})
+				$("#_keyType .combo-dropdown li").click(function(){
+					var oVal = $(this).data("value");
+					sessionStorage.oType = oVal;
+					oClick();
+				})
+			});
+			//点击更新提醒
+			$(".oTiXing").click(function(){
+				sessionStorage.oActionType = 2 ;
+				oClick();
+			});
+			//点击待创建商机
+			$(".oChuang").click(function(){
+				sessionStorage.oActionType = 1 ;
+				oClick();
+			});
+			//点击
+			function oClick(){
+				var oData;
+				$('.mainLeftAll').empty();
+				oData = {page:sessionStorage.oPag,pageNum:20,actiontype:sessionStorage.oActionType,progress:sessionStorage.oProgress,type:sessionStorage.oType,time:sessionStorage.oTime};
+				console.log(oData);
+				getAjax ( "r=reference/getList" , oData , getSuccess , getDefault );
+			}
+			function pageData(data){
+				$('.mainLeftAll').empty();
+				for (var i=0 ; i < data.data.list.length ; i++   ) {
+					var oInfo = data.data.list[i];
+					var timer = oInfo.createTime;
+					timer = new Date(parseInt(timer) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+					timer = timer.split(' ')[0];
+					if ( oInfo.opportunityInfo.length == 0 ) {
+						var html = "";
+						var isDel = oInfo.isDel;
+						var or = "";
+						if( isDel == 1 ){
+							or = "(已废弃)";
+						}
+						html += "<div class=\"oForm\"><div class=\"oFromCon\">";
+						html += "<p><span class=\"oID oColor\">ID:<i>"+oInfo.code+"</i><i class=\"oColor\">  "+or+"</i></span> <span class=\"oTime\">推荐时间：<i>"+timer+"</i></span></p>";
+						html += "<p><span class=\"oID\">客户姓名:<i class=\"_nameCus\">"+oInfo.custom.name+"</i></span></p>";
+						html += "<p><span class=\"oID\">客户电话:<i class=\"_telCus\">"+oInfo.custom.tel+"</i></span> <span class=\"oTime\">商机进度：</span></p>";
+						html += "<p class=\"oBeiZhu\"><span>备注：</span><span>"+oInfo.reason+"</span></p>";
+						$('.mainLeftAll').append( html );
+					} else{
+						var oJInDU = "";
+						for ( var s = 0 ; s <  oInfo.opportunityInfo.length; s ++ ) {
+							oJInDU += oInfo.opportunityInfo[s].state +" , ";
+						}
+						var oMoney = "";
+						for ( var s = 0 ; s <  oInfo.opportunityInfo.length; s ++ ) {
+							oMoney += oInfo.opportunityInfo[s].money +" , ";
+						}
+						var html = "";
+						html += "<div class=\"oForm\"><div class=\"oFromCon\">";
+						html += "<p><span class=\"oID oColor\">ID:<i>"+oInfo.code+"</i></span> <span class=\"oTime\">推荐时间：<i>"+timer+"</i></span></p>";
+						html += "<p><span class=\"oID\">客户姓名:<i class=\"_nameCus\">"+oInfo.custom.name+"</i></span></p>";
+						html += "<p><span class=\"oID\">客户电话:<i class=\"_telCus\">"+oInfo.custom.tel+"</i></span> <span class=\"oTime\">商机进度：<i class=\"oColor\">"+oJInDU+"</i>&nbsp;<i class=\"oColor\">￥"+oMoney+"</i></span></p>";
+						html += "<p class=\"oBeiZhu\"><span>备注：</span><span>"+oInfo.reason+"</span></p>";
+						$('.mainLeftAll').append( html );
+					}
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

@@ -1,0 +1,2 @@
+1、在xaingqingye01.html的第71行代码替换为：<a href="yuyue.html">预约参观</a><a href="tel:4001160055" >拨打电话</a>；
+2.把文件夹内的两张图片放进img文件夹内；

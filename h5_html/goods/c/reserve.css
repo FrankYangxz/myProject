@@ -1,0 +1,390 @@
+.page {
+	width: 750px;
+	width: 10rem;
+	overflow: hidden;
+	margin: auto;
+	background: #f1f1f1;
+	padding-bottom: 140px;
+	padding-bottom: 1.8666666666666667rem;
+}
+
+.warp {
+	width: 750px;
+	width: 10rem;
+	overflow: hidden;
+	margin: auto;
+	padding-bottom: 140px;
+	padding-bottom: 1.8666666666666667rem;
+}
+
+.stand {
+	width: 100%;
+	margin-top: 88px;margin-top: 1.1733333333333333rem;
+}
+
+.stand img {
+	width: 100%;
+}
+
+.list {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 2px;
+	margin-bottom: 0.02666666666666667rem;
+}
+
+.list_goods {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.page h3 {
+	font-size: 36px;
+	font-size: 0.48rem;
+	line-height: 90px;
+	line-height: 1.2rem;
+	background: #f4f4f4;
+	color: #fea100;
+	padding: 0 20px;
+	padding: 0 0.26666666666666666rem;
+}
+
+.title {
+	width: 100%;
+	font-size: 30px;
+	font-size: 0.4rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #0c0c0c;
+}
+
+.through {
+	width: 80%;
+	height: 1px;
+	margin: 0px auto;
+	margin: 0px auto;
+	padding: 0px;
+	padding: 0px;
+	background-color: #a7a7a7;
+	position: relative;
+	overflow: hidden;
+}
+
+.title_detail {
+	font-size: 32px;
+	font-size: 0.4266666666666667rem;
+	line-height: 65px;
+	line-height: 0.8666666666666667rem;
+	height: 65px;
+	height: 0.8666666666666667rem;
+	color: #FEA100;
+	text-align: center;
+	background: #fff;
+	margin-bottom: 20px;
+	margin-bottom: 0.26666666666666666rem;
+	width: 160px;
+	width: 2.1333333333333333rem;
+	position: relative;
+	left: 50%;
+	margin-left: -80px;
+	margin-left: -1.0666666666666667rem;
+	top: 50%;
+	margin-top: -32px;
+	margin-top: -0.4266666666666667rem;
+}
+
+.prefecture {
+	background: #fff;
+	padding: 20px;
+	padding: 0.26666666666666666rem;
+	overflow: hidden;
+}
+
+.prefecture .icon {
+	border-radius: 50%;
+	width: 136px;
+	width: 1.8133333333333332rem;
+	height: 136px;
+	height: 1.8133333333333332rem;
+	float: left;
+}
+
+.prefecture .description {
+	margin-left: 166px;
+	margin-left: 2.2133333333333334rem;
+}
+
+.prefecture .description h4 {
+	font-size: 32px;
+	font-size: 0.4266666666666667rem;
+	color: #000;
+	height: 75px;
+	height: 1rem;
+	line-height: 75px;
+	line-height: 1rem;
+	overflow: hidden;
+}
+
+.prefecture .description p {
+	font-size: 28px;
+	font-size: 0.37333333333333335rem;
+	color: #8d8d8d;
+	line-height: 32px;
+	line-height: 0.4266666666666667rem;
+}
+
+.goods {
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px solid #a4a4a4;
+	margin-bottom: 10px;
+	margin-bottom: 0.13333333333333333rem;
+}
+
+.goods img {
+	width: 100%;
+}
+
+.goods .price {
+	padding: 10px 20px;
+	padding: 0.13333333333333333rem 0.26666666666666666rem;
+	line-height: 50px;
+	line-height: 0.6666666666666666rem;
+	background: #fff;
+	overflow: hidden;
+}
+
+.goods .price .star_level {
+	color: #ff1f1f;
+}
+
+.goods .price .star_level .new_price {
+	font-size: 48px;
+	font-size: 0.64rem;
+	display: inline-block;
+	margin-right: 35px;
+	margin-right: 0.4666666666666667rem;
+}
+
+.goods .price .star_level .new_price i {
+	font-size: 32px;
+	font-size: 0.4266666666666667rem;
+}
+
+.goods .price .star_level .level {
+	width: 70px;
+	width: 0.9333333333333333rem;
+	height: 24px;
+	height: 0.32rem;
+	line-height:24px;
+	line-height: .32rem;
+	display: inline-block;
+	width: auto;
+}
+
+.goods .price .star_level .level img {
+	float: left;
+	width: 70px;
+	width: 0.9333333333333333rem;
+	height: 24px;
+	height: 0.32rem;
+	margin-right: 10px;
+	margin-right: 0.13333333333333333rem;
+	vertical-align: middle;
+}
+
+.goods .price .star_level .level .residue {
+	float: left;
+	width: auto;
+	font-size: 26px;
+	font-size: 0.3466666666666667rem;
+	display: block;
+	padding-left: 10px;
+	padding-left: 0.13333333333333333rem;
+	padding-right: 10px;
+	padding-right: 0.13333333333333333rem;
+	color: #fe0000;
+}
+
+.goods .price .star_level .level .inventory_none {
+	display: none;
+}
+
+.goods .price .old_price {
+	font-size: 26px;
+	font-size: 0.3466666666666667rem;
+}
+
+.goods .price .old_price span {
+	text-decoration: line-through;
+}
+
+.intro_detail {
+	background: #fff;
+	padding: 20px 20px 10px;
+	padding: 0.26666666666666666rem 0.26666666666666666rem 0.13333333333333333rem;
+	overflow: hidden;
+	margin-bottom: 10px;
+	margin-bottom: 0.13333333333333333rem;
+}
+
+.intro_detail p {
+	line-height: 50px;
+	line-height: 0.6666666666666666rem;
+}
+
+.intro_detail p span.detail_1 {
+	color: #A3A3A3;
+	width: 30%;
+	float: left;
+	font-size: 30px;
+	font-size: 0.4rem;
+}
+
+.intro_detail p span.detail_2 {
+	width: 70%;
+	float: left;
+	font-size: 30px;
+	font-size: 0.4rem;
+	white-space: pre;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.detail_img {
+	width: 100%;
+}
+
+.detail_img img {
+	width: 100%;
+	height: 100%;
+}
+
+.call {
+	width: 100%;
+	background: #eeeeee;
+	position: fixed;
+	bottom: 0;
+	height: 100px;
+	height: 1.3333333333333333rem;
+	line-height: 100px;
+	line-height: 1.3333333333333333rem;
+}
+
+.call .service {
+	width: 155px;
+	width: 2.066666666666667rem;
+	height: 100px;
+	height: 1.3333333333333333rem;
+	line-height: 100px;
+	line-height: 1.3333333333333333rem;
+	display: inline-block;
+	text-align: center;
+	font-size: 32px;
+	font-size: 0.4266666666666667rem;
+	float: left;
+	color: #FEA100;
+}
+
+.call .cart {
+	margin-left: 155px;
+	margin-left: 2.066666666666667rem;
+	width: 155px;
+	width: 2.066666666666667rem;
+	text-align: center;
+	border-left: 1px solid #bababa;
+	margin: 10px 0;
+	margin: 0.13333333333333333rem 0;
+	display: inline-block;
+}
+
+.call .cart img {
+	height: 30px;
+	height: 0.4rem;
+	margin-top: 25px;
+	margin-top: 0.3333333333333333rem;
+	vertical-align: top;
+	width: 30px;
+	width: 0.4rem;
+}
+
+.call .buy {
+	float: right;
+	color: #fff;
+	width: 430px;
+	width: 5.733333333333333rem;
+	background: #FEA100;
+	text-align: center;
+	font-size: 42px;
+	font-size: 0.56rem;
+	display: inline-block;
+}
+
+.xj_price {
+	background: #f8f8f8;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 55px;
+	margin-bottom: 0.7333333333333333rem;
+}
+
+.xj_price ul {
+	padding: 30px 30px 20px 30px;
+	padding: 0.4rem 0.4rem 0.26666666666666666rem 0.4rem;
+	overflow: hidden;
+}
+
+.xj_price ul li {
+	width: 25%;
+	float: left;
+	height: 40px;
+	height: 0.5333333333333333rem;
+	line-height: 40px;
+	line-height: 0.5333333333333333rem;
+	overflow: hidden;
+	margin-bottom: 20px;
+	margin-bottom: 0.26666666666666666rem;
+	display: block;
+}
+
+.xj_price ul li img {
+	width: 40px;
+	width: 0.5333333333333333rem;
+	height: 40px;
+	height: 0.5333333333333333rem;
+	vertical-align: top;
+	float: left;
+	margin-right: 10px;
+	margin-right: 0.13333333333333333rem;
+}
+
+.xj_price ul li div {
+	font-size: 20px;
+	font-size: 0.26666666666666666rem;
+	color: #a7a7a7;
+}
+
+
+/*tanchuang*/
+.tips_box{width: 100%;height: 100%;background: rgba(0, 0, 0, .9);position: fixed;top: 0;left: 0;z-index: 100;display: none;}
+.tips_box .ball{width: 590px; width: 7.866666666666666rem; height: 480px; height: 6.4rem;position: absolute; left: 50%; margin-left: -295px; margin-left: -3.933333333333333rem; top: 50%; margin-top: -240px; margin-top: -3.2rem; color:#fff; font-size:32px;font-size:0.4266666666666667rem; line-height:60px; line-height:0.8rem;}
+.tips_box .ball .tip_content{padding:50px;padding:0.6666666666666666rem;width:490px;width:6.533333333333333rem;}
+.tips_box .ball .btns{border-top: 1px solid #fff; padding:50px; padding:0.6666666666666666rem;}
+.tips_box .ball .btns .tip_btn{width:40%; text-align:center;border-radius: 7px; padding-top: 20px; padding-top: 0.26666666666666666rem; padding-bottom: 20px; padding-bottom: 0.26666666666666666rem;}
+.tips_box .ball .btns .tips1{border:1px solid #7d7d7d; color: #7d7d7d; float: left;}
+.tips_box .ball .btns .tips2{width:100%;border:1px solid #fea100; color: #fea100; float: right;}
+
+
+
+
+/*8-16*/
+.detail_img{margin-bottom: 10px;margin-bottom: 0.13333333333333333rem;}
+.goods_description{ background:#f3f3f3; height: 100%;}
+.goods_description .through{margin-top: 40px; margin-top: 0.5333333333333333rem;top: 40px;top: 0.5333333333333333rem; }
+.goods_description .title_detail{background:#f3f3f3; color: #3c3c3c; top: 40px;top: 0.5333333333333333rem; }
+.description{font-size: 30px;font-size: 0.4rem;   padding:40px;padding:0.5333333333333333rem;}
+.description pre {margin-bottom: 35px;margin-bottom: 0.4666666666666667rem; line-height: 40px;line-height: 0.5333333333333333rem;}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/zhanshang.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/shangjilist.css"/>
+		<script src="zhaoShang/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/tongji.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!---------顶部-->
+		<div class="top">
+			<div class="topCon">
+				<img src="zhaoShang/img/logo.png"/>
+			</div>
+		</div>
+		<div class="oListFor">
+			<p><a href="#">返回列表</a></p>
+			<p><span class="oColor oStudioMenu">Studio</span>|<span class="oSpaceMenu">Space</span></p>
+			<table class="oStudio">
+				<tr>
+					<td>推荐人姓名</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>推荐人联系方式</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>客户姓名</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>客户联系方式</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>工委需求数量</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>工位单价区间</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>需求地段</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>企业行业类别</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>客户来源</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>商机区域信息</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+			</table>
+			
+			<table class="oSpace" style="display: none;">
+				<tr>
+					<td>推荐人姓名</td>
+					<td><input type="text"  placeholder="sss" /></td>
+				</tr>
+				<tr>
+					<td>推荐人联系方式</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>客户姓名</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>客户联系方式</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>工委需求数量</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>工位单价区间</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>需求地段</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>企业行业类别</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>客户来源</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+				<tr>
+					<td>商机区域信息</td>
+					<td><input type="text"  placeholder="dddd" /></td>
+				</tr>
+			</table>
+			
+			<p><a href="#" class="oChange">创建商机</a><a href="#" class="oReset">重置</a></p>
+			
+			
+			
+			
+		</div>
+		
+		
+		
+		
+		<!--底部-->
+		
+		<div class="foot">
+			<div class="footCon">
+				<div class="footLeft">
+					<img src="zhaoShang/img/foot_03.png"/>
+				</div>
+				<div class="footCenter">
+					<dl class="footCenterTypeOne">
+						<dt>找办公室</dt>
+						<dd><a href="#">北京</a></dd>
+						<dd><a href="#">上海</a></dd>
+						<dd><a href="#">天津</a></dd>
+						<dd><a href="#">深圳</a></dd>
+					</dl>
+					<dl class="footCenterTypeTwo">
+						<dt>产品类型</dt>
+						<dd><a href="#">超级工作室</a></dd>
+						<dd><a href="#">优选工作室</a></dd>
+						<dd><a href="#">联合办公区</a></dd>
+						<dd><a href="#">移动工作站</a></dd>
+					</dl>
+					<dl class="footCenterTypeThree">
+						<dt>纳什支持</dt>
+						<dd><a href="#">纳什服务</a></dd>
+						<dd><a href="#">纳什社区</a></dd>
+						<dd><a href="#">联系我们</a></dd>
+					</dl>
+					
+					
+					
+				</div>
+				<div class="footRight">
+					<img src="zhaoShang/img/foot_05.jpg"/>
+				</div>
+				
+			</div>
+			
+		</div>
+		<script src="zhaoShang/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.oSpaceMenu').click(function(){
+				$(this).addClass('oColor').siblings().removeClass('oColor');
+				$('.oStudio').hide();
+				$('.oSpace').show();
+			})
+			$('.oStudioMenu').click(function(){
+				$(this).addClass('oColor').siblings().removeClass('oColor');
+				$('.oSpace').hide();
+				$('.oStudio').show();
+			})
+		</script>
+	</body>
+</html>

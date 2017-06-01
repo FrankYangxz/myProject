@@ -1,0 +1,36 @@
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+i {font: inherit;}
+a{text-decoration: none;}
+/*头部*/
+html{font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;}
+body{background: #ffffff;position: relative;}
+
+#toubu{width: 100%;height:45px;background: #FFFFFF;position: fixed;left:0;top: 0;z-index: 500;}
+#header{width: 94.452vw;margin: 0 auto;height: 45px;line-height: 45px;text-align: center;font-size:4.3336vw;}
+#header img{width: 5.63vw;height: 4.1484vw;float: left;margin-top: 3.641vw;}
+
+/*主干*/
+.con{width: 100vw;padding-top: 11.112vw;}
+#main{width: 100vw;}
+.banner{width: 100%;position: relative;}
+.jianbian{width: 100%;height:37.04vw;position: absolute;left: 0;bottom: 0;background: url(../img/tt6.png) repeat;background-size: contain;}
+.jianbian a{display: block;width: 32.7804vw;height:8.0008vw;text-align: center;line-height: 10.0008vw;color: #F3F3F3;border-bottom: 0.3vw solid #FFFFFF;font-size: 3.8448vw;margin-top: 26.964vw;margin-left: 33.336vw;}
+
+
+
+
+.article{width: 86.1144vw;margin: 0 auto;font-size: 3.4076vw;padding-top: 5.2596vw;padding-bottom: 8vw;text-align: justify;}
+
+
+/*底部*/
+.footer{width: 100vw;height: 10.26vw;line-height: 10.26vw;color: #FFFFFF;font-size: 3.3336vw;position:fixed;left: 0;bottom: 0;z-index: 500;}
+.footer a{display: block;width: 100vw;height: 100%;float: left;text-align: center;color: #F3F3F3;}
+.footer a:first-of-type{background: #6ecc29;}
+.footer a:last-of-type{background: #fea120;}
+
+/****************产品介绍*****************/
+.con .look{display: block;width: 74.08vw;height: 9.5488vw;line-height: 9.5488vw;text-align: center;background: #FEA120;color: #FeFeFe;font-size: 4.1484vw;margin: -3.778vw auto 5.8596vw;border-radius: 0.926vw
+;}

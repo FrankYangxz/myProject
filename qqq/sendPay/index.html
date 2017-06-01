@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mask.css"/>
+	</head>
+	<body>
+		<header>
+			<h1>发起出款</h1>
+		</header>
+		<nav>
+			<h2>商品名称：</h2>
+			<span>测试商户 | 订单号：67001000002 | 当前可用余额：<em>12312841.00</em>元</span>
+		</nav>
+		<section>
+			<div class="top">
+				<p>收款账户名：<input type="text" /></p>
+				<p>收款账号：<input type="text" /></p>
+				<p>
+					开户银行：<select><option value=""></option></select>
+					<span>省：<select><option value=""></option></select></span>
+					<span>市：<select><option value=""></option></select></span>
+				</p>
+				<p>收款人手机号：<input type="text" /></p>
+				<p>
+					<input type="button" name="" id="" value="保存收款人" />
+					<input type="button" name="" id="" value="从收款人列表选择" />
+				</p>
+			</div>
+			<div class="bottom">
+				<p>出款订单号：<input type="text" /></p>
+				<p>打款金额：<input type="text" />
+					<span>手续承办方：<select><option value=""></option></select>
+				</p>
+				<p>打款用途：<input type="text" />
+				   <span>打款原因：<input type="text" /></span>
+				</p>
+				<p>
+					<input type="button" name="" id="sendPay" value="发起打款" />
+					<input type="button" name="" id="" value="批量打款上传" />
+				</p>
+			</div>
+		</section>
+		<div class="mask"></div>
+		<div class="maskCon">
+			<!--<div>-->
+				<p>为了保障您的账户安全，请进行安全校验！<a class="close" href="###">×</a></p>
+				<!--<a href="###">×</a>-->
+			<!--</div>-->
+			<ul>
+				<li>本次打款共计&nbsp;<i>4</i>&nbsp;笔</li>
+				<li>打款手续费共计&nbsp;<i>20</i>&nbsp;元</li>
+				<li>实付&nbsp;<i>20020</i>&nbsp;元</li>
+			</ul>
+			<span>已向您尾号为<i>1234</i>的手机号发送了短信验证码，请注意查收！</span>
+			<form action="">
+				<b>输入验证码:</b>
+				<input type="text" maxlength="6" />
+				<input type="submit" id="btnn" value="免费获取验证码" onclick="settime(this)" /> 
+				<!--<input type="button" value='重新发送' />-->
+			</form>
+			<div class="">
+				<input type="button" name="" id="" value="确认出款" />
+				<input type="button" class="close" name="" id="" value="取消" />
+			</div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

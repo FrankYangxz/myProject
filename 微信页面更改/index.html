@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/newindex.css"/>
+	</head>
+	<body>
+		<div class="newbanner">
+			<span class="beijing"><i>北京</i><img src="img/index_img/xialajianotu.png"/></span>
+			<img class="llloo" src="img/index_img/llloo.png"/>
+		</div>
+		<div class="newmain">
+			<a href="nash_beijng_introduce.html">
+				<dl>
+					<dt><img src="img/index_img/jux.png"/></dt>
+					<dd>公司介绍</dd>
+				</dl>
+			</a>
+			<a href="product_introduce.html">
+				<dl>
+					<dt><img src="img/index_img/pro_introduce.png"/></dt>
+					<dd>空间产品介绍</dd>
+				</dl>
+			</a>
+			<a href="list.html">
+				<dl>
+					<dt><img src="img/index_img/area.png"/></dt>
+					<dd>区域房源信息</dd>
+				</dl>
+			</a>
+			<a href="Service_introduce.html">
+				<dl>
+					<dt><img src="img/index_img/service.png"/></dt>
+					<dd>空间服务介绍</dd>
+				</dl>
+			</a>
+		</div>
+<!-------------城市定位----------------------------------------------------------->
+		<div class="locat">
+			<dl class="dl01  ">
+				<dt>当前定位城市</dt>
+				<dd><span>北京</span> <img src="img/duigou.png"/></dd>
+			</dl>
+			<dl class="dl02">
+				<dt>选择其它城市</dt>
+				<dd><a >上海</a></dd>
+				<dd><a >天津</a></dd>
+				<dd><a >北京</a></dd>
+			</dl>
+		</div>
+		
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		//选择城市部分显示
+			$('.beijing').on('click',function(){
+				$('.locat').animate({'top':'0'},200);
+			})
+		//选择城市部分消失	
+			$('.dl02 dd').on('click',function(){
+				$('.locat').animate({'top':'100vh'},200);
+				var local=$('.beijing i').text();
+				local =localStorage.oWeiZhi || '北京';
+				$('.beijing i').text(local);
+			})
+		
+		//定位部分	
+			$('.dl02 dd a').on('click',function(){
+				var text=$(this).text();
+				localStorage.oWeiZhi = text;
+				var s = $('.dl01 dd span').text();
+				var t = s;
+				s = text;//定位城市
+				text = t;//服务城市
+				var oDqwz=sessionStorage.oDq = s;
+				var oFw=sessionStorage.oFw = text;
+				oDqwz = sessionStorage.oDq = sessionStorage.oDq || '北京';
+				oFw = sessionStorage.oFw = sessionStorage.oFw;
+				$(this).html(oFw);
+				$('.dl01 dd span').text(oDqwz);
+				
+			})
+						
+			$('.dl01 dd span').text(localStorage.oWeiZhi);
+			
+			var local=$('.beijing i').text();
+			local =localStorage.oWeiZhi || '北京';
+			$('.beijing i').text(local);
+			
+			
+			
+		</script>
+	</body>
+</html>

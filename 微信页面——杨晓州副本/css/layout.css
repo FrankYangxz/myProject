@@ -1,0 +1,101 @@
+
+#wrapper {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  width: 100%;
+  z-index: 500;
+}
+#wrapper #iscroll {
+  background-color: #ccc;
+  position: absolute;
+  width: 100%;
+}
+#wrapper #iscroll #pullDown {
+  height: 40px;
+  margin-top: -40px;
+  line-height: 40px;
+  font-size: 24px;
+  text-align: center;
+}
+#wrapper #iscroll #list li {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 15px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px #000;
+}
+#wrapper #iscroll #pullUp {
+  height: 40px;
+  margin-bottom: -40px;
+  line-height: 40px;
+  font-size: 24px;
+  text-align: center;
+}
+footer {
+  background-color: #f66;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  text-shadow: 1px 1px 1px #333333;
+}
+@keyframes load {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes load {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+#loading .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-animation: load 1s infinite both linear;
+  animation: load 1s infinite both linear;
+}
+#loading .loading #bigD {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+}
+#loading .loading #bigD #smallD {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -8px;
+  top: 50%;
+  margin-top: -6px;
+  border-radius: 50%;
+  background-color: #fea120;    /*企业色*/
+}
+/*# sourceMappingURL=layout.css.map */

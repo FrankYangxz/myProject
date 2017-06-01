@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="keywords" content="联合办公区，超级工作室，优选工作室，移动工作站，一键预约">
+		<meta name="description" content="纳什空间，全国最大的联合办公空间，为创业者而生。入驻企业在办公过程中有任何意见和建议，均可在此提交">
+		<title>预约</title>
+		<link type="text/css" rel="stylesheet" href="css01/public.css">
+		<link type="text/css" rel="stylesheet" href="css/o.css">
+		<link type="text/css" rel="stylesheet" href="css/jquery.datetimepicker.css">
+	</head>
+
+	<body class="order">
+		<div class="orderWrap">
+			
+			<div class="common">
+				<label class="titleText titleTextBg">预约日期</label>
+				<!--<input class="orderText textArrow" type="date" placeholder="预约日期" />-->
+				<input class="orderText textArrow"  id="datetimepicker" style="margin-bottom: 0;">
+			</div>
+			
+			<div class="common">
+				<label class="titleText titleTextBg">您的称呼</label>
+				<input class="orderText" type="text" style="margin-bottom: 0;" placeholder="请填写" />
+			</div>
+			<div class="common">
+				<label class="titleText titleTextBg">您的邮箱</label>
+				<input class="orderText email" type="email" style="margin-bottom: 0;" placeholder="请填写" />
+			</div>
+			<div class="common clearfix" style="border: none;">
+				<label class="titleText titleTextBg">您的联系方式</label>
+				<input class="orderText" id="telephone" type="tel" style="margin-bottom: 0;" maxlength="11" placeholder="请填写" />
+			</div>
+			<p id="telTips"></p>
+		</div>
+		<div class="submit">
+			<a href="#" class="oSub">提交</a>
+		</div>
+		<!--蒙层-->
+		<div class="mengceng"></div>
+		<div class="tianjia">
+				<p>√&nbsp;&nbsp;预约成功</p>
+				<p>我们会在24小时内与您联系</p>
+				<p><a href="#">返回首页</a></p>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.datetimepicker.full.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		$(document).ready(function() {
+			document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+		})
+	</script>
+	<script>
+		$.datetimepicker.setLocale('ch'); //设置中文
+		$('#datetimepicker').datetimepicker({
+			minDate: new Date(),
+			yearStart: 2016, //设置最小年份
+			yearEnd: 2016, //设置最大年份
+			todayButton: false, //关闭选择今天按钮
+			allowTimes: ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
+			step: 5
+		});
+		
+	</script>
+	<!--正则-->
+	<script type="text/javascript">
+		$(".email").blur(function(){
+			var oval= $(this).val();
+			CheckMail(oval)
+		})
+		//邮箱
+		function CheckMail(oval) {
+			 var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			 if ( filter.test(oval) ) {
+			 	return true;
+			 } else {
+				 alert('您的电子邮件格式不正确');
+				 return false;
+			 }
+		}
+		//手机
+		$("#telephone").blur(function(){			
+			var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+			if( !myreg.test($("#telephone").val()) ) 
+			{ 
+			    alert('请输入有效的手机号码！'); 
+			    return false; 
+			} 
+		})
+		//时间
+		$('#datetimepicker').blur(function(){
+			var oDate = new Date(); 
+			var oHour = oDate.getHours();
+			var oval = $(this).val();
+			var ss = oval.split(" ")[1].split(":")[0];
+			if (ss < oHour) {
+				$(".email").val("");
+				alert("请选择合适的时间");
+			} 
+		})
+	</script>
+
+</html>

@@ -1,0 +1,34 @@
+///////////商机列表
+//tap切换 全部，更新提星，带创建商机
+$('.oAll').click(function(){
+	$(this).addClass("oColor").siblings().removeClass("oColor");
+	$('.mainLeftGengXin').hide();
+	$('.mainLeftChuangJ').hide();
+	$('.mainLeftAll').show();
+})
+$('.oTiXing').click(function(){
+	$(this).addClass("oColor").siblings().removeClass("oColor");
+	$('.mainLeftChuangJ').hide();
+	$('.mainLeftAll').hide();
+	$('.mainLeftGengXin').show();
+})
+$('.oChuang').click(function(){
+	$(this).addClass("oColor").siblings().removeClass("oColor");
+	$('.mainLeftGengXin').hide();
+	$('.mainLeftAll').hide();
+	$('.mainLeftChuangJ').show();
+})
+
+//废弃原因提交
+$('._Feiqi').click(function(){
+	$('.oZheFeiQi').show();
+	$('.oReason').show();
+})
+$('.oFeiQiSub').click(function(){
+	$('.oZheFeiQi').hide();
+	$('.oReason').hide();
+})
+$('.oZheFeiQi').click(function(){
+	$('.oZheFeiQi').hide();
+	$('.oReason').hide();
+})

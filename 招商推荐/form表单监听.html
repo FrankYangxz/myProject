@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html>  
+<head lang="en">  
+    <meta charset="UTF-8">  
+    <title></title>  
+    <script src="zhaoShang/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+    <style>  
+        *{padding: 0; margin: 0} 
+        #oSub{width: 200px;height: 200px;background: deepskyblue;}
+    </style>
+</head>  
+<body>  
+	<div class="oFrm">
+		<form id="oSub">
+	    		名字：<input type="text" id="oName" value="用户名"/><br />
+	    		密码：<input type="password"  id="oPwd" /><br />
+	    		<input type="submit" value="tijiao"/>
+	    	</form>
+	</div>
+    <script type="text/javascript"> 
+    		document.getElementById('oSub').onkeydown=keyDownSearch; 
+//	    document.onkeydown=keyDownSearch;   
+	    function keyDownSearch(e) {  
+	        // 兼容FF和IE和Opera  
+	        var theEvent = e || window.event;  
+	        var code = theEvent.keyCode || theEvent.which || theEvent.charCode;  
+	        if (code == 13) {   
+	           console.log(111)
+	            return false;  
+	        }  
+	        return true;  
+	    } 
+	</script>
+</body>  
+</html> 

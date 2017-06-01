@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="keywords" content="Stations across the City,Conference Halls across the City">
+		<meta name="description" content="NASH.WORK provides entrepreneurs and office staff with a new office ecosystem, which is multi-space, community-featured and service-oriented">
+		<link href="img/logo.png" rel="shortcut icon">
+		<title>nash.work</title>
+		<link href="css/public.css" type="text/css" rel="stylesheet" media="all">
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+		<link href="css/jquery.bxslider.css" rel="stylesheet" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#picList1').bxSlider({
+					auto: true,
+					controls: false //隐藏左右按钮
+				});
+				$(".scroll").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({
+						scrollTop: $(this.hash).offset().top
+					}, 1000);
+				});
+				$().UItoTop({
+					easingType: 'easeOutQuart'
+				});
+				$(".logo_img a").mouseover(function() {
+					$(this).css("color","#FEA120");
+				}, function() {
+				    $(this).css("color","#fff");
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="page">
+			<!--banner-->
+			<div class="banner">
+				<ul id="picList1">
+					<li><img src="img/banner1.jpg" /> </li>
+					<li><img src="img/banner2.jpg" /> </li>
+					<li><img src="img/banner3.jpg" /> </li>
+					<li><img src="img/banner4.jpg" /> </li>
+					<li><img src="img/banner5.jpg" /> </li>
+				</ul>
+			</div>
+			<!--header-->
+			<div class="container logo">
+				<div class="logo_img"><img src="img/logo.png" />
+					<p>
+						<a href="javascript:;"><span style="color: #FEA120;">EN</span></a><i>|</i>
+						<a href="http://www.nash.work/" target="_blank"><span>CH</span></a>
+					</p>
+				</div>
+				<!--//header-->
+				<div class="content">
+					<h1>WHAT IS NASH.WORK</h1>
+					<h5>NASH.WORK provides entrepreneurs and office staff with a new office ecosystem, which is multi-space, community-featured and service-oriented.</h5>
+				</div>
+
+			</div>
+			<!--//banner-->
+			<!--about-->
+			<div class="container about">
+				<h3>NASH.WORK is the largest makerspace in China, with more than 5,000 enterprises settled in. We are available in Beijing, Shanghai, Shenzhen, Tianjin and other cities where there are a lot of entrepreneurs.</h3>
+				<p class="auout_c">NASH.WORK defines itself as the “Base Camp of Mass Entrepreneurship”, devoting itself to creating a new office ecosystem, which is multi-space, community-featured and service-oriented;</p>
+				<p class="auout_c">The designs of top-notch architects are practical and colorful. Our products, including the joint office space, the independent studios and the mobile workstations, offer more choices to enterprises. Whether you are an individual entrepreneur, a small-and micro-sized enterprise, or an urgent project team from big enterprises, you can find what you need;</p>
+				<p class="auout_c">Regional service centers and NASH.WORK App provide first-rate services, such as start up counseling, business registration, financial and legal services, for all settled-in enterprises from online to offline, as well as brilliant community activities and high-quality sharing.</p>
+				<div class="about-img">
+					<div class="super_img">
+						<img src="img/s_1.jpg" alt="" />
+						<p class="s_title"><img src="img/arrow2.png">Super Studio of NASH.WORK</p>
+					</div>
+					<div class="super_img">
+						<img src="img/s_2.jpg" alt="" />
+						<p class="s_title"><img src="img/arrow2.png">Super Team of NASH.WORK</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<p class="about_img_c">NASH.WORK’s leaders are a continuously evolving entrepreneur team, which have been deeply exploiting the real estate and mobile Internet fields for years. Therefore,they have aunique advantage in understanding and predicting the real estate market. Currently, we have an executive team that has gone through a complete break-in period and is operating at a high speed, whose members are from Tsinghua University, Beijing University, Tongji University and other institutions of higher education.</p>
+				<p class="about_img_c">NASH.WORK just completed its B round of 200 million-yuan financing in July 2016.Its business model and team continue to win the appreciation of the capital world, and it also became the first company in the maker space sector to get a B round of financing in China.</p>
+			</div>
+			<!--/about-->
+			<!---address---->
+			<div class="address">
+				<div class="container">
+					<div class="add">
+						<h2>WHERE IS NASH.WORK</h2>
+						<h5>Currently, we mainly operate in Beijing, Shanghai, Tianjin, Shenzhen and other cities wherethere are a lot of entrepreneurs, and we are also about to enter Hangzhou, Wuhan, and many more cities...</h5>
+						<img src="img/map.png" alt="">
+					</div>
+				</div>
+			</div>
+			<!---/address---->
+			<!--start-super-->
+			<div class="super">
+				<div class="container">
+					<div class="span2">
+						<div class="thumbnail">
+							<img src="img/s_01.jpg" alt="">
+							<div class="caption">
+								<h6>WANDA·SPACE of NASH.WORK</h6>
+							</div>
+						</div>
+					</div>
+					<div class="span2 mid">
+						<div class="thumbnail">
+							<img src="img/s_02.jpg" alt="">
+							<div class="caption">
+								<h6>Super Studio of NASH.WORK at Mingdundao</h6>
+							</div>
+						</div>
+					</div>
+					<div class="span2">
+						<div class="thumbnail">
+							<img src="img/s_03.jpg" alt="">
+							<div class="caption">
+								<h6>Conference Hall of NASH.WORK at Ulopark</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--end-super-->
+			<!---provide---->
+			<div class="container provide">
+				<h2>What can NASH.WORK provide for entrepreneurs</h2>
+				<div class="min_title">
+					<h4>1.Flexible and various office space</h4>
+					<p class="auout_c">There is only a distance of office space between the starting point of your dream and the success of your startup!</p>
+					<p class="auout_c">Adequate peripheral resources enable portable and flexible business.</p>
+					<p class="auout_c">Who else can satisfy all your requirements except NASH.WORK?</p>
+					<div class="span2">
+						<div class="thumbnail">
+							<img src="img/p_01.jpg" alt="">
+							<div class="caption">
+								<h6>Joint Office Area of NASH.WORK</h6>
+							</div>
+						</div>
+					</div>
+					<div class="span2">
+						<div class="thumbnail">
+							<img src="img/p_02.jpg" alt="">
+							<div class="caption">
+								<h6>Conference Halls of NASH.WORK across the City</h6>
+							</div>
+						</div>
+					</div>
+					<div class="span2">
+						<div class="thumbnail">
+							<img src="img/p_03.jpg" alt="">
+							<div class="caption">
+								<h6>Office Space of NASH.WORK</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="min_title">
+					<h4>2. Super Services at Your Fingertips</h4>
+					<p class="about_img_c">Whether you are an individual entrepreneur, start-up or small- and micro-sized enterprise, as to the entrepreneur services you need, who can provide such comprehensive super services apart from NASH.WORK?</p>
+					<div class="aboutImg"><img src="img/circle.jpg"></div>
+				</div>
+				<div class="min_title">
+					<h4>3. One App that Connects Everything</h4>
+					<p class="about_img_c">NASH.WORK is mobile social software focused on entrepreneurs. This is a place where all aspiring entrepreneurs meet each other, and all the companies’ founders come together. Here, you can discuss ideas and plans about innovation and entrepreneurship that you are interested in. As long as you have good ideas and capabilities, you are likely to get help from this software.</p>
+					<div class="app_c">
+						<div class="app_logo"><img src="img/app_logo.png"></div>
+						<div class="app_text">
+							<h5>Everthing is in NASH.WORK</h5>
+							<p>Outstanding entrepreneurs gather here</p>
+							<p>Helping each other when staring business</p>
+						</div>
+					</div>
+					<div class="aboutImg"><img src="img/app.jpg"></div>
+				</div>
+			</div>
+			<!--end-provide---->
+			<div class="footer">
+				<div class="container">
+					<div class="service">
+						<div class="s_01">
+							<img src="img/foot_logo.png">
+						</div>
+						<div class="s_02">
+							<img src="img/f_icon1.png">
+							<p>Stations across the City</p>
+						</div>
+						<div class="s_02">
+							<img src="img/f_icon2.png">
+							<p>Conference Halls across the City</p>
+						</div>
+						<div class="s_02">
+							<img src="img/f_icon3.png">
+							<p>Full Services</p>
+						</div>
+					</div>
+					<div class="product">
+						<p>Mobile Workstation</p>
+						<p>Preferred Studio</p>
+						<p>Super Studio</p>
+						<p>Joint Work Area</p>
+					</div>
+					<p><img src="img/add.png">Suite 555, Building D, Ulopark, No. 602 Wangjingyuan, Chaoyang District, Beijing 100102, P.R. China</p>
+					<p>
+						<a href="tel:400-116-0055" class="tel"><img src="img/tel.png">400-116-0055</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</body>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/move-top.js"></script>
+	<script src="js/statistics.js"></script>
+
+</html>

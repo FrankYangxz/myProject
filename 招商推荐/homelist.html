@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/zhanshang.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/shangjilist.css"/>
+		<style type="text/css">
+			.oForm{height: 174px;}
+			.mainLeftAll{padding-top: 20px;}
+			.oForm .oFromCon .oBeiZhu{height: 30px;line-height: 30px;}
+			.mainRightCon p:nth-of-type(3){padding-bottom: 6px;font-size: 20px;}
+			table{border-collapse: collapse;width:100%;}
+			td{border: 1px solid #666666;}
+			tr td:nth-of-type(1){width: 250px;height: 50px;text-indent: 80px;}
+			tr td:nth-of-type(2){height: 50px;text-indent: 80px;}
+		</style>
+		<script src="zhaoShang/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/tongji.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--弹层-->
+		<div class="oZheFeiQi"></div>
+		<!--重置密码-------------第一个弹层---------------------->
+		<div class="oPassword">
+			<form class="oPasswordInfo">
+				<p>请输入手机号码</p>
+				<p class="oyanInput"><input type="tel" placeholder="验证码"  style="display: inline-block;width: 70%;"/>|&nbsp;<span class="oGetMa oColor">获取验证码</span><span class="oDaojiShi oColor" style="display: none;">倒计时<i>60</i>s</span></p>
+				<p>新密码</p>
+				<p><input type="password" id="oNewPwd" /></p>
+				<p>再次输入新密码</p>
+				<p><input type="password"  id="oNewPwdSecond"/></p>
+				<a class="oJiKeCreat oQueRen">确认提交</a>
+			</form>
+		</div>
+		<!--意见反馈--------------第二个弹层-------------------->
+		<div class="oYiJianFanKui">
+			<form class="oYiJianInfo">
+				<textarea></textarea>
+				<input type="text" placeholder="问题订单ID" id="oProblemId"/>
+				<span>*我们将会在48小时之内，以短信(邮件)的形式回复您。</span><br />
+				<a class="oSubYiJian">确认提交</a>
+			</form>
+		</div>
+		<!--推荐-------------------第三个弹层------------------>
+		<div class="oTuiJianfo">
+			<div class="oTuiJianCon">
+				<dl>
+					<dt><h3>即刻加入纳新计划</h3></dt>
+					<dd>加入纳新计划，与千万家入驻企业共同成长，加入纳什大家庭，获得更多奖励。</dd>
+				</dl>
+				<form>
+					<p class="kehuxinxi">客户信息</p>
+					<select name="city" class="oSelect" style="text-indent: 8px;">
+						<option value="请选择城市" selected>请选择城市</option>
+						<option value="北京">北京</option>
+						<option value="上海">上海</option>
+						<option value="天津">天津</option>
+						<option value="深圳">深圳</option>
+					</select>
+					<input type="text" placeholder="客户姓名"  class="oSelect" />
+					<input type="tel" placeholder="客户电话"  class="oSelect" />
+					<a class="oBtn">确认提交</a>
+				</form>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!---------顶部-->
+		<div class="top">
+			<div class="topCon">
+				<img src="zhaoShang/img/logo.png"/>
+			</div>
+		</div>
+		<div class="banner">
+			<img src="zhaoShang/img/banner.png"/>
+		</div>
+		<!------main------>
+		<div class="main">
+			<!--左侧-->
+			<div class="mainLeft">
+				<!--下拉菜单-->
+				<ul class="oList">
+					<li>
+						<select name="time" class="oSelect">
+							<option value="推荐时间段" selected>推荐时间段</option>
+							<option value="近一周">近一周</option>
+							<option value="近一个月">近一个月</option>
+							<option value="近半年">近半年</option>
+							<option value="全部">全部</option>
+						</select>
+					</li>
+					<li>
+						<select name="progress" class="oSelect">
+							<option value="商机进度" selected>商机进度</option>
+							<option value="已完成">待看</option>
+							<option value="签约中">丢看</option>
+							<option value="近半年">已完成</option>
+							<option value="全部">签约中</option>
+						</select>
+					</li>
+					<li>
+						<select name="typee" class="oSelect">
+							<option value="商机类型" selected>商机类型</option>
+							<option value="SPACE">SPACE</option>
+							<option value="studio">studio</option>
+						</select>
+					</li>
+					<div style="clear:both;"></div>
+				</ul>
+				<!---------------------三个表单。全部，提醒更新，带创建商机----------------------->
+				
+				<div class="mainLeftAll">
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>张三</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">签约中</i>&nbsp;<i class="oColor">￥3000.00</i></span></p>
+							<p class="oBeiZhu"><span>备注：</span><span>各种各样的原因，所以废弃了，暂定20字以内的备注。谢谢合作！</span></p>
+							
+						</div>
+					</div>
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>张三</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">废弃</i>&nbsp;<i class="oColor"></i></span></p>
+							<p class="oBeiZhu"><span>备注：</span><span>暂无</span></p>
+							
+						</div>
+					</div>
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>张三</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">废弃</i>&nbsp;<i class="oColor"></i></span></p>
+							<p class="oBeiZhu"><span>备注：</span><span>暂无</span></p>
+							
+						</div>
+					</div>
+				</div>
+					
+			</div>
+			<!--右侧-->
+			<div class="mainRight">
+				<div class="mainRightCon">
+					<p>个人中心 <span>已入账&nbsp;¥&nbsp;<i>30000</i>元</span></p>
+					<p><span>基础信息</span><a href="javascript:void(0)" class="oResetPassWord">重置密码</a></p>
+					<p>张三丰</p>
+					<p>13888888888</p>
+					<p>zhangsansansan@nash.work</p>
+					<dl class="oBankInfo">
+						<dt>银行信息</dt>
+						<dd><span>招商银行</span>|<span>#123456</span>(开户行号)</dd>
+						<dd><span>1122344444444</span></dd>
+					</dl>
+					<p><a href="javscript:void(0)" class="oCreat">创建新推荐</a><a href="javscript:void(0)" class="oYiJian">意见反馈</a></p>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		<!--底部-->
+		<div class="foot">
+			<div class="footCon">
+				<div class="footLeft">
+					<img src="zhaoShang/img/foot_03.png"/>
+				</div>
+				<div class="footCenter">
+					<dl class="footCenterTypeOne">
+						<dt>找办公室</dt>
+						<dd><a href="#">北京</a></dd>
+						<dd><a href="#">上海</a></dd>
+						<dd><a href="#">天津</a></dd>
+						<dd><a href="#">深圳</a></dd>
+					</dl>
+					<dl class="footCenterTypeTwo">
+						<dt>产品类型</dt>
+						<dd><a href="#">超级工作室</a></dd>
+						<dd><a href="#">优选工作室</a></dd>
+						<dd><a href="#">联合办公区</a></dd>
+						<dd><a href="#">移动工作站</a></dd>
+					</dl>
+					<dl class="footCenterTypeThree">
+						<dt>纳什支持</dt>
+						<dd><a href="#">纳什服务</a></dd>
+						<dd><a href="#">纳什社区</a></dd>
+						<dd><a href="#">联系我们</a></dd>
+					</dl>
+				</div>
+				<div class="footRight">
+					<img src="zhaoShang/img/foot_05.jpg"/>
+				</div>
+				
+			</div>
+			
+		</div>
+	<script src="zhaoShang/js/tanceng.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

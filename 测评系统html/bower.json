@@ -1,0 +1,22 @@
+{
+  "name": "ceshi",
+  "authors": [
+    "nieyuge@163.com <nieyuge@163.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "estk": "2.0.4",
+    "jquery": "1.12.4",
+    "chosen": "^1.6.2"
+  }
+}

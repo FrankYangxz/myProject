@@ -1,0 +1,49 @@
+/*类型*/
+.area{width: 100vw;position: fixed;left: 0;top: 8.1488vw;z-index: 670;}
+.area_bottom,.area_top{display: none;}
+.list_second_area,.list_second_type{display: none;}
+
+.area a{color: #111;display: block;width: 100%;height: 100%;}
+.area_top{width: 100vw;height:58.004vw;background: #FEFEFE;margin-top: 3vw;}
+
+.list_second_type li{width: 94.444vw;border-bottom: 1px solid #e8e8e8;margin: 0 auto;}
+.area_bottom{width: 100vw;height: 118.9712vw;background: #333333;opacity: 0.6;}
+
+/*区域*/
+/*.area .left{width: 50vw;height: 51.004vw;float: left;border-right: 1px solid #E8E8E8;}
+.area .center{width: 49.5vw;height: 51.004vw;float: right;overflow-y: scroll;}
+.center::-webkit-scrollbar {display:none}
+.list_second_area_left{width: 47.222vw;padding-left: 2.778vw;}
+.list_second_area_center{width: 46.222vw;padding-left: 2.778vw;float: right;overflow:scroll;}
+.list_second_area_left li{height: 8.334vw;line-height: 8.334vw;border-bottom: 1px solid #e8e8e8;}
+.list_second_area_center li{height: 8.334vw;line-height: 8.334vw;border-bottom: 1px solid #e8e8e8;}*/
+.area_top .list_second_type li{height: 10.334vw;line-height: 10.334vw;}
+/*三个列表同时出现时*/
+.area .left,.area .center,.arer .right{width: 30.233333vw;height: 58.004vw;float: left;padding-left:2.8vw;}
+.list_second_area .right{width: 30.233333vw;height: 58.004vw;float: left;padding-left:2.8vw;}
+.list_second_area .left,.list_second_area .center{border-right: 1px solid #E8E8E8;}
+.list_second_area .center,.list_second_area .right{overflow-y: scroll;}
+.right::-webkit-scrollbar,.center::-webkit-scrollbar {display:none}
+.area_top li{height: 11.34vw;line-height: 11.34vw;border-bottom: 1px solid #e8e8e8;}
+
+.right{}
+/*变色*/
+.color{color: #FFAF41;}
+.list_second_area_center_detail{display: none;}
+
+.quyu,.ditie{width: 100vw;display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

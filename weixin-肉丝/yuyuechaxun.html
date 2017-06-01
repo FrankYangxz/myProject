@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>登录</title>
+		<link type="text/css" rel="stylesheet" href="css/p.css">
+		<link type="text/css" rel="stylesheet" href="css/o.css">
+		<script type="text/javascript">
+			var vtimeout;
+			function settime(val, countdown) {
+				if(countdown == 0) {
+					if(vtimeout) {
+						clearTimeout(vtimeout);
+					}
+					val.removeAttr('disabled');
+					val.css("background", "#fea120");
+					val.html('发送验证码');
+					countdown = 60;
+					return false;
+				} else {
+					val.attr('disabled', true);
+					val.css("background", "#c8c8c8");
+					val.html(countdown + " 秒后重发");
+					countdown--;
+				}
+				vtimeout = setTimeout(function() {
+						settime(val, countdown)
+					},
+					1000);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="complaintAdvice">
+			<img class="tsjy" src="img/advice_bg.jpg">
+			<div class="login-wrap">
+				<div class="tip">
+					<p>输入您的手机号，查询预约记录</p>
+				</div>
+				<input type="text" id="name" name="nametext" placeholder="姓名">
+				<input type="tel" id="userid" name="phoneNum" maxlength="11" placeholder="手机号">
+				<!-- add 系统验证码 start -->
+				<div class="code-check clearfix">
+					<div class="code-wrap"><input type="tel" name="scode" id="scode" placeholder="图片验证码"></div>
+					<img class="send-image" id="getsysCode" src="img/codeImg.jpg">
+				</div>
+				<!-- add 系统验证码 end -->
+				<div class="code-check clearfix">
+					<!---倒计时添加send-msg添加countdown样式--->
+					<button class="send-msg" id="getCode" type="button">获取验证码</button>
+					<div class="code-wrap"><input type="tel" name="registeCode" id="code" placeholder="短信验证码"></div>
+				</div>
+				<a href="tousujianyiTwo.html" class="login-btn">下一步</a>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+		})
+	</script>
+	<script src="js/statistics.js"></script>
+
+</html>

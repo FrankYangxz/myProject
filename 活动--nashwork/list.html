@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,minimum-scale=1, user-scalable=no">
+		<link href="img/logo.png" rel="shortcut icon">
+		<link rel="stylesheet" href="css/list_details.css" />
+	</head>
+	<body>
+		<!--列表栏，标题-->
+		<select value="全部活动" class="select" id="active">
+           <option value ="0" id="oFirst">全部活动</option>
+           <option value ="1">我报名的活动</option>
+           <option value="2">今天活动</option>
+           <option value="3">本周工作日</option>
+           <option value="4">本周周末</option>
+           <option value="5">下周</option>
+           <option value="6">往期精彩</option>
+        </select>
+        <div class="oImg">
+        	 	<img src="img/arrow.png" />
+        </div>
+       
+		<!--<div class="oAll_activity">
+			<p>全部活动<img src="img/arrow.png" /></p>
+		</div>-->
+		<!--内容栏，活动栏-->
+		<div class="oInfo" >
+			
+			<div class="oInfo_one">
+				<div class="banner" >
+					<img src="img/img_0.jpg" width="100%" height="100%" />
+					<div class="date">
+						<img src="img/date.png" />
+						<p>4月</p>
+						<p>01-15</p>
+					</div>
+					<div class="oTime">
+						<span class="oTime_activity">活动时间：10 ：00-14 : 00</span>
+						<span class="oTime_wangjing">望京悠乐汇</span>
+					</div>
+				</div>
+				<div class="oOrder">
+					<span>纳什购物双响炮</span><span><img src="img/icon_p_05.jpg"/> 60人报名</span>
+				</div>
+			</div>
+			<!--倒计时的活动-->
+			<div class="oInfo_one">
+				<div class="banner">
+					<img src="img/img_0.jpg" width="100%" height="100%" />
+					<div class="date">
+						<img src="img/date.png" />
+						<p>4月</p>
+						<p>01-15</p>
+					</div>
+					<div class="oTime">
+						<span class="oTime_activity">活动时间：10 ：00-14 : 00</span>
+						<span class="oTime_wangjing">望京悠乐汇</span>
+					</div>
+					<!--倒计时-->
+					<div id="nav" style=""></div>
+				</div>
+				<div class="oOrder">
+					<span>纳什购物双响炮</span><span><img src="img/icon_p_05.jpg"/> 60人报名</span>
+				</div>
+			</div>
+			<!--结束的活动-->
+			<div class="oInfo_one">
+				<div class="banner">
+					<img src="img/img_0.jpg" width="100%" height="100%" />
+					<div class="over">已结束</div>
+					
+				</div>
+				<div class="oOrder">
+					<span>纳什购物双响炮</span><span><img src="img/icon_p_05.jpg"/> 60人报名</span>
+				</div>
+			</div>
+			
+		</div>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/time.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+
+.fenlan{width: 100vw;height: 100vh;position:fixed;left: -100vw;top: 0;z-index: 990;}
+.list02{height: 100vh;width: 70.376vw;background: url(../img/background.png) no-repeat;background-size: cover;float: left;display: flex;flex-flow: column nowrap;justify-content: center;}
+.list02 li{width:70.376vw;height: 13.89vw;line-height: 13.89vw;font-size: 4.4448vw;color: #FEFEFE;}
+.list02 a{display: block;width: 65.376vw;height: 100%;color: #FEFEFE;margin-left: 2.773vw;}
+.list02 ul .afetrclick{border-left:0.9vw solid #FFFFFF ;background: #ffaf41;width: 69.476vw;}
+.touming{width: 29.624vw;height: 100vh;float:right;background:#333333;opacity: 0.6;}

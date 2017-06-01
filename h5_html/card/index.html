@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="纳什空间，创业，空间，社交软件，创业网，会员卡，办公空间，北京办公室，写字楼，办公室，租房，办公社交，办公助手，办公，租赁，租办公室租工位租会场为创业者提供方便，办公室交友工具，高品质办公环境的空间，全国最大的众创空间，生态办公服务众创空间">
+		<meta name="description" content="纳什空间是全国面积最大的众创空间，为初创企业提供最便捷的服务，让创业变得简单和快乐，纳什空间会员可以享受会员专属服务，会员在纳什空间app内享受会员专属优惠，降低中小企业办公运营成本，创业者获得更好的工作体验，享受工作时间，助你对接更多合作资源，加速创业">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>纳什空间会员卡</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="main">
+			<header class="header" id="header">
+				<!----轮播图start----->
+				<div class="slideBanner">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="detail.html"><img src="img/hyk_banner.jpg" alt="纳什空间会员卡"></a>
+						</li>
+					</ul>
+					<div class="pagination"></div>
+				</div>
+				<!----轮播图end------>
+				<!---卡样展示导航start------>
+				<div class="sliderCardsTab">
+					<ul class="tabs">
+						<li class="cur">尊享身份<span></span></li>
+						<li>轻松办公<span></span></li>
+						<li>多变礼卡<span></span></li>
+					</ul>
+				</div>
+				<!---卡样展示导航end------>
+			</header>
+			<!------卡样列表S-------->
+			<div class="sliderCardsList swiper-container">
+				<div class="swiper-wrapper" style="float:left;">
+					<!------精彩推荐S-------->
+					<div class="swiper-slide" id="swiperslide0">
+						
+						<a href="javascript:void(0);">
+							<img src="img/b_1card.png">
+							<dl>
+								<dt>纳什空间企业黑卡2000元</dt>
+								<DD>享受APP内所有企业服务 全城&全程
+									<DD>创业更便捷 工作更省心</DD>
+							</dl>
+						</a>
+						<a href="javascript:void(0);">
+							<img src="img/b_2card.png">
+							<dl>
+								<dt>纳什空间企业黑卡5000元</dt>
+								<DD>黑卡升级卡 新增五千元面额卡
+									<DD>更广的福利 更大的折扣</DD>
+							</dl>
+						</a>
+						<a href="javascript:void(0);">
+							<img src="img/g_card.png">
+							<dl>
+								<dt>纳什空间个人金卡200元</dt>
+								<DD>企业服务高大全 个人福利亦精彩
+									<DD>购买金卡即享多重优惠 为你而省</DD>
+							</dl>
+						</a>
+						<a href="javascript:void(0);">
+							<img src="img/bj_card.png">
+							<dl>
+								<dt>纳什空间个人白金卡1万元</dt>
+								<DD>白金VIP身份 尊享白金会员通道
+									<DD>创业公司首选 你最明智</DD>
+							</dl>
+						</a>
+					</div>
+					
+					<div class="swiper-slide" id="swiperslide1">
+						<a href="javascript:void(0);">
+							<img src="img/kj_card.png">
+							<dl>
+								<dt>纳什空间全城空间卡</dt>
+								<DD>全城工位 全城会议室 全城会场 全城..
+								<DD>有卡在手 全城享有 随订随有</DD>
+							</dl>
+						</a>
+						<a href="javascript:void(0);">
+							<img src="img/ser_card.png">
+							<dl>
+								<dt>纳什空间全程服务卡</dt>
+								<DD>创业服务 日常行政 办公服务 生活服务
+									<DD>不论你是初创型、成长型还是成熟型 全程有我</DD>
+							</dl>
+						</a>
+					</div>
+					<div class="swiper-slide" id="swiperslide2">
+						<a href="javascript:void(0);">
+							<img src="img/gift_2card.png">
+							<dl>
+								<dt>纳什空间GIFT CARD</dt>
+								<DD>员工关怀 市场活动 商务馈赠 做你所想
+									<DD>小小卡片用处大 任你自由来支配</DD>
+							</dl>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!------卡样列表end-------->
+			<!---卡样展示end------>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				//头部轮播
+				$("#swiperslide1 a,#swiperslide2 a").hide();
+				var iLength = $(".slideBanner li").length;
+				if (iLength > 1) {
+					var slideBanner = new Swiper(".slideBanner", {
+						autoplayDisableOnInteraction: false,
+						autoplay: 3000,
+						visibilityFullFit: true,
+						loop: true,
+						pagination: ".pagination",
+					});
+				}
+				//卡样展示效果
+				var sliderCards = new Swiper(".sliderCardsList", {
+					speed: 500,
+					onSlideChangeStart: function() {
+						$(".tabs .cur").removeClass("cur");
+						$(".tabs li").eq(sliderCards.activeIndex).addClass("cur");
+						$("#swiperslide" + sliderCards.activeIndex + " a").fadeIn("slow");
+						$("#swiperslide" + sliderCards.activeIndex)
+							.siblings("div")
+							.children("a").fadeOut("fast");
+					},
+
+				});
+				//卡样展示点击导航
+				$(".tabs li").on("touchstart mousedown", function(e) {
+					$("#swiperslide" + $(this).index() + " a").fadeIn("slow");
+					$("#swiperslide" + $(this).index())
+						.siblings("div")
+						.children("a").fadeOut("fast");
+					e.preventDefault();
+					$(".tabs .cur").removeClass("cur");
+					$(this).addClass("cur");
+					sliderCards.slideTo($(this).index());
+				});
+				$(".tabs li").click(function(e) {
+					e.preventDefault();
+				});
+			});
+		</script>
+	</body>
+<script src="js/statistics.js"></script>
+</html>

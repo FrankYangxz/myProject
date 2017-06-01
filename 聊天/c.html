@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>超级聊天室</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			html,body{background: #36353a;}
+			.box{width: 100%;background: #36353a;overflow-y: scroll;position: relative;}
+			/*.list{position: absolute;left: 0;bottom: -8vw;}*/
+			.box::-webkit-scrollbar {display:none;}
+			
+			li{width:90%;padding:16px 5%;/*height: 30px;*/line-height:36px;}
+			li span:first-of-type{color: #f18f2c;font-size: 30px;}
+			li span:last-of-type{color: #f4f4f4;font-size: 30px;}
+			li img{width:84px;height: 28px;margin-right: 16px;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="list">
+				
+			</ul>
+		</div>
+		
+		<script src="jquery-1.11.1.min.js"></script>
+		<script src="socket.io-1.4.5.js"></script>
+		<script type="text/javascript">
+			//通过ajax获取用户等级图片配置信息，写入configArr数组
+			var config = [];
+			$.ajax({
+					type: "get",
+					url: "http://v2.nashspace.com:8001/community/?r=app/getUserLevelListJsonp",
+					dataType: 'jsonp',
+					async: false,
+					success: function(info) {
+						//    保存数据
+						for(var i in info.data.list) {
+							var _key = info.data.list[i].level;
+							var _showImg = info.data.list[i].levelUrl
+							config[_key] = _showImg
+						}
+						var preHight = 0 ;
+						function add (olevel,oName,oNameColor,oMessage,oMessageColor){
+							var img = (olevel)? config[olevel]: 'nc.png';
+							var html = '';
+							html += '<li><img src='+img+' /><span style="color: '+oNameColor+';">'+oName+':</span> &nbsp;';
+							html += '<span style="color: '+oMessageColor+';">'+oMessage+'</span></li>';
+							$('.list').append(html);
+							
+							var screenHei = $(window).height();
+					//								console.log(screenHei);值为屏幕的高度
+							var listHei = $(".list").height();
+					//								console.log(listHei);值为ul的高度
+							var oLi = $('.list li').length;
+							var h = $('.list li').eq(oLi-1).outerHeight();
+							if (screenHei < listHei) {
+								preHight += h;
+								console.log(preHight );
+								$('html body').animate({scrollTop:preHight + 'px'},500);
+							} 							
+							
+						}
+
+						add('notification', 'sys', 'green', 'connecting', '#CCC');
+
+						var socket = io('http://119.254.100.119:12226');
+						socket.on('connect', function () {
+							//io.emit('this', { will: 'be received by everyone'});
+							add('notification', 'sys', 'green', 'connected', '#CCC');
+
+							socket.emit('reg', {un: 'chatscreen' + parseInt(Math.random()*100)});
+							add('notification', 'sys', 'green', 'registered', '#CCC');
+						});
+
+						socket.on('msg', function (m) {
+							var ut = (m.t)? m.t: '';
+							//add(m.t, m.un, '#99F', m.m + ' ' + m.mc, m.mc);
+							if (m.mc == '') {
+								add(m.t, m.un, '#99F', m.m, m.mc);
+							}
+						});
+
+					}
+			})
+
+		</script>
+	</body>
+
+</html>

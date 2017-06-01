@@ -1,0 +1,52 @@
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+i {font: inherit;}
+a{text-decoration: none;}
+
+body{width:94.444vw;margin: 0 auto;font-family: "微软雅黑";}
+/*头部*/
+#header{width:100vw;height: 45px;line-height: 45px;border-bottom: 1px solid #E8E8E8;position: fixed;left: 0vw;top: 0;background: #FEFEFE;z-index: 300;}
+.list{}
+.list li{float: left;width: 47.222vw;text-align: center;}
+.list li:first-of-type{border-right: 1px solid #E8E8E8;margin-left: 2.778vw;}
+.list li img{margin-left:2vw ;}
+/*main*/
+#main{padding-top: 12.1488vw;width: 94.444vw;}
+#main .charu{position: relative;height: 4.2vw;line-height: 4.2vw;padding-top: 3vw;z-index:0;}
+#main .charu span:nth-of-type(1){display: block;background: url(../img/xian_03.jpg) no-repeat left center;font-size: 4.1484vw;color: #000000;padding-left: 3.5vw;float: left;}
+#main .charu span:nth-of-type(2){font-size: 3.5928vw;position: absolute;left: 38vw;}
+#main .charu span:nth-of-type(3){font-size: 3.224vw;background: #FEA120;color: #FFFFFF;display: block;width: 10vw;height: 4vw;line-height: 4vw;text-align: center;float: right;padding-top: 0.2vw;}
+/*产品详细介绍*/
+.product{border-bottom: 1px solid #E8E8E8;}
+.product dt{padding-top: 2.778vw;}
+.product dt img{width: 100%;height: 50.93vw;border-radius: 10px;}
+.product dd:first-of-type{margin-top:3.241vw ; margin-bottom:3.704vw;width: 100%;display: flex;flex-flow: row nowrap;justify-content: space-between;}
+.product dd:first-of-type span:first-of-type{font-size: 5.4448vw;color: #111111;}
+.product dd:first-of-type span:last-of-type{font-size: 3.399vw;color: #fea120;}
+.product dd:first-of-type span:last-of-type a{font-size: 5.4448vw;color: #fea120;}
+.product i{color: #CCCCCC;}
+.product dd:nth-of-type(2){padding-bottom: 2.778vw;}
+.product dd:nth-of-type(3){padding-bottom: 3.704vw;}
+.product dd:nth-of-type(2),.product dd:nth-of-type(3){font-size: 4.1484vw;color: #333;}
+.product dd:nth-of-type(3) img{width: 2.4076vw;height: 3.1484vw;margin-right:1.2vw;}
+
+
+/****************************页面左上方按钮*******************************/
+
+.menu img{width: 5.63vw;height: 4.1484vw;position: fixed;left: 2.778vw;top: 3.278vw;z-index: 900;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

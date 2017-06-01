@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+		<meta name="format-detection" content="telephone=no" />
+		<link href="img/app/logo.png" rel="shortcut icon">
+		<title>纳什空间线上社区</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/index.js"></script>
+		<script>
+			$(document).ready(function() {
+				document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+				fnLunbo('tabPic');
+			})
+		</script>
+	</head>
+
+	<body>
+		<img src="img/app/logo.png" style="position:fixed; display: none; z-index: -999;">
+		<!-- Swiper -->
+		<div class="app_page">
+			<div class="login-tab line-bottom">
+				<a href="/community/index.php" class="sel">推荐</a><a href="/channel/index.html">频道</a><a href="#">最新</a>
+			</div>
+			<div id="tabPic">
+				<ul id="picList">
+					<li><img src="img/app/banner_01.jpg" /> </li>
+					<li><img src="img/app/banner_01.jpg" /> </li>
+					<li><img src="img/app/banner_01.jpg" /> </li>
+				</ul>
+				<div class="picMask">
+					<nav>
+						<a href="javascript:;" class="active"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</nav>
+				</div>
+			</div>
+			<div class="app_content">
+				<div class="article_list">
+					<div class="article_photo"><img src="img/app/a_photo.jpg"></div>
+					<div class="article_title">
+						<div class="app_title">
+							创业者福利创业者创业者福利
+							<p class="channel_tip">活动</p>
+						</div>
+						<div class="tip clearfix">
+							<p class="date">2016-01-15</p>
+							<p class="read">180阅读</p>
+						</div>
+					</div>
+				</div>
+				<div class="article_list">
+					<div class="article_photo"><img src="img/app/a_photo.jpg"></div>
+					<div class="article_title">
+						<div class="app_title">
+							创业者福利创业者创业者福利
+							<p class="channel_tip" style="background:#8370fd">讨论</p>
+						</div>
+						<div class="tip clearfix">
+							<p class="date">2016-01-15</p>
+							<p class="read">180阅读</p>
+						</div>
+					</div>
+				</div>
+				<div class="article_list">
+					<div class="article_photo"><img src="img/app/a_photo.jpg"></div>
+					<div class="article_title">
+						<div class="app_title">
+							创业者福利创业者创业者福利创业者福利创业者创业者福利创业者福利创业
+							<!--<p class="channel_tip">活动</p>-->
+						</div>
+						<div class="tip clearfix">
+							<p class="date">2016-01-15</p>
+							<p class="read">180阅读</p>
+						</div>
+					</div>
+				</div>
+				<div class="article_list">
+					<div class="space">
+						<h4>SPACE·中关村隐秘于都市园林式办公地</h4>
+						<p class="channel_tip">活动</p>
+					</div>
+					<ul class="img_list">
+						<li><img src="img/app/space_1.jpg"></li>
+						<li><img src="img/app/space_1.jpg"></li>
+						<li><img src="img/app/space_1.jpg"></li>
+					</ul>
+					<div class="tip border-bottom clearfix">
+						<p class="date">2016-01-15</p>
+						<p class="read">180阅读</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab"><a href="/community/index.php" class="tab_over">社区</a><a href="/business/welfare/index.html">福利</a><a href="#">下载APP</a></div>
+		</div>
+	</body>
+	<script src="js/statistics.js"></script>
+</html>

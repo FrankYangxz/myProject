@@ -1,0 +1,650 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/chosen/chosen.jquery.js"></script>
+    <script src="../lib/common.js"></script>
+    <script src="../lib/keguan/wodebanji/jquery.easydropdown.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/banji.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/easydropdown.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/keguan/wodebanji/xuanze.css"/>
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="../image/logo.png" /></div>
+        <div class="nav">
+            <ul class="oList">
+                 <li >
+                    <a href="已登陆首页.html">首页</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#">客观作业</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#">客观测验</a>
+                </li>
+                <li class="class_sec">
+                    <a href="#" class="addColor">综合测验</a>
+                </li>
+                <li>
+                    <a href="我的试卷.html">我的试卷</a>
+                </li>
+                <li>
+                    <a href="错题集合.html">我的收藏</a>
+                </li>
+                <li><a href="测评分析.html">测评分析</a></li>
+            </ul>
+        </div>
+        <div class="user">
+            <a class="icon_user" href="用户中心.html">
+                13888888888
+            </a>
+            <div class="icon_out"><a href="#">退出</a></div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<div class="content">
+    <div class="con">
+        <!-- 左侧导航 -->
+        <div class="menu">
+            <div class="menu_tit">客观测验</div>
+            <div class="kgcy_con">
+                <ul>
+                    <li><a href="#">建立试卷框架</a></li>
+                    <li class="on"><a href="#">试题预选</a></li>
+                    <li><a href="#">试题精选</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 左侧导航 -->
+
+        <!-- 右侧内容 -->
+        <div class="r_content">
+            <div class="r_body">
+                <div>&emsp;</div>
+                <div class="r_title">
+                    <font color="#4c9fed">初一数学xx章节自我测评</font>
+                    <span>试卷代码：123456789</span>
+                </div>
+                <div>&emsp;</div>
+                <div class="zsd_div">
+                    <dl>
+                        <dt>知&nbsp;&nbsp;识&nbsp;&nbsp;点：</dt>
+                        <dd>
+                            <div class="zsd_tit one">
+                                <h2>二级知识点1</h2>
+                                <h2>二级知识点2</h2>
+                                <h2>二级知识点3</h2>
+                                <h2>二级知识点4</h2>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="zhishi_one">
+	                            	<div id="select_label" class="zsd_bot one_erji01" style="display: none;">
+	                                <label><input type="checkbox" id="zs_1" val="正数和负数" /> 1正数和负数</label>
+	                                <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+	                                <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+	                                <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+	                                <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+	                            </div>
+	                            	<div id="select_label" class="zsd_bot one_erji02" style="display: none;">
+	                                <label><input type="checkbox" id="zs_1" val="正数和负数" /> 2正数和负数</label>
+	                                <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+	                                <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+	                                <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+	                                <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+	                            </div>
+	                            	<div id="select_label" class="zsd_bot one_erji03" style="display: none;">
+	                                <label><input type="checkbox" id="zs_1" val="正数和负数" /> 3正数和负数</label>
+	                                <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+	                                <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+	                                <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+	                                <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+	                            </div>
+	                            	<div id="select_label" class="zsd_bot one_erji04" style="display: none;">
+	                                <label><input type="checkbox" id="zs_1" val="正数和负数" /> 4正数和负数</label>
+	                                <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+	                                <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+	                                <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+	                                <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+	                            </div>
+                            </div>
+                            
+                            
+                            <div class="zsd_tit two">
+                                <h2>二级知识点1</h2>
+                                <h2>二级知识点2</h2>
+                                <h2>二级知识点3</h2>
+                                <h2>二级知识点4</h2>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="zhishi_two">
+	                            	<div id="select_label" class="zsd_bot one_erji01" style="display: none;">
+	                                <label><input type="checkbox" id="zs_1" val="正数和负数" /> 5正数和负数</label>
+	                                <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+	                                <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+	                                <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+	                                <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+	                            </div>
+	                            	<div id="select_label" class="zsd_bot one_erji02" style="display: none;">
+	                                <label><input type="checkbox" id="zs_1" val="正数和负数" /> 6正数和负数</label>
+	                                <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+	                                <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+	                                <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+	                                <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+	                            </div>
+	                            	<div id="select_label" class="zsd_bot one_erji03" style="display: none;">
+	                                <label><input type="checkbox" id="zs_1" val="正数和负数" /> 7正数和负数</label>
+	                                <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+	                                <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+	                                <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+	                                <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+	                            </div>
+	                            	<div id="select_label" class="zsd_bot one_erji04" style="display: none;">
+	                                <label><input type="checkbox" id="zs_1" val="正数和负数" /> 8正数和负数</label>
+	                                <label><input type="checkbox" id="zs_2" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_3" val="有理数的加减" /> 有理数的加减</label>
+	                                <label><input type="checkbox" id="zs_4" val="有理数的乘除法" /> 有理数的乘除法</label>
+	                                <label><input type="checkbox" id="zs_5" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_6" val="有理数的乘方" /> 有理数的乘方</label>
+	                                <label><input type="checkbox" id="zs_7" val="正数和负数" /> 正数和负数</label>
+	                                <label><input type="checkbox" id="zs_8" val="有理数" /> 有理数</label>
+	                                <label><input type="checkbox" id="zs_9" val="有理数的加减" /> 有理数的加减</label>
+	                            </div>
+                            </div>
+ 
+                        </dd>
+                    </dl>
+                    <dl style="overflow:unset;">
+                        <dt>难易度：</dt>
+                        <dd style="width:120px;">
+                            <img src="../image/btn_jian.jpg" align="absmiddle" class="jianyi" />
+                            <input class="input_text Val001" type="text" value="0"  style="width: 40px;text-align: center;" />
+                            <img src="../image/btn_jia.jpg" align="absmiddle"  class="jiayi" />
+                        </dd>
+                        <dt>题型：</dt>
+                        <dd style="width:150px;">
+                            <select class="chzn-select" style="width:150px;">
+                                <option>请选择</option>
+                                <option>初级</option>
+                                <option>中级</option>
+                                <option>高级</option>
+                            </select>
+                        </dd>
+                        <dt>
+                            <input type="image" src="../image/input_xsst.png" />
+                        </dt>
+                    </dl>
+                </div>
+                <div>&emsp;</div>
+                <div>&emsp;</div>
+                <hr color="#d4d4d4" size="1" />
+                <div>&emsp;</div>
+                <div class="con_r">
+                    <div class="cs_l">
+                        <div class="r_tit">
+                            <h2>单选题</h2>
+                            <sub>本大题共5小题</sub>
+                        </div>
+                        <!--集合。加个盒子-->
+                        <div class="confir">
+                        <!-----------------单选题------------------>
+                        <!--第一题-->
+                        		<figcaption>
+	                            <figure>1</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul class="toto">
+	                                    <li><input type="radio" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan01">
+	                                		<span data-value='one001' class="join">加入试卷</span>
+	                                 </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq001' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq001">
+	                            		
+	                            </div>
+	                        </figcaption>
+	                      <!--第二题-->
+	                      <figcaption>
+	                            <figure>2</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul class="toto">
+	                                    <li><input type="radio" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan02">
+	                                		<span data-value='two002' class="join">加入试卷</span>
+	                                 </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq002' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq002">
+	                            		
+	                            </div>
+	                        </figcaption>
+							<!--第三题-->
+							<figcaption>
+	                            <figure>3</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul class="toto">
+	                                    <li><input type="radio" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan03">
+	                                		<span data-value='three003' class="join">加入试卷</span>
+	                                </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq003' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq003">
+	                            		
+	                            </div>
+	                        </figcaption>
+                        		<!--第四题-->
+                        		<figcaption>
+	                            <figure>4</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul class="toto">
+	                                    <li><input type="radio" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan04">
+	                                		<span data-value='four004' class="join">加入试卷</span>
+	                                 </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq004' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq004">
+	                            		
+	                            </div>
+	                        </figcaption>
+							<!--第五题-->
+							<figcaption>
+	                            <figure>5</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul class="toto">
+	                                    <li><input type="radio" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan05">
+	                                	<span data-value='five005' class="join">加入试卷</span>
+	                                </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq005' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq005">
+	                            		
+	                            </div>
+	                        </figcaption>                        
+							<!--第六题-->
+							<figcaption>
+	                            <figure>6</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul class="toto">
+	                                    <li><input type="radio" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="radio" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan">
+	                                		<span data-value='six006' class="join">加入试卷</span>
+					                     
+	                                </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq006' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq006">
+	                            		
+	                            </div>
+	                        </figcaption>                        
+							<!------------------多选题----------------------->
+							
+							 <div class="r_tit">
+	                            <h2>多选题</h2>
+	                            <sub>本大题共5小题</sub>
+	                            <p>&nbsp;</p>
+	                        </div>
+	                        <!--多选第一题-->
+	                        <figcaption>
+	                            <figure>1</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul >
+	                                    <li><input type="checkbox" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan07">
+	                                		<span data-value='seven007' class="join">加入试卷</span>
+	                                </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq007' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq007">
+	                            		
+	                            </div>
+	                        </figcaption>
+                       		<!--多选第2题-->
+                       		<figcaption>
+	                            <figure>2</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul >
+	                                    <li><input type="checkbox" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan08">
+	                                		<span data-value='eight008' class="join">加入试卷</span>
+	                                 </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq008' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq008">
+	                            		
+	                            </div>
+	                        </figcaption>
+							<figcaption>
+	                            <figure>3</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul >
+	                                    <li><input type="checkbox" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan09">
+	                                		<span data-value='nine009' class="join">加入试卷</span>
+	                                </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq009' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq009">
+	                            		
+	                            </div>
+	                        </figcaption>                        
+							<figcaption>
+	                            <figure>4</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul >
+	                                    <li><input type="checkbox" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan11">
+	                                		<span data-value='ten010' class="join">加入试卷</span>
+	                                </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq010' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq010">
+	                            		
+	                            </div>
+	                        </figcaption>                        
+							<figcaption>
+	                            <figure>5</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul >
+	                                    <li><input type="checkbox" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan11">
+	                                		<span data-value='eleven011' class="join">加入试卷</span>
+	                                </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq011' class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq011">
+	                            		
+	                            </div>
+	                        </figcaption>                        
+							<figcaption>
+	                            <figure>6</figure>
+	                            <div>
+	                                <h3 class="select_tit">此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字此处是文字</h3>
+	                                <ul >
+	                                    <li><input type="checkbox" />&emsp;A、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;B、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;C、此处是文字，此处是文字</li>
+	                                    <li><input type="checkbox" />&emsp;D、此处是文字，此处是文字</li>
+	                                    <span><font color="#4c9fed">[对应知识点]：</font>知识点1</span>
+	                                </ul>
+	                            </div>
+	                            <div class="div_dan">
+	                                <font color="#ed4c4c" class="addToShiJuan12">
+	                                		<span data-value='twlwev012' class="join">加入试卷</span>
+	                                </font>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color="#4c9fed" data-value='xq012'  class="lookJieXi">查看解析 <img src="../image/dian.png" align="absmiddle" /></font>&emsp;&emsp;&emsp;&emsp;点击收藏
+	                            </div>
+	                            <div class="JieXiContent" id="yang_xq012">
+	                            		
+	                            </div>
+	                        </figcaption>                        
+                        
+                        
+                        </div>
+                    </div>
+                    
+                   
+                   <div class="cs_r" style="margin-top:60px;">
+                        <div class="cs_r_title">
+                            已选试题
+                        </div>
+                        <div class="cs_r_content">
+                            <div class="cs_title"><b>单选题</b>(每题6分，共5题)</div>
+                            <div class="cs_con oDan">
+                                <a href="#" id="yang_one001">1</a>
+                                <a href="#" id="yang_two002">2</a>
+                                <a href="#" id="yang_three003">3</a>
+                                <a href="#" id="yang_four004">4</a>
+                                <a href="#" id="yang_five005">5</a>
+                                <a href="#" id="yang_six006">6</a>
+                            </div>
+                            <div class="cs_title"><b>多选题</b>(每题6分，共5题)</div>
+                            <div class="cs_con oDan">
+                                <a href="#" id="yang_seven007">7</a>
+                                <a href="#" id="yang_eight008">8</a>
+                                <a href="#" id="yang_nine009">9</a>
+                                <a href="#" id="yang_ten010">10</a>
+                                <a href="#" id="yang_eleven011">11</a>
+                                <a href="#" id="yang_twlwev012">12</a>
+                            </div>
+                            <div class="cs_bot">
+                                <input type="image" src="../image/input_qrbjrstjx.png" onclick="location.href='综合测验页试题精选.html'"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+<!--蒙层-->
+<div class="mengceng"></div>
+<!--客观作业------------------------------------客观作业----------------------------->
+<form class="tianjia  kgzy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一1</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="客观作业.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+<!--客观检测------------------------------------客观检测----------------------------->
+<form class="tianjia  kgcy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="客观测验页建立试卷框架.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+<!--综合检测------------------------------------综合检测----------------------------->
+<form class="tianjia  zhcy001" id="qwe">
+		<div style="width: 100%;height: 80px;"></div>
+		<div class="xuan_nj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择年级：
+				<select class="dropdown" style="display: inline-block;">  
+				    <option value="1">初一3</option>  
+				    <option value="2">初二</option>  
+				    <option value="3">初三</option>    
+				</select>	
+		</div>
+		<div class="xuan_kc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				请选择课程：
+				<select class="dropdown">  
+				    <option value="1">语文</option>  
+				    <option value="2">物理</option>  
+				    <option value="3">化学</option>  
+				    <option value="4">数学</option>  
+				    <option value="4">英语</option> 
+				    <option value="4">生物</option> 
+				</select>
+		</div>
+		<div class="make_sure">
+			<button class="queDing"><a href="综合测验页建立试卷框架.html" style="color: #FFFFFF;">确定</a></button>
+			<button class="quXiao">取消</button> 
+		</div>
+</form>
+<script>
+jQuery(".chzn-select").chosen();
+
+$(function(){
+    $('#select_label input').click(function(){
+        var id = $(this).attr('id').replace(/zs/, 'ss');
+        if($(this).prop('checked')){
+            var html = "<a id='"+ id +"' href='javascript:removeSz("+ $(this).attr('id').replace(/zs_/, '') +");'>"+ $(this).attr('val') +"</a>";
+            $('#select_zs').append(html);
+        } else {
+            $('#' + id).remove();
+        }
+    });
+});
+//删除
+function removeSz(id){
+    $('#zs_' + id).attr('checked', false);
+    $('#ss_' + id).remove();
+}
+</script>
+</body>
+</html>

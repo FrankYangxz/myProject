@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="image/logo.png" /></div>
+        <div class="user">
+            <div class="iLogin">登录</div>
+            <div class="iRegister">注册</div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<!-- index -->
+<div class="index_bg">
+    <div class="bg_l" style="background-size: contain;">
+        <!-- I am a student -->
+        <div class="index_introduce" style="top: 62px;">
+            <img src="image/index_title_stu.png" />
+            <div class="index_content">
+               <!-- <p>&nbsp;</p>-->
+               <!-- <p>&nbsp;</p>-->
+                <h3>此处是文字，此处是文字</h3>
+                <p>此处是文字此处是文字此处是文字此处是文字</p>
+            </div>
+            <input type="image" src="image/input_wypc.png" style="margin-top: -30px;" />
+            <p>此处是文字此处是文字</p>
+        </div>
+    </div>
+    <div class="bg_r" style="background-size: contain;">
+       <!-- I am a teacher -->
+        <div class="index_introduce"  style="top: 62px;">
+            <img src="image/index_title_tea.png" />
+            <div class="index_content">
+                
+                <h3>此处是文字，此处是文字</h3>
+                <p>此处是文字此处是文字此处是文字此处是文字</p>
+            </div>
+            <input type="image" src="image/input_wyzj.png" style="margin-top: -30px;" />
+            <p>此处是文字此处是文字</p>
+        </div>
+   </div>
+</div>
+<!-- index -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+<script type="text/javascript">
+	var h = $(window).height();
+	var d= parseInt( h - 167 ) + "px";
+	$('.bg_l').css("height",d);
+	$('.bg_r').css("height",d);
+</script>
+</body>
+</html>

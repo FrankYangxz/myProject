@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.box{width: 200px;height: 150px;background: red;display: none;}
+		</style>
+	</head>
+	<body>
+		<button class="btn">点击</button>
+		<div class="box">
+			
+		</div>
+		<script type="text/javascript">
+			$(".btn").on("click",function(){
+				$(".box").slideToggle();
+				
+			})
+		</script>
+	</body>
+</html>

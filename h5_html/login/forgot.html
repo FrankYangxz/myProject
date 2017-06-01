@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+		<title>启用</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+		<link type="text/css" rel="stylesheet" href="css/login.css">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/jquery.md5.js"></script>
+		<script type="text/javascript">
+			var vtimeout;
+
+			function settime(val, countdown) {
+				if (countdown == 0) {
+					if (vtimeout) {
+						clearTimeout(vtimeout);
+					}
+					val.removeAttr('disabled');
+					val.html('发送验证码');
+					countdown = 60;
+					return false;
+				} else {
+					val.attr('disabled', true);
+					val.html(countdown + " 秒后重发");
+					countdown--;
+				}
+				vtimeout = setTimeout(function() {
+						settime(val, countdown)
+					},
+					1000);
+			}
+		</script>
+	</head>
+
+	<body style="background: #f2f2f2;">
+		<p class="invitation_code"><img src="img/icon.png" />纳什空间 · 办公社交圈</p>
+		<div class="wrap">
+			<input type="tel" id="userid" maxlength="11" placeholder="手机号">
+			<!-- add 系统验证码 start -->
+			<div class="code-check clearfix yanzhencode">
+				<img class="send-image" id="getsysCode" alt="" onclick="document.getElementById('getsysCode').src='/community/?r=vcode/getVcode&tm='+Math.random()" src="/community/?r=vcode/getVcode">
+				<div class="code-wrap yzm_code"><input type="tel" name="scode" id="scode" placeholder="验证码"></div>
+			</div>
+			<!-- add 系统验证码 end -->
+			<div class="code-check clearfix">
+				<button class="send-msg" id="getCode" onclick="sendMessage()">获取短信验证码</button>
+				<div class="code-wrap">
+					<input type="tel" id="code" placeholder="短信验证码">
+				</div>
+			</div>
+			<input type="password" id="password" placeholder="设置登录密码（至少6位字符）">
+			<a href="javascript:;" class="login-btn" id="reset-butten">启用</a>
+		</div>
+		<script src="js/common.js"></script>
+	</body>
+	
+	<script>
+		$('#reset-butten').bind('click', function(){
+			resetPassword();
+		});
+	</script>
+	
+		<script src="js/statistics.js"></script>
+</html>

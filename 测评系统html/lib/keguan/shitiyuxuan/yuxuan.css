@@ -1,0 +1,9 @@
+
+.JieXiContent{width: 90%;padding-top: 25px;padding-bottom: 25px;border:1px solid #E6E6E6;display: none;padding-left: 5%;padding-right: 5%;border-radius: 10px;}
+.xuanzhuan{animation: flying 0.15s linear forwards alternate;}
+.join,.lookJieXi{cursor: pointer;}
+@keyframes flying{
+	100%{
+		transform: rotateX(180deg);
+	}
+}

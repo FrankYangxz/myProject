@@ -1,0 +1,45 @@
+/*公共样式*/
+html {width: 100%;-webkit-text-size-adjust： none;font-family: "STHeitiTC","HelveticaNeue","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;}
+body {width: 100%;color: #3c3c3c;background: #fff;min-height: 100%;}
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+i {font: inherit;}
+input,select{vertical-align:middle;}
+/*设置左右浮动，class="fl"为左浮动，class="fr"为右浮动*/
+.fl { float:left; display:inline;}
+.fr { float:right; display:inline;}
+/*把h1--h6的字体大小和加粗样式全部清除掉，这样h标签就跟普通标签没有区别*/
+h1, h2, h3, h4, h5, h6 {font-weight: normal;font-size: 100%;}
+/*a样式*/
+a:link, a:visited { text-decoration:none;}
+a {text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a:hover {text-decoration: none;outline: none; color: #fff;}
+/*clear,clearfix是清楚浮动的----clearfix用法是：给浮动元素的父级添加class="clearfix"，即可清楚子元素的浮动，目前是业内比较流行的清楚浮动方法。*/
+.clear{ clear:both;}
+.clearfix:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix {zoom:1;display:block;_height:1px;clear:both;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary,time{display: block;}
+input[type="text"],input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}
+/*5-24*/
+.login-tab {height: 88px;height: 1.1733333333333333rem;line-height: 88px;line-height: 1.1733333333333333rem;background: #36353a;white-space: nowrap;font-size: 0;}
+.login-tab a {color: #bbbbbb;position: relative;display: inline-block;width: 33.333333334%;text-align: center;font-size: 30px;font-size: 0.4rem;height: 88px;height: 1.1733333333333333rem;line-height: 88px;line-height: 1.1733333333333333rem;}
+.login-tab .sel {color: #FEA100;}
+.login-tab .sel:after {content: "";position: absolute;width: 60%;bottom: 0;left: 0;right: 0;margin: auto;height: 2px;height: 0.02666666666666667rem;background: #fe9f39;}
+.tab {background: #fafafa;position: fixed;bottom: 0;width: 750px;width: 10rem;border-top: 1px solid #e3e3e3;height: 100px;height: 1.3333333333333333rem;line-height: 100px;line-height: 1.3333333333333333rem;font-size: 36px;font-size: 0.48rem;color: #484848;}
+.tab a {color: #484848;width: 248px;width: 3.3066666666666666rem;float: left;display: inline-block;text-align: center;}
+.tab a:nth-child(2) {border-left: 1px solid #e3e3e3;border-right: 1px solid #e3e3e3;}
+.tab .tab_over {color: #fe9f39;}
+
+/*back*/
+.changeTitle{width:750px;width:10rem;height: 88px;height: 1.1733333333333333rem;position: fixed; top:0; left:0;z-index:999;overflow: hidden;font-size: 34px;font-size: 0.4533333333333333rem;line-height: 88px;color: #FFF;text-align: center; font-weight: bold;}
+.changeTitle img{width:750px;width:10rem;height: 88px;height: 1.1733333333333333rem;position: relative; vertical-align: top;}
+.changeTitle p{position: absolute;  width:700px;width:9.333333333333334rem;height: 88px;height: 1.1733333333333333rem;line-height: 88px;line-height: 1.1733333333333333rem;left: 50%; margin-left: -350px;margin-left: -4.666666666666667rem;top:50%; margin-top: -44px; margin-top: -0.5866666666666667rem;}
+
+/*上一页下一页*/
+.page_change{width: 400px;width: 5.333333333333333rem;margin:auto;font-size:34px;font-size:0.4533333333333333rem; padding:20px; padding:0.26666666666666666rem;text-align:center;overflow: hidden;}
+.page_change .pev_page,.page_change .next_page{width:120px;width:1.6rem;padding:10px 20px; padding:0.13333333333333333rem 0.26666666666666666rem; background: #e6e6e6; color: #8d8d8d;}
+.page_change .pev_page{margin-right: 50px;margin-right: 0.6666666666666666rem;}
+
+

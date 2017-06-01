@@ -1,0 +1,108 @@
+ .channel_page {
+ 	width: 750px;
+ 	width: 10rem;
+ 	margin: 0 auto;
+ 	background: #f4f4f4;
+ 	padding-bottom: 160px;
+ 	padding-bottom: 2.1333333333333333rem;
+ }
+ 
+ .channel_page h3 {
+ 	font-size: 36px;
+ 	font-size: 0.48rem;
+ 	height: 80px;
+ 	height: 1.0666666666666667rem;
+ 	line-height: 80px;
+ 	line-height: 1.0666666666666667rem;
+ 	padding-left: 20px;
+ 	padding-left: 0.26666666666666666rem;
+ 	border-bottom: 1px solid #e3e3e3;
+ }
+ 
+ .list {
+ 	background: #fff;
+ 	overflow: hidden;
+ }
+ 
+ .prefecture {
+ 	padding: 20px;
+ 	padding: 0.26666666666666666rem;
+ 	height: 120px;
+ 	height: 1.6rem;
+ 	line-height: 120px;
+ 	line-height: 1.6rem;
+ 	overflow: hidden;
+ 	border-bottom: 1px solid #e3e3e3;
+ }
+ 
+ .prefecture .icon {
+ 	width: 120px;
+ 	width: 1.6rem;
+ 	height: 120px;
+ 	height: 1.6rem;
+ 	float: left;
+ }
+ .prefecture .icon img{
+ 	vertical-align: top;
+ 	width: 100%;
+ }
+ 
+ .prefecture .description {
+ 	margin-left: 190px;
+ 	margin-left: 2.533333333333333rem;
+ 	overflow: hidden;
+ }
+  .prefecture .description p{
+     width: 100%;
+     overflow: hidden;
+  }
+ 
+ .prefecture .description .title_channel {
+ 	font-size: 36px;
+ 	font-size: 0.48rem;
+ 	float: left;
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+ 	height: 90px;
+ 	height: 1.2rem;
+ 	line-height: 90px;
+ 	line-height: 1.2rem;
+ }
+ 
+ .prefecture .description .secret {
+ 	font-size: 22px;
+ 	font-size: 0.29333333333333333rem;
+ 	color: #8d8d8d;
+ 	height: 30px;
+ 	height: 0.4rem;
+ 	line-height: 30px;
+ 	line-height: 0.4rem;
+
+ }
+ 
+ .prefecture .description .secret img {
+ 	width: 22px;
+ 	width: 0.29333333333333333rem;
+ 	height: 22px;
+ 	height: 0.29333333333333333rem;
+ 	margin-right: 10px;
+ 	margin-right: 0.13333333333333333rem;
+ 	vertical-align: top;
+ }
+ 
+ .prefecture .description .jt_icon {
+ 	height: 90px;
+ 	height: 1.2rem;
+ 	line-height: 90px;
+ 	line-height: 1.2rem;
+ 	float: right;
+ }
+ 
+ .prefecture .description .jt_icon img{
+ 	width: 15px;
+ 	width: 0.2rem;
+ 	height: 26px;
+ 	height: 0.3466666666666667rem;
+ 	vertical-align: middle;
+ }

@@ -1,0 +1,26 @@
+{	"code":0,
+	"data":{"list":[
+					{"level":"admin","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/admin.png"},
+					{"level":"edit","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/edit_0.png"},
+					{"level":"design","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/shejishi.png"},
+					{"level":"pm","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/chanpinwang.png"},
+					{"level":"rd","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/gongchengshi.png"},
+					{"level":"daka","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/daka.png"},
+					{"level":"yunying","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/yunyingmiao.png"},
+					{"level":"notification","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/tongzhi.png"},
+					{"level":"system","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/xitong.png"},
+					{"level":"new","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/xintongxue.png"},
+					{"level":"1","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/1.png"},
+					{"level":"2","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/2.png"},
+					{"level":"3","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/3.png"},
+					{"level":"4","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/4.png"},
+					{"level":"5","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/5.png"},
+					{"level":"\u91d1","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/gold.png"},
+					{"level":"\u9ed1","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/userLevel\/star\/black.png"},
+					{"level":"\u793c","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/card\/background\/nashspace0308112746.png"},
+					{"level":"\u767d","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/card\/background\/nashspace0607041852.png"},
+					{"level":"\u7a7a","levelUrl":"http:\/\/nashwork1.b0.upaiyun.com\/server\/card\/background\/nashspace57b66e6a9a828.png"}
+					],
+			"imConfig":{"url":"http:\/\/119.254.100.119:12226"},
+			"currentUserLevel":"rd"}
+}

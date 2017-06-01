@@ -1,0 +1,40 @@
+*{padding: 0;margin:0}
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+i {font: inherit;}
+
+/*头部返回*/
+header{width: 100%;height: 13.73332999vw;line-height: 13.73332999vw;background: #36353b;font-size: 5.59986vw;text-align: center;color: #FFFFFF;position: relative;}
+header img{width:6vw;height: 6vw;position: absolute;top: 4vw;left:4vw;}
+/*占位符*/
+.oImg_top{width: 100%;height:38.66666657vw;background: deepskyblue;overflow: hidden;}
+.oImg_top img{width: 100vw;height: 100%;}
+/*标题*/
+.oTitle{padding:2.773333264vw 4.2666656vw 3.19999992vw 2.773333264vw;}
+.oTitle p{font-size: 4.53333322vw;color: #333333;line-height: 6.2vw;}
+/*时间，报名，位置，人数*/
+.oArticle{padding-left: 3.199999vw;font-size: 3.9999vw;color: #666;font-weight: 200;}
+.oArticle p{border-bottom: 1px solid #e6e6e6;height:10.666664vw;line-height:10.666664vw;font-weight: 200;}
+.oArticle p img{margin-right: 3.1999995vw;width: 5.0vw;height: 5.0vw;}
+.oArticle .fea{color: #fea100;}
+/*order报名按钮*/
+.oOrder{padding-left: 3.1999995vw;padding-top: 6.266666vw;padding-right: 3.1999995vw;padding-bottom: 0rem;}
+.oOrder button{width: 100%;height: 12.7999997vw;background: #ffa101;color: #FFF;font-size:4.6933333vw;border-radius: 10px;outline: none;}
+.oOrder p{color:#345B9C;font-size: 4.6933333vw;padding-top: 6.3999999vw;}
+/*报名*/
+.oOrder_number{width: 100%;}
+.sanjiao{width: 0;height: 0;border: 2.7733vw solid transparent;border-bottom-color: #eceaeb;margin-left: 7.8933316vw;border-top: none;margin-top: 1vw;}
+.oOrder_number dl{background: #eceaeb;width: 100%;padding:4.26666vw  0;border-bottom: 2px solid #dadada;}
+.oOrder_number dd,.oOrder_number dt{float: left;}
+.oOrder_number dl:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both; height: 0;}
+.oOrder_number dt img{width: 10.66666665vw;height: 10.66666665vw;border-radius: 5.3333325vw;}
+.oOrder_number dd{padding-left: 2.55999936vw;}
+.oOrder_number dd p{line-height: 5.3333325vw;font-size: 3.7333324vw;}
+.oOrder_number dd p:first-of-type{color: #3E3680;}
+.oOrder_number dd p:last-of-type{color: #8d8d8d;}
+.oNmuber_list{padding-bottom: 2.13333328vw;background: #eceaeb;padding-left: 3.1999995vw;}
+
+    
+   

@@ -1,0 +1,109 @@
+/*公共样式*/
+html {width: 100%;-webkit-text-size-adjust： none;font-family: "STHeitiTC-Light","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;}
+body{width: 100%;overflow-x: hidden;margin: 0;color: #333;background: #f6f6f6;}
+* {margin: 0;padding: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+a{text-decoration: none;}
+/*********home 首页*********************************************************************************************************************************/
+.home{width: 100vw;}
+/*******************************轮播********************************/
+.lunbo{width: 100vw;height: 38.666666vw;padding-bottom: 2.1333333vw;}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+.lunbo a{display: block;width: 100%;height: 100%;}
+/*****************************三个图：活动，大咖，企业***********************************/
+.threetype{width: 100vw;height: 33.333vw;padding-bottom: 2.1333333vw;background: #FFFFFF;display: flex;flex-flow: row nowrap;justify-content: space-between;}
+.threetype a{display: block;/*float: left*/;height: 100%;}
+.threetype a:first-of-type img,.threetype a:last-of-type img{width:33.23vw;}
+.threetype a:nth-of-type(2) img{width: 33vw;/*border-left:0.53vw solid #F6F6F6;*/}
+.threetype a:last-of-type{/*float: right;*/}
+/*****************************找办公室，租工位，定会议室，选会场**********************************/
+.lookoffice{width: 88.4vw;height:25.06vw;background: #FFFFFF;padding: 0  5.8vw;margin-bottom: 2.1333333vw;}
+.lookoffice dl{width:17.333vw;height: 25.06vw;float: left;}
+.lookoffice dl img{width:17.333vw;height: 17.333vw;}
+.lookoffice dd{width: 100%;height:7.727vw;line-height: 7.727vw;text-align: center;font-size:3.1992vw;color: #525252;}
+.lookoffice dl:nth-last-of-type(2){margin: 0 6.35vw;}
+.lookoffice dl:nth-last-of-type(4){float: right;}
+.lookoffice a{color: #333;}
+/*******************************************社区精选**********************************/
+.area_choice{width: 100vw;background: #FFFFFF;padding-bottom: 13.33vw;}
+.header{width: 95.593vw;height: 3.733vw;padding: 4.3998vw 1.7333vw 3.733324vw 2.666vw;}
+.header span{float: left;font-size:3.733vw;color: #f28d2b;}
+.header span img{width: 3.199vw;height:3.5999vw;margin-right: 2vw;margin-top:-1vw;}
+.header a{float: right;color: #f28d2b;font-size:3.733vw;}
+.header a img{width:3.5999vw;height:4.5999vw;margin-top: -1vw;}
+.header:after{content: '.';clear: both;display: block;height: 0;overflow: hidden;visibility: hidden;}
+.content{width: 100vw;}
+.content a{color: #333;}
+.content dl{width: 97.3vw;margin: 0 auto;height: 24vw;border-bottom: 0.566vw solid #f0f0f0;}
+.content dl:after{content: '.';clear: both;display: block;height: 0;overflow: hidden;visibility: hidden;}
+.content dl img{width: 22.6661vw;height: 18.6662vw;}
+.content dt{float: left;margin-top: 2.128vw;margin-left: 1.333vw;}
+.content dd{float: left;margin: 2.128vw 1.333vw 0 2.666vw;height: 18.6662vw;width:69vw;position: relative;}
+.content .two{color:#b6b6b6;font-size: 2.666vw;position: absolute;left: 0;bottom: 0;width:69vw;}
+.content .two span:nth-of-type(2){margin-left: 9.3331vw;}
+.content .two span:nth-of-type(3){color: #112e91;border: 1px solid #112e91;position: absolute;right:0;bottom: 0;}
+
+
+/*******shequ社区*****************************************************************************************************************************************/
+/*****************社区的头部*****************/
+.shequ{width: 100vw;background: #FFFFFF;}
+.shequ_header{width: 100%;height: 11.7304vw;background: #363638;padding-top: 4vw;position: fixed;top: 0;left: 0;z-index: 100;}
+.shequ_header_con{width: 94.66643vw;height:7.999999vw;margin: 0 auto;}
+.shequ_header_list{float: left;width: 44.399vw;height: 7.998vw;border-radius: 5px;border: 1px dashed #ee8e3a;overflow: hidden;}
+.shequ_header_list li{float: left;width: 22.1995vw;height: 7.998vw;line-height: 8.098vw;text-align: center;font-size: 5.06vw;}
+.guancolor01{color: #F0F0F0;background: #EE8E3A;}
+.guancolor02{color:#EE8E3A;}
+.find{float: right;width: 14.3964vw;height:6.1318vw;margin-top: 1vw;}
+/*******************社区的内容部分*******************************/
+.shequ_main{width: 100vw;padding-top:15.7304vw;padding-bottom:13.7304vw;}
+.shequ_main_con{width: 100vw;}
+.shequ_main_con_list{width: 92vw;height: 16vw;border-bottom:0.13333vw solid #c7c7c7;padding: 3.999vw;}
+.shequ_details dt,.shequ_details dd{float: left;}
+.shequ_details dt img{width: 15.733vw;height: 15.733vw;}
+.shequ_details dd{margin-left: 1vw;width: 75.2476vw;position: relative;height: 15.733vw;}
+.shequ_details dd p{width: 100%;}
+.shequ_details dd p:first-of-type{font-size: 4.2656vw;color: #333;height: 4.27vw;}
+.shequ_details dd p:nth-of-type(2){font-size: 3.4658vw;color: #666;height:3.47vw;position: absolute;left: 0;top: 6.5vw;}
+.shequ_details dd p:nth-of-type(2) span:nth-of-type(1){display: inline-block;width:55.8864vw;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.shequ_details dd p:nth-of-type(2) span:nth-of-type(2){display: inline-block;width: 6.4vw;height:6.4vw;line-height: 6.9vw;background: red;border-radius: 3.2vw;
+														text-align: center;color: #FFFFFF;position: absolute;top: -1.3vw;right: 8vw;}
+.shequ_details dd .left{width: 2.39vw;height: 3.46vw;float: right;margin-right: -1vw;}
+.shequ_details dd p:nth-of-type(2) span:nth-of-type(2){font-size: 2.666vw;}
+.shequ_details .img01{width: 3.999vw;height: 3.166vw;margin-right: 1.333vw;}
+.shequ_details .img02{width: 3.065vw;height: 3.166vw;margin-right: 1.333vw;margin-left: 2.666vw;}
+.shequ_details dd p:nth-of-type(3){font-size: 2.666vw;color: #999999;position: absolute;bottom: 0;left: 0;}
+
+
+/**********社区频道部分***********************************************************/
+.pindao_header{width: 100%;height: 11.7304vw;background: #363638;padding-top: 4vw;position: fixed;top: 0;left: 0;z-index: 100;}
+.pindao_header_con{width: 94.66643vw;height:7.999999vw;margin: 0 auto;}
+.pindao_header_list{float: right;width: 60.6vw;height: 7.998vw;border-radius: 5px;border: 1px dashed #ee8e3a;overflow: hidden;}
+.pindao_header_list li{float: left;width: 20.1995vw;height: 7.998vw;line-height: 8.0998vw;text-align: center;font-size: 5.06vw;color: #EE8E3A;}
+.pindaomenu{float: left;width: 14.3964vw;height:6.1318vw;margin-top: 1vw;}
+.pindao_header_list .back{color: #F0F0F0;background: #EE8E3A;}
+.pindao_main{margin-top:15.755vw;padding-bottom:14.8vw ;}
+.remen,.fujin,.zuijin{width: 100vw;min-height: 45vw;}
+.fujin,.zuijin{display: none;}
+/**发帖按钮found_tiezi*******************************************************************/
+.found_tiezi{width: 17.866vw;height: 17.866vw;border-radius: 8.933vw;position:fixed;left:50%;margin-left: -8.933vw;bottom: 21.06vw;z-index: 500;}
+.found_tiezi a{display: block;width: 17.866vw;height: 17.866vw;line-height:19.866vw;background: url(../img/jiahao.png) no-repeat;background-size:cover;}
+.found_tiezi:after{content: '.';clear: both;display: block;height: 0;overflow: hidden;visibility: hidden;}
+/*下载的遮罩层*/
+.oZhezhao_load{width: 100vw;height: 100vh;position: fixed;z-index: 900;position: top:0;left: -100vw;}
+.zhazhao_top{width: 100vw;height: 9vh;background:deepskyblue;line-height: 9vh;}
+.zhazhao_top img{width:4vw;height: 6.7vw;margin-left: 3vw;}
+.zhezhao_main{width: 100vw;height: 91vh;background: #000000;opacity: 0.8;color: #FFFFFF;}
+.zhezhao_main p{width: 66vw;padding-top: 43vw;line-height: 8.53vw;padding-left: 17vw;padding-bottom: 5vw;}
+.zhezhao_main .line{width: 78vw;height: 0px;border:1px solid #FFFFFF;margin-left: 11vw;}
+.zhezhao_main .lijixiazai{width: 64vw;padding-left:18vw;padding-top: 6.66vw;}
+.zhezhao_main a{display: block;width: 64vw;height: 13vw;line-height: 13vw;text-align: center;color: #FEA100;border: 1px solid #FEA100;border-radius: 10px;}
+

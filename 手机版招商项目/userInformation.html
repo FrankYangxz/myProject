@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="part/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="part/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="part/css/common.css"/>
+		<script src="part/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="part/js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+			window.addEventListener("resize", function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+			}, false);
+		</script>
+		<style type="text/css">
+			#oList input{width: 2rem;text-align: center;}
+			.customerInfo{margin: 0;}
+		</style>
+	</head>
+	<body>
+		<div id="back">
+			<div class="backCon">
+				<span class="backImg">返回</span>
+				<span class="oTitle">纳什空间</span>
+			</div>
+		</div>
+		<div id="oTop">
+			<div class="oTopCon">
+				<img src="part/img/nashLogo.png"/>	
+			</div>
+		</div>
+		<div id="banner">
+			<p>与纳什空间共同成长</p>
+			<p>推荐优质客户，纳什与您共同成长</p>
+		</div>
+		<!-------------------------------------个人信息----------------------------------------->
+		<div class="recommend">
+			<div class="recommendCon">
+				<p class="personalCenter">个人中心 <span class="oAllMoney">已入账&nbsp;￥<i>300000</i></span></p>
+				<hr style="height:1px;border:none;border-top:1px solid #dbdddf;margin-top: 0rem;"/>
+				<p class="jcxx"><span>基础信息</span><span class="mimaReset">重置密码</span></p>
+				<p class="_userName yangshi">张三丰</p>
+				<p class="_userTel yangshi">186677777</p>
+				<p class="_userEmail yangshi">12w21@163.com</p>
+				<hr style="height:1px;border:none;border-top:1px solid #ebeef3;margin-top: 0.3rem;"/>
+			</div>
+		</div>
+		<!------------------推荐信息列表------------------>
+		<div class="main">
+			<ul class="nashList">
+				<!--推荐时间段-->
+				<li class="oTuiTime">
+					<div class="customerInfo" id="oList"><input type="text" data-value="0" value="推荐时间段" readonly="readonly" /><img class="oListImg" src="part/img/jiao_03.png"/>
+						<ul class="cityName">
+							<li data-value="1">一星期内</li>
+							<li data-value="2">一月内</li>
+							<li data-value="3">三个月内</li>
+							<li data-value="4">半年内</li>
+							<li data-value="5">一年半内</li>
+						</ul>
+					</div>
+				</li>
+				<!--商机进度-->
+				<li class="oTuiProcess">
+					<div class="customerInfo" id="oList"><input type="text" value="商机进度"  data-value="0" readonly="readonly" /><img class="oListImg" src="part/img/jiao_03.png"/>
+						<ul class="cityName">
+							<li data-value="1">带看</li>
+							<li data-value="2">赢单</li>
+							<li data-value="3">丢单</li>
+							<li data-value="4">付款中</li>
+							<li data-value="5">已付款</li>
+						</ul>
+					</div>
+				</li>
+				<!--商机类型-->
+				<li class="oTuiType">
+					<div class="customerInfo" id="oList"><input type="text" value="商机类型" data-value="" readonly="readonly" /><img class="oListImg" src="part/img/jiao_03.png"/>
+						<ul class="cityName">
+							<li data-value="Space">Space</li>
+							<li data-value="Studio">Studio</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<!--列表-->
+			<div class="oTuiList">
+				<div class="oTuiListCon">
+					<p class="oTuiListConHeader"> <span class="oColor">ID：<i>300000</i></span> <span>商机进度：<i>2017-05-02</i></span></p>
+					<p>客户姓名：<span>张三</span></p>
+					<p class="jinInfo"><span>13999999999</span><span>商机进度：<i>付款中</i><i>￥300</i></span></p>
+					<p class="oBeiZhu"><span>备注：</span><span>暂无</span></p>
+				</div>
+				
+				
+				
+				
+			</div>
+			
+			
+			
+		</div>
+		<!------------------银行信息--------------------------->
+		<div class="recommend">
+			<div class="recommendCon">
+				<p class="jcxx">银行信息</p>
+				<p class="yangshi"><span>招商银行</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>123456</span>(开户行号)</p>
+				<p class="yangshi">122334445567888</p>
+				<hr style="height:1px;border:none;border-top:1px solid #dbdddf;margin-top: 0.15rem;margin-bottom: 0.4rem;"/>
+				<p><a class="oCreat">创建新推荐</a><a class="oRetroaction">意见反馈</a></p>
+				<div style="clear: both;padding-top: 0.3rem;"></div>
+			</div>
+		</div>
+		<!--底部-->
+		<div id="oFoot"></div>
+		<script src="part/js/topandfoot.js" type="text/javascript" charset="utf-8"></script>
+		<script src="part/js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="part/js/list.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

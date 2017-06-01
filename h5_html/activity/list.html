@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<link href="i/logo.png" rel="shortcut icon">
+		<title>活动</title>
+		<link rel="stylesheet" type="text/css" href="../public/c/public.css" />
+		<link rel="stylesheet" type="text/css" href="c/active.css" />
+		<script src="../public/j/fun.js"></script>
+		<script src="../public/j/jquery-1.9.1.min.js"></script>
+		<script src="j/active.js"></script>
+		<script>
+			$(document).ready(function() {
+				document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="loading dis_load">
+				<div class="load"><img src="../public/i/loading.gif">加载中...</div>
+			</div>
+			<div class="list">
+				<div class="a_active">
+					<img class="goods_bg" src="i/photo.jpg">
+				</div>
+				<div class="a_detail">
+					<p class="a_content">每周三，让我们抱团聊创业，感受最真实的狼性内心</p>
+					<p class="a_time">活动时间：<span>2016-04-25 16:00</span></p>
+				</div>
+			</div>
+	</body>
+	<script>
+		$(document).ready(function() {
+			active();
+		})
+
+		function a_detail(detailId) {
+			window.location.href = 'detail.php?&_type=activity&_id=' + detailId + '';
+		}
+	</script>
+	<script src="../public/j/statistics.js"></script>
+</html>

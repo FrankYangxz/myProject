@@ -1,0 +1,39 @@
+*{padding: 0;margin: 0;}
+ul li{list-style: none;}
+.top{width: 100vw;height: 103.797vw;background: url(../img/bj_1.png) no-repeat center -6vw;background-size: cover;}
+.back{width: 4vw;height: 0vw;margin-left: 2.66vw;padding-top: 7.46vw;}
+.back img{width: 100%;height:0vw;}
+.top p:nth-of-type(2){width: 100vw;height: 10.66vw;text-align: center;color: #FFFFFF;font-size: 7.466vw;padding-top: 5.86vw;padding-bottom:4vw;}
+.top p:nth-of-type(3){width: 82.66vw;height:20.53vw;margin: 0 auto;}
+.top p:nth-of-type(3) img{width: 100%;height: 100%;}
+.top p:nth-of-type(4){width: 67.99vw;height:43.99vw;margin: 0 auto;padding-top: 3.1333vw;padding-bottom:8vw ;}
+.top p:nth-of-type(4) img{width: 100%;height: 100%;}
+.sygz{width: 95.66vw;height: 43.99vw;margin: 0 auto;background: url(../img/shiyongguizebj.png)  no-repeat center -5px;background-size: contain;margin-bottom: 5.5vw;}
+.sygz p{padding-left: 11.66vw;}
+.sygz p:nth-of-type(1){font-size: 4.799vw;padding-top: 5.1982vw;padding-bottom: 2vw;font-weight: 700;}
+.sygz p:nth-of-type(2),.sygz p:nth-of-type(3),.sygz p:nth-of-type(4),.sygz p:nth-of-type(5){font-size: 3.99vw;line-height: 6vw;}
+
+/*包月优惠*/
+.baoyue{width: 100vw;display: ;}
+.baoyue img{width: 100%;}
+.baoyue a{display: block;}
+
+
+.main{width: 100vw;background: url(../img/bj_2.png) no-repeat top center;background-size: cover;}
+/*************************前三名***************************/
+.list_qiansan{width: 94.643vw;/*height: 19.999vw;*/margin: 0 auto;}
+ul li{height:19.999vw;position: relative;line-height: 19.999vw;background: #f5f5f5;position: relative;}
+ul li:nth-of-type(2){background: #FFFFFF;}
+.mingci{width: 10.399vw;height: 11.733vw;position: absolute;top: 0;left: 0;line-height: 11.73vw;color: #FFFFFF;}
+.mingci strong{position: absolute;top: -1.5vw;left: 2vw;}
+.touxiang{width: 13.33vw;height: 13.33vw;border-radius: 6.66vw;position: absolute;top: 3.7vw;left: 13.333vw;}
+.name{font-size: 4.53vw;color: #333;padding-right: 12.66vw;padding-left: 36vw;display: inline-block;}
+.zhangshu{font-size: 3.466vw;color: #999;position: absolute;top: 0.26vw;right: 3vw;}
+.zhangshu i{font-style: normal;}
+
+.main02{width: 100vw;background: url(../img/bj_3.png) no-repeat;background-size: cover;}
+.main02 .more li strong{color: #333333;}
+.main02 .more li:nth-of-type(odd){background: #FFFFFF;}
+.main02 .more li:nth-of-type(even){background: #f5f5f5;}
+
+.main03{width: 100vw;height:16.53vw;background: url(../img/bj_4.png) no-repeat;background-size: cover;}

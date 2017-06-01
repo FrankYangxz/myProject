@@ -1,0 +1,5 @@
+修改文档：
+1.list.html和list02.html增加了iscroll相关代码；
+2.map.html增加了顶部返回条及位置信息；
+3.xaingqingye.html的局部地图改动；
+（注：iscroll代码里面的ajax调取成功板块已标注；外包公司同志请在开发好以后把list.html和list02.html页面底部的js代码外联。辛苦了）

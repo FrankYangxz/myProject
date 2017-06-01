@@ -1,0 +1,122 @@
+/*公共样式*/
+html {width: 100%;-webkit-text-size-adjust： none;font-family: "STHeitiTC-Light","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;}
+body{width: 100%;overflow-x: hidden;margin: 0;color: #333;background: #f6f6f6;}
+* {margin: 0;padding: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none;}
+
+img {vertical-align:middle;max-width: 100%;border: none;}
+a{text-decoration: none;}
+
+
+/*********home 首页*********************************************************************************************************************************/
+.home{width: 100vw;overflow: hidden;}
+/*******************************顶部轮播********************************/
+.lunbo{width: 100vw;height: 38.666666vw;background: red;overflow: hidden;}
+.lunbo .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.lunbo .swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+.lunbo a{display: block;width: 100%;height: 100%;}
+/*****************************三个图：活动，大咖，企业***********************************/
+.banner{width: 100vw;height: 57.333vw;background: #FFFFFF;position: relative;overflow: hidden;}
+.banner:after{content: '.';clear: both;display: block;height: 0;overflow: hidden;visibility: hidden;}
+.threetype{width: 94.66vw;height: 55.73vw;position: absolute;top: -3.199vw;left: 2.667vw;background: #FFFFFF;border-radius:10px ;box-shadow:-5px 0 5px #eeeeee,5px 0 5px #eeeeee,0 0 0, 0 10px 10px #eeeeee;position: absolute;z-index: 500;}
+.threetype p{width: 57.333vw;height: 8.0vw;padding-top: 8.86666vw;padding-left: 1.3333vw;}
+.threetype p img{width: 100%;height: 100%;}
+
+.gongwei{width: 91.99vw;margin: 0 auto;display: -webkit-box;display: -moz-box;display: -ms-flexbox;
+display: -o-box;display: box;display: -webkit-flex; /* Safari */display: flex;
+flex-flow: row nowrap;justify-content: space-between;
+}
+.gongwei dl{width: 17.33vw;}
+.gongwei dl dt a{display: block;width: 17.33vw;height: 17.33vw;}
+.gongwei dl dt img{width: 100%;height: 100%;}
+.gongwei dd{width: 100%;text-align: center;height: 9.331vw;line-height: 9.34vw;font-size: 3.1999vw;color: #333333;}
+
+/**************************************欢迎来到纳什空间*****************************************************/
+.welcome{width: 100vw;height: 68.06vw;overflow: hidden;}
+.welcome p{font-size: 5.3332vw;padding: 2.93vw 4vw;}
+.welcome .lunbo3D{width: 100%;height: 53.86vw;padding-top: 3vw;}
+.lunbo3D .swiper-container {
+        width: 100%;
+    }
+ .lunbo3D .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 200px;
+    }
+
+
+
+
+
+
+/*.welcome:after{content: '.';clear: both;display: block;height: 0;overflow: hidden;visibility: hidden;}*/
+/*******************************************社区精选**********************************/
+.area_choice{width: 100vw;background: #FFFFFF;padding-bottom: 13.33vw;overflow: hidden;}
+.header{width: 95.593vw;height: 3.733vw;padding: 4.3998vw 1.7333vw 3.733324vw 2.666vw;}
+.header span{float: left;font-size: 5.3332vw;}
+.content{width: 100vw;overflow-x: hidden;}
+.content a{color: #333;}
+
+.content dl{width: 100vw;height: 33.3325vw;border-bottom: 0.566vw solid #f0f0f0;}
+
+.content dt img{width: 43.99vw;height: 27.99vw;padding-left: 2.66vw;}
+.content dt{float: left;margin-top: 3vw;}
+.content dd{float: left;height: 27.99vw;width:46.399vw;position: relative;padding-top: 4.5vw;padding-left:3.199vw;}
+.content .one{font-size: 4.533vw;}
+.content .two{color:#b6b6b6;font-size:3.733vw;position: absolute;left: 3.199vw;bottom: 2vw;width:69vw;}
+.content dl:after{content: '.';clear: both;display: block;height: 0;overflow: hidden;visibility: hidden;}
+/*******************************************纳什空间VR看房**********************************/
+.VR_kanfang{width: 100vw;overflow-x: hidden;}
+.VR_kanfang p{font-size: 5.3332vw;padding: 2.93vw 4vw;}
+.vr_lunbo{width:100vw;height: 49.33vw;}
+
+.vr_lunbo .swiper-container {
+        width: 100vw;
+        height: 48.33vw;
+       
+    }
+.vr_lunbo .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        width: 80%;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+/*.vr_lunbo .swiper-slide:nth-child(2n) {
+        width: 80%;
+    }
+.vr_lunbo .swiper-slide:nth-child(3n) {
+        width: 50%;
+    }*/
+
+.vr_lunbo a{display: block;width: 100%;height: 100%;}
+.vr_lunbo img{width: 100%;height: 100%;}
+/*******************更多精彩***********************/
+.moreWonderful{width: 100vw;height: 33.33vw;background: deepskyblue;overflow: hidden;}
+
+/***********************底部菜单*****************************/
+.footer{width: 100vw;height: 13.33vw;background: #f9f9f9;position: fixed;left: 0;bottom: 0;border-top: 1px solid #b2b2b2;z-index: 1000;}
+.list li{width:25vw;float: left;height: 13.33vw;line-height: 13.33vw;text-align: center;font-size: 4.533322vw;color: #f3a85f;}
+.list li a{display: block;width: 100%;height: 100%;border-right: 1px solid #b2b2b2;color: #333333;}
+.list li:first-of-type a{color: #f3a85f;}
+.footer:after{content: '.';clear: both;display: block;height: 0;overflow: hidden;visibility: hidden;}

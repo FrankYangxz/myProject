@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="img/logo01.png" rel="shortcut icon">
+		<title>产品详情</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+	</head>
+	<body>
+		
+	    <!-------------------------------左上角按钮---------------------------->
+	    <p class="back02"><a href="list.html"><img src="img/Arrow@3x.png"/></a></p>
+		
+	    <div class="main_banner">
+	    		<img src="img/list01_03.jpg"/>
+	    </div>
+	    
+	    <div class="main_details">
+	    		<p>万达广场A座301室</p>
+	    		<p><img src="img/left.png"/><img src="img/center.png"/><img src="img/right.png"/></p>
+	    		<p><span>20000元/月</span><span>共20位</span><span>150㎡</span></p>
+	    		<p></p>
+	    </div>
+		
+		<div class="main_details02">
+			<p><img src="img/weizhi01.jpg"/> <span>建国路93号</span></p>
+			<p><img src="img/train.jpg"/><span>1号线（锦江乐园站），步行7分钟</span></p>
+			<p style="padding-right: 6vw;">326路；731路；804路；1202路；南梅线；枫梅线；石梅线；50路；131路；218路；703B路；725路；729路；317路</p>
+		</div>
+		<div class="main_details03">
+			<p><span>·</span>房源特色<span>·</span></p>
+			<p>标准硬装，交通便利，周围配套设施齐全。</p>
+		</div>
+		
+		<div class="main_details04">
+			<p><span>·</span>看房记录<span>·</span></p>
+			<p>近一个月新增<span>24</span>位看房用户，共<span>24</span>位</p>
+		</div>
+		<div class="main_details05">
+			<p><span>·</span>位置及周边<span>·</span></p>
+			<div class="map" style="position: relative;">
+<!--				
+				
+				
+				-->
+				<div id="mapp" style="width: 100%;height: 100%;position: absolute;z-index: 1000;top: 0;left: 0;">
+					
+				</div>
+			</div>
+		</div>
+		<div class="yuyue">
+			<a href="#">预约参观<img src="img/lind_03.jpg" /></a><a href="#">拨打电话<img src="img/ww_05.jpg" /> </a>
+		</div>
+		
+	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--轮播图-->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+		  pagination : '.swiper-pagination',
+		  paginationType : 'custom',
+		  paginationCustomRender: function (swiper, current, total) {
+		      return current + ' / ' + total;
+		  }
+		});
+		
+	</script>
+	<!--点击图片-->
+	<script type="text/javascript">
+		$('.main_banner img').on('click',function(){
+			window.location='lunbo.html';
+		})
+	</script>
+	<!--点击地图-->
+	<script type="text/javascript">
+		$('.map').on('click',function(){
+			window.location='map.html'	
+		})
+		$('#mapp').on('click',function(){
+			window.location='map.html'	
+		})
+	</script>
+	</body>
+</html>

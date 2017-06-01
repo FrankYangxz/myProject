@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+		<meta name="format-detection" content="telephone=no" />
+		<link href="i/logo.png" rel="shortcut icon">
+		<title>赞过我/他的人</title>
+		<link rel="stylesheet" type="text/css" href="../public/c/public.css" />
+		<link rel="stylesheet" type="text/css" href="c/support.css" />
+		<script src="../public/j/jquery-1.9.1.min.js"></script>
+		<script src="../public/j/fun.js"></script>
+		<script>
+			$(document).ready(function() {
+				document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+			});
+		</script>
+	</head>
+
+	<body>
+		<img src="i/logo.png" style="position:fixed; display: none; z-index: -999;">
+		<div class="changeTitle" onclick="goBack()"><img src="i/anniu_02.jpg">
+			<p>返回</p>
+		</div>
+		<div class="support">
+			<p>最近有100人赞过我/他的动态</p>
+			<div id="support_list">
+				<div class="support_person clearfix">
+					<div class="support_photo"><img src="i/channel_icon.jpg"></div>
+					<div class="support_name">纳什空间纳什空间纳什空间@纳什空间</div>
+				</div>
+				<div class="support_person">
+					<div class="support_photo"><img src="i/channel_icon.jpg"></div>
+					<div class="support_name">纳什空间纳什空间纳什空间@纳什空间</div>
+				</div>
+			</div>
+			<div class="page_change"><a href="#" class="pev_page">上一页</a><a href="#" class="next_page ">下一页</a></div>
+		</div>
+	</body>
+	<script src="j/statistics.js"></script>
+
+</html>

@@ -1,0 +1,20 @@
+修改：
+	1.nash_beijing_introduce.html页面的第39~46行左右位置，类名为.tou001的div内代码更改为：
+							<div id="toubu" style="text-indent:7em;">
+								<img id="obig" src="img/menu.jpg" />纳什空间介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a class="lol" href="nash_company_introduce.html">
+									<span>北京</span>&nbsp;
+									<img class="tt" src="img/arrow.png"/>
+								</a>
+							</div>
+	2.在nash_beijing_introduce.html页面中最底部的一段js更改为：
+														$('#obig').on('click',function(){
+															$('.fenlan').animate({'left':'0'},200)
+														})；
+														（注释：更改这个可能会引起之前的bug,侧栏可能划不出来。）			
+	3.把add.css文件添加到css中（注：是css文件夹，不是css01文件夹）；
+	4.页面增加了error.html，nash_compangy_introduce.html。
+	5.增加了图片diushi.png,把图片添加到img中（注：是img文金价，不是img01文件夹）；
+
+
+

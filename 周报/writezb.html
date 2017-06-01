@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html >
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>纳什空间周报录入</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/css-table.css" />
+	<style type="text/css">
+		/**{padding: 0;margin: 0;}*/
+		ol{padding-left: 30px;margin: 0;padding-right: 0;margin-right: 0;}
+		li{word-break: break-word;padding-right: 0;margin-right: 0;margin: 5px 0;}
+		li input{width: 80%;text-indent: 5px;border: none;height: 20px;outline-style: none;border-radius:3px ;}
+		#travel,.header{width: 1000px;margin: 0 auto;}
+		.tap{width: 1000px;margin: 0 auto;}
+		span{padding: 5px 10px;background:#2388BF;border-radius:3px;color: #FFFFFF;margin-left: 10px;cursor: pointer;}
+		.company span:hover{background: #3AD5A0;}
+		.company .color{background: #3AD5A0;}
+		.con{text-align: left;}
+		.oWidth{min-width: 50px;}
+		tbody tr th{text-align: center;}
+		.forAdd{position: relative;}
+		.add{display: block;font-size: 16px;position: absolute;right: 3px;bottom: 3px;width: 25px;height: 25px;text-align: center;line-height: 25px;color: #FFFFFF;border-radius:12.5px;background: #45A8DF;cursor: pointer;}
+		.add:hover{background:#2388BF;}
+		i{font-style: normal;}
+		tr:hover{background: #BCD9E1;}
+	</style>
+	</head>
+<body>
+<div class="tap">
+	<h3>纳什空间周报录入</h3>
+	<p class="company"></p>
+</div>	
+<table id="travel">
+	<thead>    
+    	    <tr>
+            <th scope="col" colspan="10">纳什空间周报录入</th>
+        </tr>
+        <tr>
+        		<th scope="col" >部门</th>
+            <th scope="col" colspan="4">工作计划</th>
+            <th scope="col" colspan="4">实际工作/未完计划说明</th>
+        </tr>        
+    </thead>
+ <!----------------------周一--------------------------------周一----------------------------------周一-->   
+    <tbody class="oZhouYi">
+    	<!---------------------------------总裁办---------------------------------->
+    		<tr>
+    			<th scope="row"  class="oWidth oBuMen"></th>
+            <td colspan="4" class="con oPlanWanCheng" align="left" valign="top">
+            	<!----工作计划---->
+            		<!--<ol>
+            			<li data-value= "deparmentId"><input type="text" date-value= "planlistid" value = "planlist"/></li>
+            		</ol>-->
+            </td>
+            <td colspan="4" class="con forAdd oFactWanCheng" align="left" valign="top">
+            	<!----完成情况---->
+            		<!--<ol>
+            			<li><input type="text" /></li>
+            		</ol>
+            		<a class="add">+</a>-->
+            </td>
+       </tr>  
+		<!--保存-->
+	    <tr>
+	        <th scope="col" colspan="10"><button>保存</button></th>
+	    </tr>
+    </tbody>
+</table>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/style-table.js"></script>
+<script type="text/javascript">
+//渲染之前的所有数据
+	$.ajax({
+		type:"get",
+		dataType:"json",
+		url:"add2.json",
+		async:true,
+		success:function(data){
+//			data = JSON.parse(data);
+			console.log(data.list.length);
+			//渲染时间
+			for (var i=0;i<data.list.length;i++) {
+				$('.company').append("<span><i></i>-<i></i></span>");
+				$('#travel').append( $('.oZhouYi:eq(0)').clone() );
+				var oStar = data.list[i].date.start;
+				var oEnd = data.list[i].date.end;
+				var oTimeS = new Date(parseInt(oStar) * 1000).toLocaleString().substr(0,17);
+				var oTimeE = new Date(parseInt(oEnd) * 1000).toLocaleString().substr(0,17);
+				var oTimeStart = oTimeS.split("上")[0];
+				var oTimeEnd = oTimeE.split("上")[0];
+				$('.company span:eq('+i+') i:eq(0)').html(oTimeStart);
+				$('.company span:eq('+i+') i:eq(1)').html(oTimeEnd);
+			}
+			//渲染部门
+			for (var y = 0 ; y <data.list.length; y++) {
+				for (var e = 0 ; e < data.list[y].list.length; e++ ) {
+					var oDeparmentId = data.list[y].list[e].departmentId;
+					var oDeparmentName = data.list[y].list[e].departmentName;
+					$("#travel tbody:eq("+y+") tr:eq("+e+") .oBuMen").html(oDeparmentName);
+					$('#travel tbody:eq('+y+') tr:eq('+e+') ').after( $('#travel tbody:eq(0) tr:eq(0)').clone() );
+					$('#travel tbody:eq('+y+') tr:eq('+(e+1)+') .oBuMen').empty();	
+				}
+			}
+			//渲染工作计划及实际工作
+			for (var y = 0 ; y <data.list.length; y++) {
+				for (var e = 0 ; e < data.list[y].list.length; e++ ) {
+					var oDeparmentId = data.list[y].list[e].departmentId;
+					var oDeparmentName = data.list[y].list[e].departmentName;
+//					//是否只读
+					var oValPlan = data.list[y].list[e].list.planReadOnly;
+					var oValFact = data.list[y].list[e].list.factReadOnly;
+					//内容
+					var oPLanList = data.list[y].list[e].list.planList;
+					var oFactList = data.list[y].list[e].list.factList;
+					//工作计划
+					if ( oValPlan ) {
+						var oStr1 = "<ol>"
+						for (var s = 0; s < oPLanList.length ; s++ ) {
+							oStr1 += "<li data-value="+oDeparmentId+"><input type=\"text\"  data-value="+oPLanList[s].id+"  readonly=\"readonly\"  value="+oPLanList[s].content +"></li>";
+						}
+						oStr1 += "</ol>";
+						$("#travel tbody:eq("+y+") tr:eq("+e+") .oPlanWanCheng").html(oStr1);
+					} else{
+						var oStr1 = "<ol>"
+						for (var s = 0; s < oPLanList.length ; s++ ) {
+							oStr1 += "<li data-value="+oDeparmentId+"><input type=\"text\" data-value="+oPLanList[s].id+" value="+oPLanList[s].content+"></li>";
+						}
+						oStr1 += "</ol>";
+						$("#travel tbody:eq("+y+") tr:eq("+e+") .oPlanWanCheng").html(oStr1);
+					}
+					//完成情况
+					if ( oValFact ) {
+						var oStr2 = "<ol>"
+						for (var s = 0; s < oFactList.length ; s++ ) {
+							oStr2 += "<li data-value="+oDeparmentId+"><input type=\"text\" data-value="+oFactList[s].id+" readonly=\"readonly\" value="+oFactList[s].content+" ></li>";
+						}
+						oStr2 += "</ol><a class=\"add\">+</a>";
+						$("#travel tbody:eq("+y+") tr:eq("+e+") .oFactWanCheng").html(oStr2);
+					} else{
+						var oStr2 = "<ol>"
+						for (var s = 0; s < oFactList.length ; s++ ) {
+							oStr2 += "<li data-value="+oDeparmentId+"><input type=\"text\" data-value="+oFactList[s].id+" value="+oFactList[s].content+" ></li>";
+						}
+						oStr2 += "</ol><a class=\"add\">+</a>";
+						$("#travel tbody:eq("+y+") tr:eq("+e+") .oFactWanCheng").html(oStr2);
+					}
+				}
+			}
+			//第一个tbody显示，其余的隐藏
+			$('#travel tbody:eq(0)').show().siblings('tbody').hide();
+			
+			//保存数据，向后台发送数据；
+//			$('button').on("click",function(){
+//				var  oIndex = 0;
+//				var oIndex = $(this).parent().parent().parent().index();//获取到当前button对应的tbody的下标；
+//				oIndex = oIndex - 1;
+//				var oStarTi = data.list[oIndex].date.start;
+//				var oEndTi = data.list[oIndex].date.end;
+//				var oData = GetJsonData();
+//				oData = JSON.stringify(oData);
+//				$.ajax({
+//					type: "post",
+//			        url: "sss.html",
+//			        data: {data:oData, start:oStarTi, end:oEndTi},
+//			        dataType: "json",
+//			        success:function(message){
+//			        		alert("保存成功！");
+//			        		window.location.reload();
+//			        },
+//			        error: function (message) {
+//			            alert("数据保存失败！")
+//			        }
+//				});
+//				console.log( GetJsonData() );     //向后台发送的数据
+//				function GetJsonData(){
+//					var oNewDataAll = [];
+//					var oPlanDataAll = [];
+//					var oFactDataAll = [];
+//					var oTrLength = $('#travel tbody:eq('+oIndex+') tr').length;
+//					for (var g = 0 ; g < oTrLength ; g++ ) {
+//						//工作计划的数据
+//						var oLiLength = $('#travel tbody:eq('+oIndex+') tr:eq('+g+') .oPlanWanCheng ol li');
+//						var oFactLiLength = $('#travel tbody:eq('+oIndex+') tr:eq('+g+') .oFactWanCheng ol li');
+//						for (var h = 0; h < oLiLength.length ; h++   ) {
+//							var oDepartmentId = oLiLength.eq(0).data("value");  //部门的id
+//							var oPlanListId = oLiLength.eq(h).find('input').data("value"); //每条信息的id
+//							if ( oPlanListId == undefined) {
+//								oPlanListId = 0;
+//							}
+//							var oPlanVal = oLiLength.eq(h).find('input').val();    //每条信息的内容
+//							if ( oPlanVal == '') {
+//								oPlanVal = "";
+//							}
+//							var oPlanJson = {
+//								"oDepartmentId":oDepartmentId,
+//								"oPLanListId":oPlanListId,
+//								"oNewVal":oPlanVal,
+//							}
+//							oPlanDataAll.push(oPlanJson);
+//						}
+//						//完成情况的数据
+//						for (var h = 0; h < oFactLiLength.length ; h++   ) {
+//							var oDepartmentId = oFactLiLength.eq(0).data("value"); //部门的id
+//							var oFactListId = oFactLiLength.eq(h).find('input').data("value"); //每条信息的id
+//							if ( oFactListId == undefined ) {
+//								oFactListId = 0;
+//							}
+//							var oFactVal = oFactLiLength.eq(h).find('input').val(); //每条信息的内容
+//							if ( oFactVal == '') {
+//								oFactVal = "";
+//							}
+//							var oFactJson = {
+//								"oDepartmentId":oDepartmentId,
+//								"oFactListId":oFactListId,
+//								"oNewVal":oFactVal,
+//							}
+//							oFactDataAll.push(oFactJson);
+//						}	
+//					}
+//					for (var z = 0 ; z < oPlanDataAll.length ; z++ ) {
+//						 var  oIDp= oPlanDataAll[z].oDepartmentId;
+//						 var  oIDf = oFactDataAll[z].oDepartmentId;
+//						 var  oValp = oPlanDataAll[z].oNewVal;
+//						 var  oValf = oFactDataAll[z].oNewVal; 
+//						 if ( oIDp == oIDf  &&  oValp == " " &&  oValf == " " ) {
+//						 	oPlanDataAll.splice(z,1);
+//						 	oFactDataAll.splice(z,1);
+//						 }
+//					}
+//					oNewDataAll.push( oPlanDataAll );
+//					oNewDataAll.push( oFactDataAll );
+//					return oNewDataAll;
+//				}
+//				
+//			})
+			function oPostData(){
+				//解绑这个按钮
+				$(this).unbind('click', oPostData); 
+				var oIndex = $(this).parent().parent().parent().index();//获取到当前button对应的tbody的下标；
+				oIndex = oIndex - 1;
+				var oStarTi = data.list[oIndex].date.start;
+				var oEndTi = data.list[oIndex].date.end;
+				var oData = GetJsonData();
+				oData = JSON.stringify(oData);
+				$.ajax({
+					type: "post",
+			        url: "sss.html",
+			        data: {data:oData, start:oStarTi, end:oEndTi},
+			        dataType: "json",
+			        success:function(message){
+			        			if ( message.success ) {
+			        				alert("保存成功！");
+			        				window.location.reload();
+			        			} else{
+			        				alert("数据保存失败！");  
+               					$(self).click(oPostData);   //数据保存失败再重新绑定按钮
+			        			}
+			        }
+				});
+				console.log( GetJsonData() );     //向后台发送的数据
+				function GetJsonData(){
+					var oNewDataAll = [];
+					var oPlanDataAll = [];
+					var oFactDataAll = [];
+					var oTrLength = $('#travel tbody:eq('+oIndex+') tr').length;
+					for (var g = 0 ; g < oTrLength ; g++ ) {
+						//工作计划的数据
+						var oLiLength = $('#travel tbody:eq('+oIndex+') tr:eq('+g+') .oPlanWanCheng ol li');
+						var oFactLiLength = $('#travel tbody:eq('+oIndex+') tr:eq('+g+') .oFactWanCheng ol li');
+						for (var h = 0; h < oLiLength.length ; h++   ) {
+							var oDepartmentId = oLiLength.eq(0).data("value");  //部门的id
+							var oPlanListId = oLiLength.eq(h).find('input').data("value"); //每条信息的id
+							if ( oPlanListId == undefined) {
+								oPlanListId = 0;
+							}
+							var oPlanVal = oLiLength.eq(h).find('input').val();    //每条信息的内容
+							if ( oPlanVal == '') {
+								oPlanVal = "";
+							}
+							var oPlanJson = {
+								"oDepartmentId":oDepartmentId,
+								"oPLanListId":oPlanListId,
+								"oNewVal":oPlanVal,
+							}
+							oPlanDataAll.push(oPlanJson);
+						}
+						//完成情况的数据
+						for (var h = 0; h < oFactLiLength.length ; h++   ) {
+							var oDepartmentId = oFactLiLength.eq(0).data("value"); //部门的id
+							var oFactListId = oFactLiLength.eq(h).find('input').data("value"); //每条信息的id
+							if ( oFactListId == undefined ) {
+								oFactListId = 0;
+							}
+							var oFactVal = oFactLiLength.eq(h).find('input').val(); //每条信息的内容
+							if ( oFactVal == '') {
+								oFactVal = "";
+							}
+							var oFactJson = {
+								"oDepartmentId":oDepartmentId,
+								"oFactListId":oFactListId,
+								"oNewVal":oFactVal,
+							}
+							oFactDataAll.push(oFactJson);
+						}	
+					}
+					for (var z = 0 ; z < oPlanDataAll.length ; z++ ) {
+						 var  oIDp= oPlanDataAll[z].oDepartmentId;
+						 var  oIDf = oFactDataAll[z].oDepartmentId;
+						 var  oValp = oPlanDataAll[z].oNewVal;
+						 var  oValf = oFactDataAll[z].oNewVal; 
+						 if ( oIDp == oIDf  &&  oValp == " " &&  oValf == " " ) {
+						 	oPlanDataAll.splice(z,1);
+						 	oFactDataAll.splice(z,1);
+						 }
+					}
+					oNewDataAll.push( oPlanDataAll );
+					oNewDataAll.push( oFactDataAll );
+					return oNewDataAll;
+				}
+					
+			}
+			$('button').click( oPostData );
+			
+			
+			
+			
+			
+			
+			
+			//增加
+			$('.add').on	("click",function(){
+				var  str = "<li><input type=\"text\" /></li>";
+				$(this).siblings('ol').append(str);
+				$(this).parent().siblings('td').find('ol').append(str);
+			})
+			//tap切换
+			$('span').eq(0).addClass('color');
+			$('.company span').on("click",function(){
+				var oIndex = $(this).index();
+				$(this).addClass('color').siblings().removeClass('color');
+				$('#travel tbody:eq('+oIndex+')').show().siblings('tbody').hide();
+			})
+			
+			//除去没有信息的多余一行
+			for (var x = 0; x < $('tbody').length ; x++ ) {
+				for (var q = 0 ; q <  $('tbody:eq('+x+') tr').length ; q++  ) {
+					if ( $('tbody:eq('+x+') tr:eq('+q+') .oBuMen').text() == ''  ) {
+						$('tbody:eq('+x+') tr:eq('+q+')').remove();
+					}
+					//添加title属性
+					for (var d = 0 ; d < $('tbody:eq('+x+') tr:eq('+q+') ol li').length ; d++ ) {
+						var oVa2 = $('tbody:eq('+x+') tr:eq('+q+') ol li:eq('+d+') input').val();
+						$('tbody:eq('+x+') tr:eq('+q+') ol li:eq('+d+') input').attr('title',oVa2);
+					}
+				}
+			}
+			
+		}
+	});
+</script>
+</body>
+</html>

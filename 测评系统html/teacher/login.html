@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教育科技网站</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+    <div class="con head">
+        <div class="logo"><img src="../image/logo.png" /></div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+<!-- login -->
+<div class="login_bg" style="background-size: contain;>
+    <div class="con">
+        <div class="login_region" style="width: 500px;height: 415px;right: 50px;margin-top: -210px;">
+            <p class="icon on"></p>
+            <!-- teacher login -->
+            <div class="teacher" style="left:0%">
+                <div class="login_div">
+                    <p class="login_title"><img src="../image/title_lsdl.png" /></p>
+                    <div class="login_input">
+                        <strong><img src="../image/font-user.png" /></strong>
+                        <input type="text" placeholder="请输入您的手机号" />
+                    </div>
+                    <div class="login_input">
+                        <strong><img src="../image/font-pass.png" /></strong>
+                        <input type="password" placeholder="请输入您的密码" />
+                    </div>
+                    <button class="btn_dl" onclick="location.href='已登陆首页.html'"></button>
+                    <div class="login_notes" style="padding-top: 15px;"> 
+                        <p class="f_r"><a href="#">忘记密码?</a></p>
+                        <p class="f_r"><a href="#">下载申请表&nbsp;&nbsp;&nbsp;&nbsp</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- teacher login -->
+        </div>
+    </div>
+</div>
+<!-- login -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="copyright">
+        <p>教育科技网站</p>
+        <p>Copyright©2015-2017 jiaoyu.com沪ICP16001095号版权所有</p>
+    </div>
+</div>
+<!-- footer -->
+<script type="text/javascript">
+	var h = $(window).height();
+	var d= parseInt( h - 167 ) + "px";
+	$('.login_bg').css("height",d);
+</script>
+</body>
+</html>

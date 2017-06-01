@@ -1,0 +1,76 @@
+/*预约参观*/
+input[type="text"], input[type="password"], input[type="tel"] {width:100%;font-size: 28px;font-size: 0.37333333333333335rem;border-radius: 3px;height: 90px;height: 1.2rem;line-height: 90px;line-height: 1.2rem;padding: 0 20px;padding: 0 0.26666666666666666rem;margin-bottom:15px;margin-bottom:0.2rem;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.orderVisit{width: 100%; height: 100%; position: relative;}
+.orderVisit .yuyueImg{width:100%;position: relative;}
+.orderVisit .visit{position: absolute; width: 92%;top:90px;top:1.2rem; left: 50%; margin-left: -46%; border-radius: 3px;}
+.yyimg{margin-left: 20px;margin-left: 0.26666666666666666rem;}
+.yycanguan{background: #fff; border-radius: 3px;}
+.search_btn{position: absolute;top: 50%;width: 92%;left: 50%;margin-left: -46%;}
+/*预约页面*/
+.order{background: #f0f0f0;}
+.orderWrap{padding-left:20px;padding-left:0.26666666666666666rem;padding-right:20px;padding-right:0.26666666666666666rem; background: #fff; margin-top: 40px;margin-top: 0.5333333333333333rem; }
+.common{font-size:28px;font-size:0.37333333333333335rem; color: #111111;border-bottom:1px solid #e6e6e6;height: 90px;height: 1.2rem;line-height: 90px;line-height: 1.2rem;}
+.common:last-child{border-bottom: none;}
+.common a{display: block;}
+.common select{direction: rtl;}
+.titleText{padding-left: 45px;padding-left: 0.6rem; float: left; }
+.titleTextBg{background: url(../img/x.png) no-repeat 0px center; }
+.orderText{width:40%!important;font-size: 28px;font-size: 0.37333333333333335rem;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; float: right; text-align: right; padding-right: 45px;padding-right: 0.6rem; color: #ccc; height: 90px; height: 1.2rem; line-height: 90px; line-height: 1.2rem;}
+.textArrow{background: url(../img/arrow.png) no-repeat 100% center;}
+.orderColor{color: #FEA120; display: block;}
+.telphone,.code{width: 100%;margin-bottom:15px;margin-bottom:0.2rem;}
+.djs{background:#bbb!important;}
+.submit{height: 210px;height: 2.8rem; line-height: 210px; line-height: 2.8rem;display: inline-block; width: 100%;}
+.submit a{width: 90%; height: 90px; height: 1.2rem; line-height: 90px; line-height: 1.2rem; font-size: 34px; font-size: 0.4533333333333333rem; margin: 60px auto; margin: 0.8rem auto; display: block; background: #fea120; text-align: center; color: #fff; border-radius: 3px;}
+#telTips{display:none;font-size: 12px; line-height: 20px; height: 20px; color: #d72f2b;width: 100%;}
+
+
+
+/*辦公服務*/
+.fwImg{padding-left:20px;padding-left:0.26666666666666666rem;padding-right:20px;padding-right:0.26666666666666666rem;margin: auto; padding-top: 20px;padding-top:0.26666666666666666rem; padding-bottom: 20px;padding-bottom:0.26666666666666666rem;}
+.fwImg img{width: 100%;}
+.bgfw{background: #fff;}
+.bgfwText{width: 50%; float: left;}
+a.href{display: block;height: 90px;height: 1.2rem; line-height: 90px;line-height: 1.2rem;}
+.bgfwImg{width: 30px;width: 0.4rem; margin-right: 20px; margin-right: 0.26666666666666666rem;}
+.myOrder{position: absolute; width: 100%; top: 50%; margin-top: -35px;margin-top: -0.4666666666666667rem; left: 50%; margin-left: -50%;}
+.myOrder h3{font-size: 34px;font-size: 0.4533333333333333rem; color: #fff; text-align: center;  margin-bottom: 20px;margin-bottom: 0.26666666666666666rem;}
+.myOrder p{font-size: 28px;font-size: 0.37333333333333335rem;color: #fff; text-align: center;}
+.fwImgList{position: relative;margin-bottom: 15px;margin-bottom: 0.2rem;}
+.fwImgList img{width: 100%;position: relative;}
+/*常见问题/融资服务*/
+ .complaintAdvice{width: 100%; height: 100%; overflow: hidden;}
+.complaintAdvice .tsjy{width:100%;position: relative;}
+.page{padding:20px 20px 100px 20px;padding:0.26666666666666666rem 0.26666666666666666rem 1.3333333333333333rem 0.26666666666666666rem;}
+.page h3{font-size: 34px;font-size: 0.4533333333333333rem; color: #111111; text-align: center; margin-bottom: 35px; margin-bottom: 0.4666666666666667rem;}
+.page h4{font-size: 28px;font-size: 0.37333333333333335rem;color: #333; text-align: center;margin-top: 20px;margin-top: 0.26666666666666666rem;}
+.page .jianjie{font-size: 26px;font-size: 0.3466666666666667rem; color: #333; line-height: 45px; line-height: 0.6rem;padding-bottom: 45px; padding-bottom: 0.6rem;border-bottom:1px solid #e8e8e8;}
+.page .pageList{margin-top:50px;margin-top:0.6666666666666666rem;font-size: 28px;font-size: 0.37333333333333335rem;}
+.page .pageList h5{color: #FEA120; font-size: 28px; font-size: 0.37333333333333335rem;}
+.page .pageList .logo{text-align: center;}
+.page .pageList .logo .logoImg{width: 176px;width: 2.3466666666666667rem; height: 88px; height: 1.1733333333333333rem;margin-bottom: 20px;margin-bottom: 0.26666666666666666rem;}
+.page .pageList .logo h6{font-size: 24px;font-size: 0.32rem; color: #111111;}
+.page .pageList p{padding-top: 45px;padding-top: 0.6rem; padding-bottom: 45px; padding-bottom: 0.6rem; font-size: 24px; font-size: 0.32rem; line-height: 45px; line-height: 0.6rem; color: #333;border-bottom:1px solid #e8e8e8;}
+.pageRongzi{padding-left: 30px;padding-left: 0.4rem; padding-right: 30px; padding-right: 0.4rem;}
+.bottom_btn{position: fixed; bottom: 0; width: 100%; height: 90px; height: 1.2rem; line-height: 90px; line-height: 1.2rem; text-align: center; background: #FEA120; color: #FFFFFF; font-size: 34px; font-size: 0.4533333333333333rem;}
+.bottom_btn a{color: #FFFFFF; display: block;}
+.bottom_btn a:hover{color: #FFFFFF;}
+
+.open{font-size: 16px; line-height: 40px; height: 40px; background:rgba(120,27,27,.8);position: fixed;top: 0;left: 0; width:100%; color: #fff; text-align: right;}
+.disblock{display: none;}
+/*投诉与建议*/
+.login-wrap{position: absolute; top:90px;top:1.2rem; width: 84%;left: 50%; margin-left: -42%;}
+.tip{font-size: 36px;font-size: 0.48rem; margin-bottom: 80px;margin-bottom: 1.0666666666666667rem; line-height: 65px; line-height: 0.8666666666666667rem; text-align: center; color: #fff;}
+ .send-msg {width: 30%;float: right;margin-left: 10px;margin-left: 0.13333333333333333rem;font-size: 28px;font-size: 0.37333333333333335rem;height: 90px;height: 1.2rem;line-height: 90px;line-height: 1.2rem;background: #FEA120;color: #fff;border-radius: 3px;padding: 0 20px;padding: 0 0.26666666666666666rem;}
+.send-msg.countdown {background: #BBBBBB; color: #fff;}
+.code-wrap {float: left;width: 65%;overflow: hidden;}
+.send-image{margin-left: 20px;margin-left: 0.26666666666666666rem;width: 30%;height: 90px;height: 1.2rem; vertical-align: top; border-radius: 3px; float: right;}
+a.login-btn {display: block;height: 90px;height: 1.2rem; line-height: 90px; line-height: 1.2rem;text-align: center;color: #FFF;background: #FEA120;border-radius: 3px;font-size: 34px;font-size: 0.4533333333333333rem;margin-top: 30px;margin-top: 0.4rem;}
+a.login-btn:hover {background: #feab42;}
+.suggest {padding: 2%; width: 96%; border-radius: 3px; min-height: 500px;min-height: 6.666666666666667rem;background:#fff;resize: none;font-size: 28px;font-size: 0.37333333333333335rem;line-height:30px;line-height:0.4rem;overflow: hidden;word-wrap: break-word;}
+.nd{text-align: center;width:30%; margin-left: 35%;}
+.search{background:#FEA120; color: #fff;}
+.issBtn{margin:0; padding: 0; border-radius: 0;}
+.succeed{color: #111; background:#FFFFFF; width:60%; text-align:center;margin:50px auto;margin:0.6666666666666666rem auto;font-size: 36px;font-size: 0.48rem;}
+
+

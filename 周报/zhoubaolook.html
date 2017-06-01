@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html >
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>周报量化</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/css-table.css" />
+	<style type="text/css">
+		ol{padding-left: 30px;margin: 0;padding-right: 0;margin-right: 0;}
+		li{word-break: break-word;padding-right: 0;margin-right: 0;}
+		#travel{width: 1200px;margin: 0 auto;}
+		#travel thead{width: 1200px;}
+		.oTopForHeight,.tap{width: 1200px;margin: 0 auto;}
+		span{padding: 5px 10px;background:#2388BF;border-radius:3px;color: #FFFFFF;margin-left: 10px;cursor: pointer;}
+		.company span:hover{background: #3AD5A0;}
+		.color{background: #3AD5A0;}
+		.con{text-align: left;}
+		.oWidth{min-width: 50px;}
+		tbody tr th{text-align: center;}
+		i{font-style: normal;}
+		.oTopForHeight{width: 1200px;position: fixed;left: 50%;margin-left: -600px;top: 0px;background: #FFFFFF;display: none;}
+		.oFexed{position: fixed;left: 50%;margin-left: -600px;top: 83px;display: none;}
+		/*.oHide{width: 1000px;margin: 0 auto;position: fixed;left: 50%;margin-left: -500px;top: 100px;}*/
+	</style>
+	</head>
+<body>
+<div class="tap">
+	<h3>纳什空间周报</h3>
+	<p class="company"></p>
+</div>
+<div class="oTopForHeight tap">
+	
+</div>
+<table id="travel">
+	<thead class="oFexed"></thead>
+	<!--<caption>纳什空间周报</caption> --> 
+    <thead class="addd">    
+    	    <tr>
+            <th scope="col" rowspan="2" class="oWidth">部门名称</th>
+            <th scope="col" rowspan="2" class="oWidth">第一负责人</th>
+            <th scope="col" colspan="4" class="oShouZhou"><i></i>-<i></i></th>
+            <th scope="col" colspan="4" class="oErZhou"><i></i>-<i></i></th>
+        </tr>
+        <tr>
+            <th scope="col" colspan="2" class="three">工作计划</th>
+            <th scope="col" colspan="2" class="four" style="min-width: 180px;">实际工作/未完计划说明</th>
+            <th scope="col" colspan="2" class="five">工作计划</th>
+            <th scope="col" colspan="2" class="sex" style="min-width: 180px;">实际工作/未完计划说明</th>
+        </tr>        
+    </thead>
+    <div style="clear: both;"></div>
+<!----------------------集团--------------------------------集团----------------------------------集团-->   
+    <tbody class="oJiTuan">
+    		<tr class="oList">
+			<th scope="row"  class="oWidth oBuMen"></th>
+	        <td class="oWidth oFuZeRen"></td>
+	        <td colspan="2" class="con oFirstPlan" align="left" valign="top"></td>
+	        <td colspan="2" class="con oFirstWanCheng" align="left" valign="top"></td>
+	        <td colspan="2" class="con oSecondPlan" align="left" valign="top"></td>
+	        <td colspan="2" class="con oSecondWanCheng" align="left" valign="top"></td>
+	    </tr>
+    </tbody>
+</table>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>	
+<script type="text/javascript" src="js/style-table.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		type:"get",
+		datatype:"json",
+		url:"add.json",
+		async:true,
+		success:function(data){
+//			data = JSON.parse(data);
+//			console.log(data[0].list[0].list);//s代表  总裁办,委员会
+			var oFirstBeginTime = data[0].list[0].list[0].date.start;
+			var oFirstEndTime = data[0].list[0].list[0].date.end;
+			var oSecBeginTime = data[0].list[0].list[1].date.start;
+			var oSecEndTime = data[0].list[0].list[1].date.end;
+//			new Date(parseInt(oStar) * 1000).toLocaleString().substr(0,17);
+			var oFirstTimeS = new Date(parseInt(oFirstBeginTime) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+			var oFirstTimeE = new Date(parseInt(oFirstEndTime) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+			var oSecondTimeS = new Date(parseInt(oSecBeginTime) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+			var oSecondTimeE = new Date(parseInt(oSecEndTime) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+			
+			var oFs = oFirstTimeS.split(' ')[0];
+			var oFe = oFirstTimeE.split(' ')[0];
+			var oSs = oSecondTimeS.split(' ')[0];
+			var oSe = oSecondTimeE.split(' ')[0];
+			$('.oShouZhou i:eq(0)').html(oFs);
+			$('.oShouZhou i:eq(1)').html(oFe);
+			$('.oErZhou i:eq(0)').html(oSs);
+			$('.oErZhou i:eq(1)').html(oSe);
+			
+			//渲染tap头部公司的信息
+			for (var i = 0 ; i < data.length ; i++ ) {
+				$('.company').append("<span>"+data[i].modelName+"</span>");
+				$('#travel').append( $('.oJiTuan:eq(0)').clone() );
+//				$('.company span').eq(i).text( data[i].modelName )
+			}
+			//第一个tbody显示，其余的隐藏
+			$('#travel tbody:eq(0)').show().siblings('tbody').hide();
+			//渲染时间
+			var oFirstBegin;
+			//渲染所有的部门，第一负责人
+			for (var j = 0 ; j < data.length; j++) {
+				for (var d = 0; d < data[j].list.length; d++) {
+					var oDepartName = data[j].list[d].departmentName;
+					var oDepartUser = data[j].list[d].departmentUser;			    
+					$('#travel tbody:eq('+j+') tr:eq('+d+') .oBuMen').html( oDepartName );
+					$('#travel tbody:eq('+j+') tr:eq('+d+') .oFuZeRen').html( oDepartUser );
+					
+					$('#travel tbody:eq('+j+')').append( $('#travel tbody:eq(0) tr:eq(0)').clone() );
+					$('#travel tbody:eq('+j+') tr:eq('+(d+1)+') .oBuMen').empty();
+					$('#travel tbody:eq('+j+') tr:eq('+(d+1)+') .oFuZeRen').empty();
+					$('#travel tbody:eq('+j+') tr:eq('+(d+1)+') .oFirstPlan').empty();
+					$('#travel tbody:eq('+j+') tr:eq('+(d+1)+') .oFirstWanCheng').empty();
+					$('#travel tbody:eq('+j+') tr:eq('+(d+1)+') .oSecondPlan').empty();
+					$('#travel tbody:eq('+j+') tr:eq('+(d+1)+') .oSecondWanCheng').empty();
+				}
+			}
+			//渲染第一周计划，计划完成情况
+			for (var y = 0 ; y < data.length; y++) {      //集团
+				for (var e = 0; e < data[y].list.length; e++) {   //部门
+						var oFirstPlan = data[y].list[e].list[0].planList;
+						var oFirstFact = data[y].list[e].list[0].factList;
+						var oSecPlan = data[y].list[e].list[1].planList;
+						var oSecFact = data[y].list[e].list[1].factList;
+//						console.log(oFirstPlan);
+						
+						//第一周计划
+						var oStrOnePlan = "<ol>";
+						for (var w = 0; w < oFirstPlan.length; w++ ) {
+							oStrOnePlan += "<li>"+oFirstPlan[w]+"</li>";	
+						}
+						oStrOnePlan += "</ol>";
+						$('#travel tbody:eq('+y+') tr:eq('+e+') .oFirstPlan').append(oStrOnePlan);
+//						//第一周完成情况
+						var oStrOneWanC = "<ol>";
+						for (var w = 0; w < oFirstFact.length; w++ ) {
+							oStrOneWanC += "<li>"+oFirstFact[w]+"</li>";	
+						}
+						oStrOneWanC += "</ol>";
+						$('#travel tbody:eq('+y+') tr:eq('+e+') .oFirstWanCheng').append(oStrOneWanC);
+						//第二周计划
+						var oStrTwoPlan = "<ol>";
+						for (var w = 0; w < oSecPlan.length; w++ ) {
+							oStrTwoPlan += "<li>"+oSecPlan[w]+"</li>";	
+						}
+						oStrTwoPlan += "</ol>";
+						$('#travel tbody:eq('+y+') tr:eq('+e+') .oSecondPlan').append(oStrTwoPlan);
+//						//第二周完成情况
+						var oStrTwoWanC = "<ol>";
+						for (var w = 0; w < oSecFact.length; w++ ) {
+							oStrTwoWanC += "<li>"+oSecFact[w]+"</li>";	
+						}
+						oStrTwoWanC += "</ol>";
+						$('#travel tbody:eq('+y+') tr:eq('+e+') .oSecondWanCheng').append(oStrTwoWanC);
+					}
+				}
+			
+			//tap切换
+			$('span').eq(0).addClass('color');
+			$('.company span').on("click",function(){
+				var oIndex = $(this).index();
+				$(".oTopForHeight .company span:eq("+oIndex+")").addClass('color').siblings().removeClass('color');
+				$(this).addClass('color').siblings().removeClass('color');
+				$('#travel tbody:eq('+oIndex+')').show().siblings('tbody').hide();
+			})
+			//除去没有信息的多余一行
+			for (var x = 0; x < $('tbody').length ; x++ ) {
+				for (var q = 0 ; q <  $('tbody:eq('+x+') tr').length ; q++  ) {
+					if ( $('tbody:eq('+x+') tr:eq('+q+') .oBuMen').text() == ''  ) {
+						$('tbody:eq('+x+') tr:eq('+q+')').remove();
+					}
+				}
+			}
+		}
+
+	});
+</script>
+<script type="text/javascript">
+	window.onload=function(){
+		var oTop = $('.tap').html();
+		$('.oTopForHeight').html( $('.tap').html() );
+		var oval = $('.addd').html();
+		$('.oFexed').html(oval);
+		var oWithBu = $('.oBuMen').css('width').split("px")[0];  //部门的宽度
+	 	var oWithFu = $('.oFuZeRen').css('width').split("px")[0]; //负责人的宽度
+	 	var oWithFirst = $('.oFirstPlan').css('width').split("px")[0]; //第一周计划的宽度
+	 	var oWithFirstPlan = $('.oFirstWanCheng').css('width').split("px")[0]; //第一周完成的宽度
+	 	var oWithSec = $('.oSecondPlan').css('width').split("px")[0]; //负责人的宽度
+	 	var oWithSecPlan = $('.oSecondWanCheng').css('width').split("px")[0]; //负责人的宽度
+ 		$('.oFexed tr:eq(0) th:eq(1)').css("width",oWithFu);
+	   	$('.oFexed tr:eq(1) th:eq(0)').css("width",oWithFirst);
+	   	$('.oFexed tr:eq(1) th:eq(1)').css("width",oWithFirstPlan);
+	   	$('.oFexed tr:eq(1) th:eq(2)').css("width",oWithSec);
+	   	$('.oFexed tr:eq(1) th:eq(3)').css("width",oWithSecPlan);
+	   	$('.company span').on("click",function(){
+			var oIndex = $(this).index();
+			$(this).addClass('color').siblings().removeClass('color');
+			$(".company span:eq("+oIndex+")").addClass('color').siblings().removeClass('color');
+			$('#travel tbody:eq('+oIndex+')').show().siblings('tbody').hide();
+		})
+	}
+	$(window).scroll(function(){
+		var oH = $(window).scrollTop();
+		if ( oH >= 21 ) {
+			$('.oFexed').show();
+			$('.oTopForHeight').show();
+		}else{
+			$('.oFexed').hide();
+			$('.oTopForHeight').hide();
+		}
+	})
+</script>
+
+</body>
+</html>

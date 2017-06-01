@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>纳什空间</title>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/zhanshang.css"/>
+		<link rel="stylesheet" type="text/css" href="zhaoShang/css/shangjilist.css"/>
+		<script src="zhaoShang/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zhaoShang/js/tongji.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--弹层-->
+		<div class="oZheFeiQi"></div>
+		<div class="oReason">
+			<form>
+				<p>废弃原因说明</p>
+				<textarea >sss废弃原因说明废弃原因说明废弃原因说明废弃原因说明废弃原因说明废弃原因说明废弃原因说明s</textarea>
+				<a class="oFeiQiSub">确认提交</a>
+			</form>
+		</div>
+		
+		<!---------顶部-->
+		<div class="top">
+			<div class="topCon">
+				<img src="zhaoShang/img/logo.png"/>
+			</div>
+		</div>
+		<div class="banner">
+			<img src="zhaoShang/img/banner.png"/>
+		</div>
+		<!------main------>
+		<div class="main">
+			<!--左侧-->
+			<div class="mainLeft">
+				<!--下拉菜单-->
+				<ul class="oList">
+					<li>
+						<select name="time" class="oSelect">
+							<option value="推荐时间段" selected>推荐时间段</option>
+							<option value="近一周">近一周</option>
+							<option value="近一个月">近一个月</option>
+							<option value="近半年">近半年</option>
+							<option value="全部">全部</option>
+						</select>
+					</li>
+					<li>
+						<select name="progress" class="oSelect">
+							<option value="商机进度" selected>商机进度</option>
+							<option value="已完成">待看</option>
+							<option value="签约中">丢看</option>
+							<option value="近半年">已完成</option>
+							<option value="全部">签约中</option>
+						</select>
+					</li>
+					<li>
+						<select name="typee" class="oSelect">
+							<option value="商机类型" selected>商机类型</option>
+							<option value="SPACE">SPACE</option>
+							<option value="studio">studio</option>
+						</select>
+					</li>
+					<div style="clear:both;"></div>
+				</ul>
+				<p class="menu"><span class="oAll oColor">全部</span>|<span class="oTiXing">更新提醒</span>|<span class="oChuang">待创建商机</span></p>
+				<!---------------------三个表单。全部，提醒更新，带创建商机----------------------->
+				<!--全部-->
+				<div class="mainLeftAll">
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>张三</i></span> <span class="oTime ">商机类型：<i class="oColor">SPACE</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">签约中</i></span></p>
+							<p><span class="oID">推荐人姓名:<i>张三</i></span></p>
+							<p><span class="oID">推荐人电话:<i>18388888888</i></span></p>
+							<p><a href="#">查看详情</a><a href="#" style="float: right;">提醒更新付款信息</a></p><br />
+							<p><a href="javascript:volid(0);" class="_Feiqi">废弃</a></p>
+						</div>
+					</div>
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>张三</i></span> <span class="oTime ">商机类型：<i class="oColor">SPACE</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">签约中</i></span></p>
+							<p><span class="oID">推荐人姓名:<i>张三</i></span></p>
+							<p><span class="oID">推荐人电话:<i>18388888888</i></span></p>
+							<p><a href="#">查看详情</a><a href="#" style="float: right;">提醒更新付款信息</a></p><br />
+							<p><a href="javascript:volid(0);"  class="_Feiqi">废弃</a></p>
+						</div>
+					</div>
+					
+				</div>
+				<!--更新提醒-->
+				<div class="mainLeftGengXin">
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>李四</i></span> <span class="oTime ">商机类型：<i class="oColor">SPACE</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">签约中</i></span></p>
+							<p><span class="oID">推荐人姓名:<i>李四</i></span></p>
+							<p><span class="oID">推荐人电话:<i>18388888888</i></span></p>
+							<p><a href="#">查看详情</a><a href="#" style="float: right;">提醒更新付款信息</a></p><br />
+							<p><a href="javascript:volid(0);" class="_Feiqi">废弃</a></p>
+						</div>
+					</div>
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>李四</i></span> <span class="oTime ">商机类型：<i class="oColor">SPACE</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">签约中</i></span></p>
+							<p><span class="oID">推荐人姓名:<i>李四</i></span></p>
+							<p><span class="oID">推荐人电话:<i>18388888888</i></span></p>
+							<p><a href="#">查看详情</a><a href="#" style="float: right;">提醒更新付款信息</a></p><br />
+							<p><a href="javascript:volid(0);"  class="_Feiqi">废弃</a></p>
+						</div>
+					</div>
+					
+				</div>
+				<!--带创建商机-->
+				<div class="mainLeftChuangJ">
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>王五</i></span> <span class="oTime ">商机类型：<i class="oColor">SPACE</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">签约中</i></span></p>
+							<p><span class="oID">推荐人姓名:<i>王五</i></span></p>
+							<p><span class="oID">推荐人电话:<i>18388888888</i></span></p>
+							<p><a href="#">查看详情</a><a href="#" style="float: right;">提醒更新付款信息</a></p><br />
+							<p><a href="javascript:volid(0);" class="_Feiqi">废弃</a></p>
+						</div>
+					</div>
+					<!--一个表单-->
+					<div class="oForm">
+						<div class="oFromCon">
+							<p><span class="oID oColor">ID:<i>300243</i></span> <span class="oTime">推荐时间：<i>2017-03-17</i></span></p>
+							<p><span class="oID">客户姓名:<i>王五</i></span> <span class="oTime ">商机类型：<i class="oColor">SPACE</i></span></p>
+							<p><span class="oID">客户电话:<i>18388888888</i></span> <span class="oTime">商机进度：<i class="oColor">签约中</i></span></p>
+							<p><span class="oID">推荐人姓名:<i>王五</i></span></p>
+							<p><span class="oID">推荐人电话:<i>18388888888</i></span></p>
+							<p><a href="#">查看详情</a><a href="#" style="float: right;">提醒更新付款信息</a></p><br />
+							<p><a href="javascript:volid(0);"  class="_Feiqi">废弃</a></p>
+						</div>
+					</div>
+					
+				</div>
+			
+			
+			
+			</div>
+			<!--右侧-->
+			<div class="mainRight">
+				<div class="mainRightCon">
+					<p>客服信息</p>
+					<p>客服编号：<span>123456</span></p>
+					<p>kefuzhongxin@nash.work</p>
+					<button>退出登录</button>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+			
+		</div>
+		
+		
+		
+		<!--底部-->
+		
+		<div class="foot">
+			<div class="footCon">
+				<div class="footLeft">
+					<img src="zhaoShang/img/foot_03.png"/>
+				</div>
+				<div class="footCenter">
+					<dl class="footCenterTypeOne">
+						<dt>找办公室</dt>
+						<dd><a href="#">北京</a></dd>
+						<dd><a href="#">上海</a></dd>
+						<dd><a href="#">天津</a></dd>
+						<dd><a href="#">深圳</a></dd>
+					</dl>
+					<dl class="footCenterTypeTwo">
+						<dt>产品类型</dt>
+						<dd><a href="#">超级工作室</a></dd>
+						<dd><a href="#">优选工作室</a></dd>
+						<dd><a href="#">联合办公区</a></dd>
+						<dd><a href="#">移动工作站</a></dd>
+					</dl>
+					<dl class="footCenterTypeThree">
+						<dt>纳什支持</dt>
+						<dd><a href="#">纳什服务</a></dd>
+						<dd><a href="#">纳什社区</a></dd>
+						<dd><a href="#">联系我们</a></dd>
+					</dl>
+				</div>
+				<div class="footRight">
+					<img src="zhaoShang/img/foot_05.jpg"/>
+				</div>
+			</div>
+		</div>
+		<script src="zhaoShang/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".oList li select").change(function(){
+				var oVal = $(this).find("option:selected").val();
+				var index = $(this).parent().index();
+				console.log(index);
+				console.log(oIndex);
+			})
+			
+			
+		</script>
+		
+	</body>
+</html>

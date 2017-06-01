@@ -1,0 +1,168 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>邀请</title>
+		
+	</head>
+
+	<body>
+		
+		<a class="invite_click"><p>点击接受邀请</p></a>
+			
+	</body>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+
+		 var configIos = {
+	        scheme: 'nashwork://space/',
+	        path: 'https://itunes.apple.com/cn/app/na-shen-kong-jian-chuang-ye/id1050870433?mt=8' 
+	    };
+	    var configAdr = {//nashwork://space/
+	        scheme: 'nashwork://space/',
+	        path: 'http://a.app.qq.com/o/simple.jsp?plg_nld=1&pkgname=com.nashwork.space&plg_uin=1&plg_auth=1&plg_usr=1&plg_dev=1&plg_vkey=1'
+	    };
+	    
+	    var pc_path = 'https://www.baidu.com';
+//	    var inviteUserName = '<?php echo $returnMessage['userName'];?>';
+//	    var inviteUserPhoto = '<?php echo $returnMessage['userPhoto'] . s150; ?>';
+	
+	    //doc加载完成初始化数据
+	    $(document).ready(function() {
+	    		document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+//	        is_weixn();
+			init_argument();
+	    });
+	
+	   /**
+	    浏览器版本信息
+	    * @type {Object}
+	    * @return {Boolean}  返回布尔值
+	    */
+	    function browser() {
+	        var u = window.navigator.userAgent.toLowerCase();
+	        var app = navigator.appVersion.toLowerCase();
+	        return {
+	            txt: u, // 浏览器版本信息
+	            version: (u.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1], // 版本号
+	            msie: /msie/.test(u) && !/opera/.test(u), // IE内核
+	            mozilla: /mozilla/.test(u) && !/(compatible|webkit)/.test(u), // 火狐浏览器
+	            safari: /safari/.test(u) && !/chrome/.test(u), //是否为safair
+	            chrome: /chrome/.test(u), //是否为chrome
+	            opera: /opera/.test(u), //是否为oprea
+	            presto: u.indexOf('presto/') > -1, //opera内核
+	            webKit: u.indexOf('applewebkit/') > -1, //苹果、谷歌内核
+	            gecko: u.indexOf('gecko/') > -1 && u.indexOf('khtml') == -1, //火狐内核
+	            mobile: !!u.match(/applewebkit.*mobile.*/), //是否为移动终端
+	            ios: !!u.match(/\(i[^;]+;( u;)? cpu.+mac os x/), //ios终端
+	            android: u.indexOf('android') > -1, //android终端
+	            iPhone: u.indexOf('iphone') > -1, //是否为iPhone
+	            iPad: u.indexOf('ipad') > -1, //是否iPad
+	            webApp: !!u.match(/applewebkit.*mobile.*/) && u.indexOf('safari/') == -1, //是否web应该程序，没有头部与底部
+	            weiXin:u.match(/MicroMessenger/i) == 'micromessenger'
+	        };
+	    }
+	
+	    //页面参数信息体
+	    var config = {
+	        scheme: '',
+	        path: '',
+	        device:{
+	            weixin:false,
+	            ios:false,
+	            android:false,
+	            other:false
+	        }
+	    };
+	
+	    function init_argument() {
+	        var b=browser();
+	
+	        if (b.weiXin) {
+	            config.device.weixin = true;
+	        }
+	
+	         if(b.ios||b.iPhone||b.iPad){
+	            config.scheme = configIos.scheme;//初始化替换
+	            config.path = configIos.path;//初始化替换
+	            config.device.ios = true;
+	
+	        }else if(b.android){
+	            config.scheme = configAdr.scheme;//初始化替换
+	            config.path = configAdr.path;//初始化替换
+	            config.device.android = true;
+	        }else {
+	            //非客户端浏览器打开
+	             config.device.other = true;
+	             config.path = pc_path;
+	        }
+	    }
+	
+	    function open_appstore() {
+			window.location= config.path;
+	    }
+	
+	    function open_client() {
+	        if (config.device.weixin || config.device.other) {
+	            open_hint_ui();
+	        } else {
+	           window.location=config.scheme; 
+	        }
+	
+	    }
+	
+	
+	     //非客户端浏览器打开页面
+	    function open_hint_ui() {
+	
+	        if(config.device.ios){
+	            //alert('ios ui');
+	            $(".notice_mark,.notice_img").show();
+	        }else if(config.device.android){
+	            $(".notice_mark,.notice_img").show();
+	        }else {
+	        		open_appstore();
+	            //非客户端浏览器打开
+	            //$(".notice_mark,.notice_img").show();
+	        }
+	    }
+//	    function is_weixn(){
+//			    var ua = navigator.userAgent.toLowerCase();  
+//			    if(ua.match(/MicroMessenger/i)=="micromessenger") {  
+//			    	  // 微信打开
+//			    	  alert("请使用浏览器打开");
+//			    	  
+//			       
+//			    } else {   
+//			      //不是微信打开
+//			      init_argument();
+//			      alert("1");
+//			    }  
+//			}  
+	    $(document).ready(function() {
+			$('.invite_click').bind('click', function(){
+				var ua = navigator.userAgent.toLowerCase();  
+			    if(ua.match(/MicroMessenger/i)=="micromessenger") {  
+			    	  // 微信打开
+			    	  alert("请使用浏览器打开");
+			    	  
+			    } else {   
+			      	if(config.device.ios){
+			            window.location =  'nashwork://space/'; 
+				        window.setTimeout(function(){
+				           window.location.href = 'https://itunes.apple.com/cn/app/na-shen-kong-jian-chuang-ye/id1050870433?mt=8'; 
+				        },2000);
+
+			        }else if(config.device.android){
+			        		window.location =  "nashwork://space/"; 
+				        window.setTimeout(function(){
+				        		window.location.href = 'http://a.app.qq.com/o/simple.jsp?plg_nld=1&pkgname=com.nashwork.space&plg_uin=1&plg_auth=1&plg_usr=1&plg_dev=1&plg_vkey=1';
+				        },4000);
+			        }
+			   }
+			});
+		})
+	</script>
+
+</html>

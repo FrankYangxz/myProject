@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>预约</title>
+		<link type="text/css" rel="stylesheet" href="css/p.css">
+		<link type="text/css" rel="stylesheet" href="css/o.css">
+		<link type="text/css" rel="stylesheet" href="css/jquery.datetimepicker.css">
+	</head>
+
+	<body class="order">
+		<div class="orderWrap">
+			<div class="common">
+				<label class="titleText titleTextBg">预约类型</label>
+				<select class="orderText textArrow" dir="rtr" id="Project"></select>
+			</div>
+			<div class="common">
+				<label class="titleText titleTextBg">预约日期</label>
+				<!--<input class="orderText textArrow" type="date" placeholder="预约日期" />-->
+				<input class="orderText textArrow"  id="datetimepicker" style="margin-bottom: 0;">
+			</div>
+			<div class="common">
+				<label class="titleText titleTextBg">预约城市</label>
+				<select class="orderText textArrow" dir="rtr" id="City"></select>
+			</div>
+			<div class="common">
+				<label class="titleText titleTextBg">预约区域</label>
+				<select class="orderText textArrow" dir="rtr" id="area"></select>
+			</div>
+			<div class="common">
+				<label class="titleText titleTextBg">您的称呼</label>
+				<input class="orderText" type="text" style="margin-bottom: 0;" placeholder="请填写" />
+			</div>
+			<div class="common clearfix" style="border: none;">
+				<label class="titleText titleTextBg">您的联系方式</label>
+				<input class="orderText" id="telephone" type="tel" style="margin-bottom: 0;" maxlength="11" placeholder="请填写" />
+			</div>
+			<p id="telTips"></p>
+		</div>
+		<div class="submit">
+			<a href="#" onclick="validatemobile();">提交</a>
+			<!--成功跳转成功页面yuyuechenggong.html--->
+		</div>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.datetimepicker.full.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		$(document).ready(function() {
+			document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 10 + "px";
+		})
+	</script>
+	<script>
+		$.datetimepicker.setLocale('ch'); //设置中文
+		$('#datetimepicker').datetimepicker({
+			yearStart: 2016, //设置最小年份
+			yearEnd: 2016, //设置最大年份
+			todayButton: false, //关闭选择今天按钮
+			allowTimes: ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
+			step: 5
+		});
+	</script>
+
+	<script src="js/statistics.js"></script>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $(".mo").scrollTop(100);
+  });
+});
+</script>
+</head>
+<body>
+<div style="border:1px solid black;width:200px;height:200px;overflow:auto" class="mo">
+	<ul class="list">
+		
+		<li>This is some text.</li>
+		<li>This is some text.</li>
+	</ul>
+</div>
+<button class="btn1">把 scroll top offset 设置为 100px</button>
+<script type="text/javascript">
+	var arr = [{"colors":"Sony","value":7},{"colors":"Samsumg","value":14},{"colors":"Insignia","value":24}];
+	var j;
+	for( var i=0;i<arr.length; i++ ){
+		if ( arr[i].value == 7 ) {
+			j=i;
+		}
+	}
+	console.log(j)
+</script>
+</body>
+</html>

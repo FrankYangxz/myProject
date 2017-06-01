@@ -1,0 +1,53 @@
+/*公共样式*/
+* {margin: 0;padding: 0;border: 0;}
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,iframe,input,select{margin:0;padding:0; border:none;}
+ul,ul li,ol,li{list-style:none outside none;}
+img {vertical-align:middle;max-width: 100%;border: none;}
+a{text-decoration: none;}
+body{background: #FFFFFF;font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;}
+input{outline: none;}
+/*input,select{display:block;vertical-align:top; appearance:none;-moz-appearance:none;-webkit-appearance:none; background: #fff; border-radius: 0;-webkit-tap-highlight-color:transparent;}*/
+/*----------------首页-----------------*/
+@media only screen and (min-width: 168px){
+	.top{width: 100%;height: 56px;background: #000000;}
+	.topCon{width: 960px;height: 55px;margin: 0 auto;padding-top: 8px;}
+	.banner{width: 100%;height:640px;background: url(../img/banner.png) no-repeat;background-size:cover;}
+	.banner .bannerInfo{width: 960px;margin: 0 auto;height: 100%;}
+	.bannerInfo p:nth-of-type(1){height: 54px;padding-top: 287px;background: url(../img/nshikongjian.png) no-repeat left bottom;}
+	.bannerInfo p:nth-of-type(1) img{height: 100%;}
+	.logohh img{height: 54px;width: 224px;}
+	.bannerInfo p:nth-of-type(2){height: 68px;padding-top: 30px;color: #FFFFFF;font-size: 60px;font-weight: 400;}
+	.bannerInfo p:nth-of-type(3){height: 30px;padding-top: 36px;color: #FFFFFF;font-size: 28px;}
+	/*新增首页*/
+	.oINdex{width: 100%;}
+	.oFloat{width: 685px;height: 350px;position: fixed;left: 50%;margin-left: -340px;top: 200px;text-align: center;color: #FFFFFF;}
+	.oLog{width: 100%;display: flex;flex-flow:row nowrap;justify-content: space-between;}
+	.oLog a{display: inline-block;width: 200px;height: 50px;text-align: center;line-height: 50px;border: 1px solid #FFFFFF;color: #FFFFFF;font-weight: 100;}
+	.yyy{padding-top: 50px;padding-bottom: 90px;font-weight: 100;}
+	.oLog a:hover{background: #f04150;border: 1px solid #f04150;}
+	.oFloat h1{font-size:62px;font-weight: 200;}
+	#loginfalse .mainRight{height: 430px;}
+}
+@media only screen and (min-width: 1367px){
+	/*头部*/
+	.top{width: 100%;height: 70px;background: #000000;}
+	.topCon{width: 1200px;height: 55px;margin: 0 auto;padding-top: 15px;}
+	.banner{width: 100%;height:640px;background: url(../img/banner.png) no-repeat;background-size:cover;}
+	
+	.banner .bannerInfo{width: 1200px;margin: 0 auto;height: 100%;}
+	.bannerInfo p:nth-of-type(1){height: 54px;padding-top: 287px;}
+	.bannerInfo p:nth-of-type(1) img{height: 100%;}
+	.logohh img{height: 54px;width: 224px;}
+	.bannerInfo p:nth-of-type(2){height: 68px;padding-top: 30px;color: #FFFFFF;font-size: 60px;font-weight: 400;}
+	.bannerInfo p:nth-of-type(3){height: 30px;padding-top: 36px;color: #FFFFFF;font-size: 28px;}
+	
+	/*新增首页*/
+	.oINdex{width: 100%;}
+	.oFloat{width: 680px;height: 350px;position: fixed;left: 50%;margin-left: -340px;top: 260px;text-align: center;color: #FFFFFF;}
+	.oLog{width: 100%;display: flex;flex-flow:row nowrap;justify-content: space-between;}
+	.oLog a{display: inline-block;width: 200px;height: 50px;text-align: center;line-height: 50px;border: 1px solid #FFFFFF;color: #FFFFFF;font-weight: 100;}
+	.yyy{padding-top: 50px;padding-bottom: 90px;font-weight: 100;}
+	.oLog a:hover{background: #f04150;border: 1px solid #f04150;}
+	.oFloat h1{font-size:64px;font-weight: 200;}
+	#loginfalse .mainRight{height: 500px;}
+}

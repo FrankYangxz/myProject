@@ -1,0 +1,5 @@
+    
+    
+ details.html代码修改：
+     1.reserve.css文件需要覆盖；
+     2.代码第106行类名为.description的模块需要替换；（删掉了原来的pre标签，换成了现在的p标签。）
