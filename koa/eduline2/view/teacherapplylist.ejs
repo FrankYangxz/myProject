@@ -1,0 +1,70 @@
+<script>
+    //同意成为讲师
+   function pass(id) {
+//        alert(id)   指的是 _id
+       $.get('/admin/pass?id='+id,function (retxt) {
+           if ( retxt == 1 ){
+               alert("数据库操作chenggong");
+               $("#main").load("/admin/teacherapplylist");
+           }else{
+               alert("数据库操作失败");
+           }
+       })
+   }
+
+   //拒绝成为讲师
+    function refause(id) {
+        refauseform.uid.value = id;
+        $("#refauseModal").modal("show");
+    }
+    function refauseSub() {
+       $.get("/admin/refause",$("#refauseform").serialize(),function (retext) {
+           if (retxt == 1) {
+               $("#main").load("/admin/teacherapplylist");
+               alert("数据库操作cgenggong")
+           } else {
+               alert("数据库操作失败")
+           }
+       })
+        return false;
+    }
+</script>
+<table class="table">
+    <caption>讲师申请列表</caption>
+    <tbody>
+    <% rs.forEach(function (item) {%>
+    <tr>
+        <td align='right'>
+            <img src="../<%-item.photopath%>"> <br/>  <!---根路径-->
+            <%-item.realname%><br/>
+            <%-item.idnumber%>
+        </td>
+        <td>
+            <%-item.preview%>
+        </td>
+        <td>
+            <input type="button" value="同意" class="btn btn-success" onclick="pass('<%-item._id%>')" />
+            <input type="button" value="拒绝" class="btn btn-danger"  onclick="refause('<%-item._id%>')" />
+        </td>
+    </tr>
+    <%}) %>
+    </tbody>
+</table>
+
+<div class="modal fade" id="refauseModal">
+    <div class="modal-dialog">
+        <div class="modal-content" >
+            <div class="modal-header"> 驳回理由</div>
+
+            <div class="modal-body" style="align-content: center">
+                <form name="refauseform" id="refauseform" onsubmit="return refauseSub();" >
+                    <textarea name="message" id="" cols="67" rows="30" width="120" ></textarea>
+                    <input type="hidden" name="uid">
+                    <input type="submit" value="确认驳回">
+                </form>
+            </div>
+            <div class="modal-footer"> </div>
+
+        </div>
+    </div>
+</div>

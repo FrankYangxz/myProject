@@ -1,0 +1,99 @@
+
+<%- include head %>
+<script>
+    function httpSend( url ) {
+        $("#main").load( url );
+    }
+    ////回复消息
+    function replySS( rid , sendname ) {
+        replyForm.rid.value = rid;
+        $("#sendname").html(sendname);
+        $("#replyDiv").show();
+        $("#nmsgDiv").hide();
+        $("#messageModal").modal("show");
+    }
+    function onReply() {
+        $.post("/msg/reply",$("#replyForm").serialize(),function (retxt) {
+            if ( retxt == 1){
+                $("#messageModal").modal("hide");
+                alert("回复成功")
+            }else{
+                alert("回复失败")
+            }
+        });
+        return false;
+    }
+
+    // 删除
+    function del(id) {
+        if ( confirm("确定删除吗？") ){
+            location.href = "/msg/delmsg?id="+id;
+        }
+    }
+    ////新消息
+    function newMsg() {
+        $("#replyDiv").hide();
+        $("#nmsgDiv").show();
+        $("#messageModal").modal("show");
+    }
+    function onNewMsg() {
+        $.post("/msg/newmsg",$("#msgForm").serialize(),function (retxt) {
+            if ( retxt == 1 ){
+                alert("数据库操作chenggong！");
+                $("#messageModal").modal("hide");
+            }else if(retxt == -1){
+                alert("没有此人");
+            }else{
+                alert("数据库操作失败！");
+            }
+        })
+
+        return false;
+    }
+
+</script>
+<div style="width:1024px;margin:1em auto;">
+    <div id="main" style="border:1px solid green;width:1024px;">
+        <form action="/teacher/newCourse" name="newcourse" id="newcourse" method="post" enctype="multipart/form-data" >
+            <table class="table">
+                <caption style="text-align: center">
+                    创建课程
+                </caption>
+                <tbody>
+                    <tr>
+                        <td>课程名称：</td>
+                        <td> <input type="text" placeholder="请输入课程名称" class="form-control" name="title"/> </td>
+                    </tr>
+                    <tr>
+                        <td>课程分类：</td>
+                        <td>
+                            <select name="type">
+                                <option value="1">node</option>
+                                <option value="2">vue</option>
+                                <option value="3">C++</option>
+                                <option value="4">java</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>课程logo：</td>
+                        <td> <input type="file"  class="form-control" name="clogo" /> </td>
+                    </tr>
+                    <tr>
+                        <td>课程简介：</td>
+                        <td><textarea  name="brief" id="" cols="100" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"  align="center">
+                            <input type="submit" class="btn btn-success" value="创新课程" />
+                            <a href="/teacher/course"><input type="button" class="btn btn-success" value="返回" /></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

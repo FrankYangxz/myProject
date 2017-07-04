@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>在线教育koa1</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <style>
+        .horul{
+            float:left;
+            font-size:1.5em;
+            line-height:2em;
+        }
+        .horul li{
+            display:inline-block;
+            list-style:none;
+            height:25px;
+            width:3em;
+            text-align:center;
+        }
+        .menu{
+            width:1024px;
+            background-color:#005f3d;
+            height:1.5em;
+            margin:0 auto;
+            font-size:1.5em;
+            display:hidden;
+            text-align:center;
+        }
+        .menu span{
+            float:left;
+            display:inline-block;
+            color:#ffffff;
+            margin-left:1em;
+        }
+        .answer tr td div{
+            width:45px;
+            height:45px;
+            background-color:green;
+            color:#ffffff;
+            text-align:center;
+        }
+        .menu a,.menu a:hover,.menu a:visited{
+            color:#ffffff;
+        }
+        .zhuxiao{color:#31b0d5;}
+        .zhuxiao:hover{color: #31b0d5;}
+        tr td a{color: #333333;}
+        tr td a:hover{color: #31b0d5;}
+    </style>
+</head>
+<body>
+<div style="width:1024px;height:3em;margin:1em auto">
+    <span class="glyphicon glyphicon-comment" style="float:left;font-size:2em"><b>源库</b></span>
+    &nbsp;
+    <ul class="horul">
+        <li>问答</li>
+
+    </ul>
+    &nbsp;
+    <div style="float:right;line-height:2em;">
+        <input type="text"  placeholder="请输入关键字" style="width:240px;height:30px;" >
+        <span class="glyphicon glyphicon-zoom-in" style="font-size:1.5em;cursor:pointer;"/>
+        <% if(!loginbean){%>
+            <input type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal" href="./users/login" value="登录/注册"/>
+        <%}else {%>
+            <a href="#" style="color: #31b0d5;"> 首页 </a>&nbsp;
+            <a href="#" style="color: #31b0d5;">消息<span class="badge"><%-loginbean.msgnum%></span></a>&nbsp;
+            <%if(loginbean.role>0){%>
+                <a href="/home/" style="color: #31b0d5;">个人空间</a>&nbsp;
+            <%}else {%>
+                <a href="/admin/" style="color: #31b0d5;">管理员空间</a>&nbsp;
+            <%}%>
+            <a href="/users/logout" class="zhuxiao" style="color: #31b0d5;">注销</a>
+        <%}%>
+    </div>
+</div>
+<div class="menu">
+    <span>home</span>
+    <span>|</span>
+    <span><a href="#">javascript</a></span>
+    <span>php</span>
+    <span>pathon</span>
+    <span>java</span>
+    <span>mysql</span>
+    <span>ios</span>
+    <span>android</span>
+    <span>node.js</span>
+    <span>html5</span>
+    <span>lunux</span>
+    <span>c++</span>
+    <span>...</span>
+</div>

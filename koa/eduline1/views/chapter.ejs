@@ -1,0 +1,121 @@
+
+<%- include head %>
+<script src="/xheditor/xheditor-1.2.2.min.js"></script>
+<script src="/xheditor/xheditor_lang/zh-cn.js"></script>
+<script>
+    //文本编辑，是一个框框
+    var editor;
+    $(pageInit);
+    function pageInit()
+    {
+        $.extend(XHEDITOR.settings,{shortcuts:{'ctrl+enter':chapterForm}});
+        editor=$(chapterForm.content).xheditor({
+            html5Upload:false,upMultiple:'1',
+            upLinkUrl:"../upload/upfile",
+            upLinkExt:"zip,rar,txt",
+            upImgUrl:"../upload/upimg",
+            upImgExt:"jpg,jpeg,gif,png",
+            upFlashUrl:"/uploadFlash",
+            upFlashExt:"swf",
+            upMediaUrl:"/uploadMedia",
+            upMediaExt:"wmv,avi,wma,mp3,mid"
+        });
+        //吧现在页面的地址保存起来，后面重定向用
+        chapterForm.myurl.value = location.href;
+    }
+</script>
+<script>
+    function newChapter() {
+        chapterForm.reset();
+        chapterForm.myurl.value = location.href;
+        chapterForm.subBtn.value = "创建新章节";
+        $("#creatChapter").modal("show");
+        chapterForm.action = '/teacher/pubChapter';
+    }
+    function fold() {
+        $("#creatChapter").modal("hide");
+    }
+    //  删除章节
+    function delChapter(id) {
+        if( confirm("确定删除吗？")){
+            location.href = "/teacher/delChapetr?id="+id+"&cid=<%-id%>&coursName=<%-coursName%>";
+        }
+    }
+    //  修改章节
+    function upChapter(id) {
+        $.get("./getChapter?id="+id,function (data) {
+            chapterForm.title.value = data.title;
+            editor.setSource( data.content );
+            chapterForm.subBtn.value = "修改此章节";
+            $("#creatChapter").modal("show");
+            chapterForm.chapterid.value = data._id;
+            chapterForm.action = '/teacher/upChapter';
+        })
+    }
+</script>
+<div style="width:1024px;margin:1em auto;">
+    <div id="main" style="border:1px solid green;width:100%;">
+        <table class="table">
+            <caption style="text-align: center">
+                <%-coursName%><%-id%>
+                <input type="button" class="btn btn-success" style="position: relative;left: 120px;" value="新章节" onclick="newChapter()"/>
+            </caption>
+            <tbody>
+                <tr>
+                    <td>章节标题</td><td>操作</td>
+                </tr>
+                <% chapterRs.forEach(function (item) {%>
+                <tr>
+                    <td><a href="./chapterInfo?id=<%-item._id%>" target="_blank" ><%-item.title%></a> </td>
+                    <td>
+                        <input type="button" class="btn btn-success" value="修改" onclick="upChapter('<%-item._id%>');">
+                        <input type="button" class="btn btn-danger" value="删除" onclick="delChapter('<%-item._id%>');">
+                    </td>
+                </tr>
+                <% })%>
+                <tr>
+                    <td colspan="2" align="center">
+                        共<%-cpCount%>条记录&nbsp;
+                        第<%-page%>/<%-sumpage%>页&nbsp;
+                        <%if( page > 1 ){%>
+                            <a href="<%=url%>&page=1">首页</a>&nbsp;
+                            <a href="<%=url%>&page=<%-(page-1)%>">上一页</a>&nbsp;
+                        <%}%>
+                        <%if( page < sumpage ){%>
+                            <a href="<%=url%>&page=<%-(page+1)%>">下一页</a>&nbsp;
+                            <a href="<%=url%>&page=<%-(sumpage)%>">尾页</a>&nbsp;
+                        <%}%>
+                        &nbsp;
+                        <%for (let i=1;i<= sumpage;i++){%>
+                            <a href="<%=url%>&page=<%-i%>"><%-i%></a>
+                        <%}%>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--创建新的章节模态框-->
+<div class="modal fade" id="creatChapter">
+    <form action="" id="chapter" name="chapterForm" method="post">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 754px;">
+                <div class="modal-header" style="text-align: center"> 创建新章节 </div>
+                <div class="modal-body">
+                    <p>章节标题:<input type="text" name="title"></p>
+                    <p>章节内容:</p>
+                    <p><textarea name="content"  cols="100" rows="20"></textarea></p>
+                </div>
+                <div class="modal-footer" style="text-align: center">
+                    <input type="hidden" name="courseid" value="<%-id%>">
+                    <input type="hidden" name="chapterid" value="<%-id%>">
+                    <input type="hidden" name="myurl" value="">
+                    <input type="submit" class="btn btn-success" name="subBtn" value="创建章节">
+                    <input type="button" class="btn btn-warning" value="收起" onclick="fold()">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
